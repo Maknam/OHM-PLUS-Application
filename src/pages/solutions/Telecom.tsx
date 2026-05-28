@@ -1,0 +1,378 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Wifi, Signal, Battery, Fuel, MapPin, Bell, CheckCircle2, Activity, TowerControl, Gauge, Shield, Zap, Cloud, AlertTriangle, TrendingDown, Sparkles, Leaf } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function Telecom() {
+  const features = [
+    { icon: Signal, title: "Grid Status Monitoring", desc: "Real-time visibility of utility power availability", gradient: "from-purple-500 to-pink-500" },
+    { icon: Battery, title: "Battery Health Tracking", desc: "Monitor backup battery condition and runtime", gradient: "from-blue-500 to-cyan-500" },
+    { icon: Fuel, title: "Fuel Consumption", desc: "Track generator fuel usage and detect theft", gradient: "from-orange-500 to-red-500" },
+    { icon: MapPin, title: "Site Dashboard", desc: "Manage all tower sites from one central view", gradient: "from-green-500 to-emerald-500" },
+    { icon: Bell, title: "Instant Alerts", desc: "Get notified immediately of power disruptions", gradient: "from-yellow-500 to-amber-500" },
+    { icon: Activity, title: "Generator Runtime", desc: "Track usage patterns and maintenance needs", gradient: "from-cyan-500 to-blue-500" }
+  ];
+
+  const benefits = [
+    { icon: TrendingDown, title: "40% Less Site Visits", desc: "Remote monitoring reduces operational costs", value: "40%", color: "text-purple-400" },
+    { icon: Shield, title: "99.9% Uptime", desc: "Instant alerts prevent service disruptions", value: "99.9%", color: "text-green-400" },
+    { icon: AlertTriangle, title: "Theft Detection", desc: "Monitor fuel consumption anomalies", value: "25%", color: "text-orange-400" },
+    { icon: Gauge, title: "Battery Life Extension", desc: "Predictive maintenance alerts", value: "30%", color: "text-blue-400" }
+  ];
+
+  const caseStudies = [
+    {
+      operator: "MTN Nigeria",
+      location: "Lagos, Nigeria",
+      savings: "₦45M",
+      reduction: "32%",
+      image: "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?w=600&h=400&fit=crop",
+      description: "Reduced fuel costs across 50 tower sites with real-time monitoring"
+    },
+    {
+      operator: "Airtel Ghana",
+      location: "Accra, Ghana",
+      savings: "₵280,000",
+      reduction: "28%",
+      image: "https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg?w=600&h=400&fit=crop",
+      description: "Improved generator efficiency and reduced downtime by 45%"
+    },
+    {
+      operator: "Glo Nigeria",
+      location: "Port Harcourt, Nigeria",
+      savings: "₦38M",
+      reduction: "35%",
+      image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?w=600&h=400&fit=crop",
+      description: "Detected fuel theft and optimized maintenance schedules"
+    }
+  ];
+
+  const metrics = [
+    { label: "Towers Monitored", value: "500+", icon: TowerControl },
+    { label: "Fuel Savings", value: "25-35%", icon: Fuel },
+    { label: "Uptime Improvement", value: "99.9%", icon: Zap },
+    { label: "ROI Timeline", value: "6-8 months", icon: TrendingDown }
+  ];
+
+  return (
+    <div className="pt-32 pb-20 min-h-screen relative overflow-hidden">
+      {/* Dark Background */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a] via-[#0f0f2a] to-[#1a1a3e]" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,114,206,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,114,206,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      </div>
+
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
+        {/* Back Link */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mb-8"
+        >
+          <Link to="/solutions" className="text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center gap-2 group">
+            <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" /> Back to Solutions
+          </Link>
+        </motion.div>
+
+        {/* Hero Section */}
+        <div className="grid md:grid-cols-2 gap-12 mb-20">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center md:text-left"
+          >
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-400 text-sm font-medium mb-6 mx-auto md:mx-0 w-fit">
+              <Wifi className="w-4 h-4" />
+              Telecom Infrastructure
+            </div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white mb-6 leading-tight text-center md:text-left">
+              Telecom <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Towers</span>
+            </h1>
+            <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed text-center md:text-left">
+              Remote monitoring of backup generators and grid power. Ensure uptime across distributed infrastructure with centralized visibility.
+            </p>
+            <p className="text-gray-400 mb-8 text-center md:text-left">
+              Telecom infrastructure requires 24/7 uptime. Omhero provides remote monitoring capabilities for your distributed tower network, tracking grid availability, generator runtime, and battery health.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <Link to="/contact">
+                <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white shadow-lg shadow-purple-500/20 w-full sm:w-auto justify-center">
+                  Request Demo <Sparkles className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+              <Link to="/pricing">
+                <Button size="lg" variant="outline" className="border-purple-500/30 text-white hover:bg-purple-500/10 w-full sm:w-auto justify-center">
+                  View Telecom Pricing
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-3xl blur-2xl" />
+            <div className="relative bg-gradient-to-br from-purple-500/20 to-pink-500/10 rounded-3xl p-6 border border-white/20 backdrop-blur-sm overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1533664488202-6af66d26c44a?w=800&h=420&fit=crop"
+                alt="Telecom Tower Monitoring"
+                className="w-full h-auto rounded-2xl shadow-2xl"
+              />
+              <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md rounded-xl p-3 border border-purple-500/30">
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  <div>
+                    <div className="text-xs text-gray-400">Grid Status</div>
+                    <div className="text-base sm:text-lg font-bold text-green-400">Active</div>
+                  </div>
+                  <div className="border-l border-white/20 pl-2">
+                    <div className="text-xs text-gray-400">Battery Health</div>
+                    <div className="text-base sm:text-lg font-bold text-purple-400">94%</div>
+                  </div>
+                  <div className="border-l border-white/20 pl-2">
+                    <div className="text-xs text-gray-400">Fuel Level</div>
+                    <div className="text-base sm:text-lg font-bold text-white">68%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Metrics Overview */}
+        <div className="mb-24">
+          <div className="bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-indigo-500/20 rounded-3xl p-1">
+            <div className="bg-black/60 backdrop-blur-md rounded-2xl p-8 md:p-12">
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-white text-center mb-4">
+                Network <span className="text-purple-400">Performance Metrics</span>
+              </h2>
+              <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto text-sm sm:text-base">
+                Real results from telecom operators using Omhero
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {metrics.map((metric, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="text-center group"
+                  >
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                      <metric.icon className="w-8 h-8 text-purple-400" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-1 text-center">{metric.value}</h3>
+                    <p className="text-gray-400 text-sm text-center">{metric.label}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Benefits */}
+        <div className="mb-24">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-white text-center mb-12">
+            Why Telecom Companies <span className="text-purple-400">Choose Omhero</span>
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="bg-black/40 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:border-purple-500/30 transition-all group text-center md:text-left"
+            >
+              <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <TrendingDown className="w-5 h-5 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Reduce OPEX</h3>
+              </div>
+              <p className="text-gray-300 text-center md:text-left">Optimize fuel delivery schedules and reduce site visits by up to 40% with remote monitoring.</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="bg-black/40 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:border-purple-500/30 transition-all group text-center md:text-left"
+            >
+              <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Shield className="w-5 h-5 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Prevent Downtime</h3>
+              </div>
+              <p className="text-gray-300 text-center md:text-left">Get instant alerts when grid power fails or generators aren't performing as expected.</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+              className="bg-black/40 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:border-purple-500/30 transition-all group text-center md:text-left"
+            >
+              <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Fuel className="w-5 h-5 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Detect Fuel Theft</h3>
+              </div>
+              <p className="text-gray-300 text-center md:text-left">Track fuel consumption against generator runtime to identify discrepancies and theft.</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+              className="bg-black/40 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:border-purple-500/30 transition-all group text-center md:text-left"
+            >
+              <div className="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Battery className="w-5 h-5 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Extend Equipment Life</h3>
+              </div>
+              <p className="text-gray-300 text-center md:text-left">Predictive maintenance alerts help prevent generator and battery failure.</p>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Features Grid */}
+        <div className="mb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 text-center">
+              Monitoring <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Capabilities</span>
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto text-center">
+              Complete visibility across your entire tower network
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="group relative bg-black/40 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all hover:-translate-y-2"
+              >
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform mx-auto md:mx-0`}>
+                  <feature.icon className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 text-center md:text-left">{feature.title}</h3>
+                <p className="text-gray-400 text-sm text-center md:text-left">{feature.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits Grid */}
+        <div className="mb-24">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-black/40 backdrop-blur-md rounded-xl p-6 text-center border border-white/10 hover:border-purple-500/30 transition-all group"
+              >
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <benefit.icon className={`w-7 h-7 ${benefit.color}`} />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-1 text-center">{benefit.value}</h3>
+                <p className="text-sm font-semibold text-gray-300 mb-1 text-center">{benefit.title}</p>
+                <p className="text-xs text-gray-500 text-center">{benefit.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Case Studies */}
+        <div className="mb-24">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-white text-center mb-12">
+            Telecom <span className="text-purple-400">Success Stories</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {caseStudies.map((study, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-black/40 backdrop-blur-md rounded-xl overflow-hidden border border-white/10 hover:border-purple-500/30 transition-all group"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={study.image}
+                    alt={study.operator}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                  <div className="absolute top-4 right-4 bg-purple-500/90 rounded-full px-2 py-1">
+                    <span className="text-xs font-bold text-white">{study.reduction} saved</span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-1 text-center md:text-left">{study.operator}</h3>
+                  <p className="text-sm text-gray-400 mb-3 text-center md:text-left">{study.location}</p>
+                  <p className="text-gray-300 text-sm mb-4 text-center md:text-left">{study.description}</p>
+                  <div className="flex justify-between items-center pt-3 border-t border-white/10">
+                    <div>
+                      <div className="text-xs text-gray-400 text-center md:text-left">Annual Savings</div>
+                      <div className="text-lg font-bold text-purple-400 text-center md:text-left">{study.savings}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xs text-gray-400 text-center md:text-right">Reduction</div>
+                      <div className="text-lg font-bold text-white text-center md:text-right">{study.reduction}</div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 sm:p-12 border border-white/20 backdrop-blur-sm">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">Ready to Optimize Your Network?</h3>
+            <p className="text-base sm:text-lg text-gray-300 mb-8 max-w-2xl mx-auto text-center">
+              Join leading telecom operators already reducing costs and improving uptime with Omhero.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white shadow-lg shadow-purple-500/20 text-base sm:text-lg px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto justify-center">
+                  Deploy Across Your Network <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                </Button>
+              </Link>
+              <Link to="/pricing">
+                <Button size="lg" variant="outline" className="border-purple-500/30 text-white hover:bg-purple-500/10 text-base sm:text-lg px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto justify-center">
+                  Request Quote
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
