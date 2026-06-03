@@ -21,7 +21,7 @@ const FloatingParticles = () => {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-primary/20"
+          className="absolute rounded-full bg-ohm-blue/20"
           style={{
             width: particle.size,
             height: particle.size,
@@ -94,8 +94,8 @@ const StatCard = ({ value, label, icon: Icon, delay }: { value: string; label: s
     transition={{ delay }}
     className="text-center"
   >
-    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-cyan-500/20 flex items-center justify-center mx-auto mb-4">
-      <Icon className="w-8 h-8 text-primary" />
+    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-ohm-blue/20 to-ohm-green/20 flex items-center justify-center mx-auto mb-4">
+      <Icon className="w-8 h-8 text-ohm-green" />
     </div>
     <div className="text-3xl md:text-4xl font-bold text-white mb-1">{value}</div>
     <div className="text-sm text-gray-400">{label}</div>
@@ -246,10 +246,10 @@ export default function CaseStudies() {
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
         
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-500/15 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-[100px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,114,206,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,114,206,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-ohm-blue/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-ohm-green/15 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-ohm-blue/5 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,75,158,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,75,158,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
         
         <FloatingParticles />
       </div>
@@ -266,12 +266,12 @@ export default function CaseStudies() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-primary text-sm font-medium mb-6 mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ohm-blue/20 backdrop-blur-sm border border-ohm-blue/30 text-ohm-green text-sm font-medium mb-6 mx-auto">
               <Sparkles className="w-4 h-4 animate-pulse" />
               Real Results from Real Customers
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6 leading-tight text-center">
-              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-blue-500">
+              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-ohm-green to-ohm-blue">
                 Stories
               </span>
             </h1>
@@ -310,10 +310,10 @@ export default function CaseStudies() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 rounded-xl bg-primary/20 backdrop-blur-sm">
-                      <study.icon className="w-6 h-6 text-primary" />
+                    <div className="p-2 rounded-xl bg-ohm-blue/20 backdrop-blur-sm">
+                      <study.icon className="w-6 h-6 text-ohm-green" />
                     </div>
-                    <span className="text-sm text-primary uppercase tracking-wider bg-primary/10 px-3 py-1 rounded-full">
+                    <span className="text-sm text-ohm-green uppercase tracking-wider bg-ohm-blue/10 px-3 py-1 rounded-full">
                       {study.type} • Case Study
                     </span>
                   </div>
@@ -323,15 +323,15 @@ export default function CaseStudies() {
               </div>
 
               {/* Results Banner */}
-              <div className="bg-gradient-to-r from-primary/20 via-cyan-500/20 to-purple-500/20 rounded-2xl p-6 mb-8 border border-primary/20">
+              <div className="bg-gradient-to-r from-ohm-blue/20 via-ohm-green/20 to-ohm-blue/20 rounded-2xl p-6 mb-8 border border-ohm-blue/20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="text-center md:text-left">
                     <p className="text-sm text-gray-400 mb-1">Key Result</p>
-                    <p className="text-2xl font-bold text-primary">{study.result}</p>
+                    <p className="text-2xl font-bold text-ohm-green">{study.result}</p>
                   </div>
                   <div className="text-center md:text-left">
                     <p className="text-sm text-gray-400 mb-1">Annual Savings</p>
-                    <p className="text-2xl font-bold text-cyan-400">{study.savings}</p>
+                    <p className="text-2xl font-bold text-ohm-green">{study.savings}</p>
                   </div>
                 </div>
               </div>
@@ -343,8 +343,8 @@ export default function CaseStudies() {
                   <ul className="space-y-3">
                     {study.challenges.map((challenge, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-red-500" />
+                        <div className="w-5 h-5 rounded-full bg-ohm-orange/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-ohm-orange" />
                         </div>
                         <span className="text-gray-300">{challenge}</span>
                       </li>
@@ -356,7 +356,7 @@ export default function CaseStudies() {
                   <ul className="space-y-3">
                     {study.solutions.map((solution, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-ohm-green shrink-0 mt-0.5" />
                         <span className="text-gray-300">{solution}</span>
                       </li>
                     ))}
@@ -377,9 +377,9 @@ export default function CaseStudies() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: idx * 0.1 }}
-                    className="bg-black/40 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-primary/30 transition-all"
+                    className="bg-black/40 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-ohm-blue/30 transition-all"
                   >
-                    <metric.icon className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <metric.icon className="w-8 h-8 text-ohm-green mx-auto mb-2" />
                     <div className="text-2xl font-bold text-white">{metric.value}</div>
                     <div className="text-xs text-gray-400">{metric.label}</div>
                   </motion.div>
@@ -407,8 +407,8 @@ export default function CaseStudies() {
               </div>
 
               {/* Testimonial */}
-              <div className="bg-gradient-to-r from-primary/10 to-cyan-500/10 rounded-2xl p-8 border border-white/20">
-                <Quote className="w-10 h-10 text-primary/40 mb-4" />
+              <div className="bg-gradient-to-r from-ohm-blue/10 to-ohm-green/10 rounded-2xl p-8 border border-white/20">
+                <Quote className="w-10 h-10 text-ohm-green/40 mb-4" />
                 <p className="text-lg text-gray-200 italic mb-6">"{study.testimonial.quote}"</p>
                 <div className="flex items-center gap-4">
                   <ImageWithFallback 
@@ -434,9 +434,9 @@ export default function CaseStudies() {
           transition={{ duration: 0.6 }}
           className="text-center mt-24"
         >
-          <div className="bg-gradient-to-r from-primary/20 via-cyan-500/20 to-blue-500/20 rounded-2xl p-12 border border-white/20 backdrop-blur-sm relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl" />
+          <div className="bg-gradient-to-r from-ohm-blue/20 via-ohm-green/20 to-ohm-blue/20 rounded-2xl p-12 border border-white/20 backdrop-blur-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-ohm-blue/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-ohm-green/10 rounded-full blur-3xl" />
             
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -447,7 +447,7 @@ export default function CaseStudies() {
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-primary to-cyan-600 hover:from-primary/90 hover:to-cyan-600/90 text-white shadow-lg shadow-primary/30 text-lg px-8 h-14">
+                  <Button size="lg" className="bg-gradient-to-r from-ohm-green to-ohm-blue hover:from-ohm-green/90 hover:to-ohm-blue/90 text-white shadow-lg shadow-ohm-green/30 text-lg px-8 h-14">
                     Start Your Journey <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>

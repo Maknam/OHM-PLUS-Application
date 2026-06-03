@@ -129,12 +129,12 @@ export default function ComingSoon() {
   }
 
   const features = [
-    { icon: Zap, title: "Real-time Monitoring", description: "Track your energy usage as it happens", color: "from-yellow-500 to-orange-500" },
-    { icon: Activity, title: "Smart Analytics", description: "AI-powered insights to optimize usage", color: "from-green-500 to-emerald-500" },
-    { icon: Calendar, title: "Predictive Alerts", description: "Never miss an important notification", color: "from-blue-500 to-cyan-500" },
-    { icon: Battery, title: "Battery Optimization", description: "Extend battery life by 30%", color: "from-purple-500 to-pink-500" },
-    { icon: TrendingUp, title: "Cost Savings", description: "Reduce bills by up to 40%", color: "from-red-500 to-orange-500" },
-    { icon: Award, title: "Carbon Tracking", description: "Monitor your environmental impact", color: "from-teal-500 to-green-500" },
+    { icon: Zap, title: "Real-time Monitoring", description: "Track your energy usage as it happens", color: "from-ohm-orange to-ohm-orange/70" },
+    { icon: Activity, title: "Smart Analytics", description: "AI-powered insights to optimize usage", color: "from-ohm-green to-ohm-green/70" },
+    { icon: Calendar, title: "Predictive Alerts", description: "Never miss an important notification", color: "from-ohm-blue to-ohm-blue/70" },
+    { icon: Battery, title: "Battery Optimization", description: "Extend battery life by 30%", color: "from-ohm-green to-ohm-green/70" },
+    { icon: TrendingUp, title: "Cost Savings", description: "Reduce bills by up to 40%", color: "from-ohm-orange to-ohm-orange/70" },
+    { icon: Award, title: "Carbon Tracking", description: "Monitor your environmental impact", color: "from-ohm-blue to-ohm-blue/70" },
   ];
 
   const socialLinks = [
@@ -155,7 +155,7 @@ export default function ComingSoon() {
             scale: [1, 1.1, 0.9, 1]
           }}
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[-150px] right-[-100px] w-[500px] h-[500px] rounded-full bg-gradient-to-r from-primary/30 to-cyan-500/20 blur-[100px]"
+          className="absolute top-[-150px] right-[-100px] w-[500px] h-[500px] rounded-full bg-gradient-to-r from-ohm-blue/30 to-ohm-green/20 blur-[100px]"
         />
         <motion.div
           animate={{ 
@@ -164,7 +164,7 @@ export default function ComingSoon() {
             scale: [1, 0.9, 1.1, 1]
           }}
           transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-[-200px] left-[-150px] w-[600px] h-[600px] rounded-full bg-gradient-to-r from-purple-600/20 to-pink-600/20 blur-[120px]"
+          className="absolute bottom-[-200px] left-[-150px] w-[600px] h-[600px] rounded-full bg-gradient-to-r from-ohm-green/20 to-ohm-blue/20 blur-[120px]"
         />
         <motion.div
           animate={{ 
@@ -173,7 +173,7 @@ export default function ComingSoon() {
             scale: [1, 1.05, 0.95, 1]
           }}
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 5 }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-gradient-to-r from-yellow-500/10 to-orange-500/10 blur-[100px]"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-gradient-to-r from-ohm-orange/10 to-ohm-orange/10 blur-[100px]"
         />
         <motion.div
           animate={{ 
@@ -181,7 +181,7 @@ export default function ComingSoon() {
             y: [0, 20, -20, 0],
           }}
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 8 }}
-          className="absolute bottom-[20%] right-[5%] w-[350px] h-[350px] rounded-full bg-gradient-to-r from-green-500/10 to-emerald-500/10 blur-[100px]"
+          className="absolute bottom-[20%] right-[5%] w-[350px] h-[350px] rounded-full bg-gradient-to-r from-ohm-green/10 to-ohm-blue/10 blur-[100px]"
         />
       </div>
 
@@ -214,7 +214,7 @@ export default function ComingSoon() {
 
       {/* Mouse-follow glow effect */}
       <motion.div
-        className="fixed w-[300px] h-[300px] rounded-full bg-gradient-to-r from-primary/10 to-cyan-500/5 blur-[80px] pointer-events-none z-0"
+        className="fixed w-[300px] h-[300px] rounded-full bg-gradient-to-r from-ohm-blue/10 to-ohm-green/5 blur-[80px] pointer-events-none z-0"
         animate={{
           x: mousePosition.x - 150,
           y: mousePosition.y - 150,
@@ -226,8 +226,8 @@ export default function ComingSoon() {
       <div className="fixed inset-0 pointer-events-none opacity-[0.02]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(0,114,206,0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,114,206,0.05) 1px, transparent 1px),
+            linear-gradient(rgba(0,75,158,0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0,75,158,0.05) 1px, transparent 1px),
             radial-gradient(circle at 20% 50%, rgba(255,255,255,0.03) 0%, transparent 50%)
           `,
           backgroundSize: '50px 50px, 50px 50px, 100% 100%'
@@ -243,7 +243,7 @@ export default function ComingSoon() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl w-full"
         >
-          <div className="bg-gradient-to-br from-black/50 via-black/40 to-black/50 backdrop-blur-xl rounded-3xl shadow-2xl p-8 md:p-12 border border-white/10 hover:border-primary/30 transition-all duration-500">
+          <div className="bg-gradient-to-br from-black/50 via-black/40 to-black/50 backdrop-blur-xl rounded-3xl shadow-2xl p-8 md:p-12 border border-white/10 hover:border-ohm-blue/30 transition-all duration-500">
             
             {/* Animated Icon with glow */}
             <motion.div
@@ -252,8 +252,8 @@ export default function ComingSoon() {
               className="flex justify-center mb-6"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-cyan-500 rounded-2xl blur-xl opacity-50 animate-pulse" />
-                <div className="relative w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-cyan-600 flex items-center justify-center shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-ohm-green to-ohm-blue rounded-2xl blur-xl opacity-50 animate-pulse" />
+                <div className="relative w-20 h-20 rounded-2xl bg-gradient-to-br from-ohm-green to-ohm-blue flex items-center justify-center shadow-2xl">
                   <Zap className="w-10 h-10 text-white" />
                 </div>
               </div>
@@ -266,7 +266,7 @@ export default function ComingSoon() {
               transition={{ delay: 0.2 }}
               className="flex justify-center mb-6"
             >
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/20 to-cyan-500/20 backdrop-blur-sm border border-primary/30 text-primary text-sm font-medium shadow-lg">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-ohm-blue/20 to-ohm-green/20 backdrop-blur-sm border border-ohm-blue/30 text-ohm-green text-sm font-medium shadow-lg">
                 <Sparkles className="w-4 h-4 animate-pulse" />
                 Launching Soon - Be the First to Know
               </div>
@@ -283,7 +283,7 @@ export default function ComingSoon() {
                 Something Beautiful
               </span>
               <br />
-              <span className="bg-gradient-to-r from-primary via-cyan-400 to-purple-400 bg-clip-text text-transparent animate-gradient">
+              <span className="bg-gradient-to-r from-ohm-green via-ohm-green to-ohm-blue bg-clip-text text-transparent animate-gradient">
                 Is Coming
               </span>
             </motion.h1>
@@ -295,12 +295,12 @@ export default function ComingSoon() {
               transition={{ delay: 0.4 }}
               className="text-center text-gray-300 text-lg md:text-xl mb-8 leading-relaxed flex items-center justify-center gap-2 flex-wrap"
             >
-              <Cloud className="w-5 h-5 text-cyan-400" />
+              <Cloud className="w-5 h-5 text-ohm-blue" />
               We're crafting an exceptional dashboard experience
-              <Sun className="w-5 h-5 text-yellow-400" />
+              <Sun className="w-5 h-5 text-ohm-orange" />
               <br />
               that puts humanity back into energy data.
-              <Moon className="w-5 h-5 text-purple-400" />
+              <Moon className="w-5 h-5 text-ohm-blue" />
             </motion.p>
 
             {/* Countdown Timer with gradient backgrounds */}
@@ -312,10 +312,10 @@ export default function ComingSoon() {
             >
               {Object.entries(timeLeft).map(([unit, value], index) => {
                 const gradients = [
-                  "from-blue-500 to-cyan-500",
-                  "from-purple-500 to-pink-500",
-                  "from-orange-500 to-red-500",
-                  "from-green-500 to-emerald-500"
+                  "from-ohm-blue to-ohm-blue",
+                  "from-ohm-green to-ohm-green",
+                  "from-ohm-orange to-ohm-orange",
+                  "from-ohm-green to-ohm-blue"
                 ];
                 return (
                   <motion.div
@@ -325,8 +325,8 @@ export default function ComingSoon() {
                     transition={{ delay: 0.5 + index * 0.1 }}
                     className="relative group"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-cyan-500/20 rounded-xl blur group-hover:blur-md transition-all" />
-                    <div className="relative bg-gradient-to-br from-black/60 to-black/40 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-primary/30 transition-all hover:-translate-y-1">
+                    <div className="absolute inset-0 bg-gradient-to-r from-ohm-blue/20 to-ohm-green/20 rounded-xl blur group-hover:blur-md transition-all" />
+                    <div className="relative bg-gradient-to-br from-black/60 to-black/40 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-ohm-blue/30 transition-all hover:-translate-y-1">
                       <div className={`text-3xl md:text-4xl font-bold bg-gradient-to-r ${gradients[index]} bg-clip-text text-transparent mb-1`}>
                         {String(value).padStart(2, '0')}
                       </div>
@@ -351,8 +351,8 @@ export default function ComingSoon() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-6"
                 >
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 flex items-center justify-center mx-auto mb-4 border-2 border-green-500/50 animate-pulse">
-                    <CheckCircle2 className="w-10 h-10 text-green-500" />
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-ohm-green/20 to-ohm-green/20 flex items-center justify-center mx-auto mb-4 border-2 border-ohm-green/50 animate-pulse">
+                    <CheckCircle2 className="w-10 h-10 text-ohm-green" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">You're on the list! 🎉</h3>
                   <p className="text-gray-300 mb-4">
@@ -361,7 +361,7 @@ export default function ComingSoon() {
                   <Button 
                     onClick={() => setIsSuccess(false)} 
                     variant="outline"
-                    className="border-primary/30 text-white hover:bg-primary/20 hover:border-primary/50 transition-all"
+                    className="border-ohm-blue/30 text-white hover:bg-ohm-blue/20 hover:border-ohm-blue/50 transition-all"
                   >
                     Join with another email
                   </Button>
@@ -374,16 +374,16 @@ export default function ComingSoon() {
                         placeholder="Enter your email address"
                         type="email"
                         {...form.register("email")}
-                        className="h-12 bg-black/50 border-white/20 focus:border-primary focus:ring-primary/20 text-white placeholder:text-gray-500 transition-all"
+                        className="h-12 bg-black/50 border-white/20 focus:border-ohm-green focus:ring-ohm-green/20 text-white placeholder:text-gray-500 transition-all"
                       />
                       {form.formState.errors.email && (
-                        <p className="text-sm text-red-400 mt-1">{form.formState.errors.email.message}</p>
+                        <p className="text-sm text-ohm-orange mt-1">{form.formState.errors.email.message}</p>
                       )}
                     </div>
                     <Button 
                       type="submit"
                       disabled={submitWaitlist.isPending}
-                      className="h-12 px-8 bg-gradient-to-r from-primary to-cyan-600 hover:from-primary/90 hover:to-cyan-600/90 text-white shadow-lg shadow-primary/20 transition-all hover:scale-105"
+                      className="h-12 px-8 bg-gradient-to-r from-ohm-green to-ohm-blue hover:from-ohm-green/90 hover:to-ohm-blue/90 text-white shadow-lg shadow-ohm-green/20 transition-all hover:scale-105"
                     >
                       {submitWaitlist.isPending ? (
                         <>
@@ -398,9 +398,9 @@ export default function ComingSoon() {
                     </Button>
                   </div>
                   <p className="text-xs text-gray-500 text-center flex items-center justify-center gap-1">
-                    <Star className="w-3 h-3" />
+                    <Star className="w-3 h-3 text-ohm-green" />
                     No spam, ever. Unsubscribe anytime.
-                    <Star className="w-3 h-3" />
+                    <Star className="w-3 h-3 text-ohm-green" />
                   </p>
                 </form>
               )}
@@ -425,7 +425,7 @@ export default function ComingSoon() {
                     <feature.icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm text-white group-hover:text-primary transition-colors">{feature.title}</h4>
+                    <h4 className="font-semibold text-sm text-white group-hover:text-ohm-green transition-colors">{feature.title}</h4>
                     <p className="text-xs text-gray-400">{feature.description}</p>
                   </div>
                 </motion.div>
@@ -442,12 +442,12 @@ export default function ComingSoon() {
               <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <div className="flex items-center gap-3 text-sm">
                   <div className="flex items-center gap-2 text-gray-400">
-                    <Clock className="w-4 h-4 text-primary" />
+                    <Clock className="w-4 h-4 text-ohm-green" />
                     <span>Launching in 120 days</span>
                   </div>
                   <div className="w-px h-4 bg-gray-700 hidden sm:block" />
                   <div className="flex items-center gap-2 text-gray-400">
-                    <Mail className="w-4 h-4 text-cyan-400" />
+                    <Mail className="w-4 h-4 text-ohm-blue" />
                     <span>Priority access for early signups</span>
                   </div>
                 </div>
@@ -480,24 +480,24 @@ export default function ComingSoon() {
           className="mt-8 text-center"
         >
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link to="/" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-1">
+            <Link to="/" className="text-gray-400 hover:text-ohm-green transition-colors flex items-center gap-1">
               Home
             </Link>
-            <Link to="/product" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-1">
+            <Link to="/product" className="text-gray-400 hover:text-ohm-green transition-colors flex items-center gap-1">
               Product
             </Link>
-            <Link to="/contact" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-1">
+            <Link to="/contact" className="text-gray-400 hover:text-ohm-green transition-colors flex items-center gap-1">
               Contact
             </Link>
-            <Link to="/pricing" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-1">
+            <Link to="/pricing" className="text-gray-400 hover:text-ohm-green transition-colors flex items-center gap-1">
               Pricing
             </Link>
-            <Link to="/energy-tips" className="text-gray-400 hover:text-primary transition-colors flex items-center gap-1">
+            <Link to="/energy-tips" className="text-gray-400 hover:text-ohm-green transition-colors flex items-center gap-1">
               Energy Tips
             </Link>
           </div>
           <p className="text-xs text-gray-500 mt-4 flex items-center justify-center gap-1">
-            © 2026 OhmPlus. All rights reserved. Built with <Heart className="w-3 h-3 inline text-red-400 animate-pulse" /> for Africa.
+            © 2026 OhmPlus. All rights reserved. Built with <Heart className="w-3 h-3 inline text-ohm-orange animate-pulse" /> for Africa.
           </p>
         </motion.div>
       </div>

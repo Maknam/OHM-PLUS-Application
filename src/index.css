@@ -7,6 +7,14 @@
 
 @layer base {
   :root {
+    /* Ohm Plus Brand Colors - Light Mode (if needed) */
+    --ohm-blue: #004B9E;
+    --ohm-green: #0D9444;
+    --ohm-orange: #FF4E00;
+    --ohm-dark: #1A1A1A;
+    --ohm-light: #FFFFFF;
+    
+    /* Dark Mode Theme (Your existing setup) */
     --background: 207 72% 10%;
     --foreground: 0 0% 100%;
     
@@ -16,20 +24,24 @@
     --popover: 207 72% 10%;
     --popover-foreground: 0 0% 100%;
     
+    /* Map Ohm Blue to primary */
     --primary: 207 100% 40%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 219 64% 34%;
+    /* Map Ohm Green to secondary */
+    --secondary: 140 84% 32%;
     --secondary-foreground: 0 0% 100%;
     
+    /* Keep existing */
     --muted: 207 40% 20%;
     --muted-foreground: 207 20% 70%;
     
+    /* Map Ohm Orange to destructive/warning */
+    --destructive: 18 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    
     --accent: 207 100% 40%;
     --accent-foreground: 0 0% 100%;
-    
-    --destructive: 358 80% 47%;
-    --destructive-foreground: 0 0% 100%;
     
     --border: 207 40% 20%;
     --input: 207 40% 20%;
@@ -45,6 +57,15 @@
     --sidebar-accent: 207 40% 20%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-ring: 207 100% 40%;
+  }
+  
+  /* Optional: Light mode variant using Ohm Plus colors */
+  .light-mode {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --ohm-blue: #004B9E;
+    --ohm-green: #0D9444;
+    --ohm-orange: #FF4E00;
   }
 }
 
@@ -66,11 +87,72 @@
     background-attachment: fixed;
   }
   
+  /* Ohm Plus Typography */
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-wide;
   }
 }
 
+/* Ohm Plus Custom Utility Classes */
+@layer utilities {
+  /* Ohm Plus Brand Colors */
+  .bg-ohm-blue { background-color: #004B9E; }
+  .bg-ohm-green { background-color: #0D9444; }
+  .bg-ohm-orange { background-color: #FF4E00; }
+  .bg-ohm-dark { background-color: #1A1A1A; }
+  .bg-ohm-light { background-color: #FFFFFF; }
+  
+  .text-ohm-blue { color: #004B9E; }
+  .text-ohm-green { color: #0D9444; }
+  .text-ohm-orange { color: #FF4E00; }
+  .text-ohm-dark { color: #1A1A1A; }
+  .text-ohm-light { color: #FFFFFF; }
+  
+  .border-ohm-blue { border-color: #004B9E; }
+  .border-ohm-green { border-color: #0D9444; }
+  .border-ohm-orange { border-color: #FF4E00; }
+  
+  /* 60-30-10 Rule Classes */
+  .surface-60 {
+    @apply bg-white dark:bg-gray-900;
+  }
+  
+  .structural-30 {
+    @apply bg-ohm-blue text-white;
+  }
+  
+  .action-success {
+    @apply bg-ohm-green text-white;
+  }
+  
+  .action-alert {
+    @apply bg-ohm-orange text-white;
+  }
+  
+  /* Gradient backgrounds using Ohm colors */
+  .bg-gradient-ohm {
+    background: linear-gradient(135deg, #004B9E 0%, #0D9444 100%);
+  }
+  
+  .bg-gradient-ohm-alert {
+    background: linear-gradient(135deg, #FF4E00 0%, #004B9E 100%);
+  }
+  
+  /* Glass morphism with Ohm colors */
+  .glass-ohm {
+    background: rgba(0, 75, 158, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 75, 158, 0.2);
+  }
+  
+  .glass-ohm-green {
+    background: rgba(13, 148, 68, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(13, 148, 68, 0.2);
+  }
+}
+
+/* Existing grid pattern */
 .bg-grid-white\/5 {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgba(255,255,255,0.05)'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E");
 }

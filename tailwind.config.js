@@ -12,6 +12,16 @@ export default {
         display: ["Barlow Condensed", "sans-serif"],
       },
       colors: {
+        // Ohm Plus Brand Colors
+        ohm: {
+          blue: '#004B9E',
+          green: '#0D9444',
+          orange: '#FF4E00',
+          dark: '#1A1A1A',
+          light: '#FFFFFF',
+        },
+        
+        // Keep existing shadcn colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

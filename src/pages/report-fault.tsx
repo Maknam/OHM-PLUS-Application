@@ -45,12 +45,12 @@ export default function ReportFault() {
   };
 
   const faultTypes = [
-    { value: "no_power", label: "No Power / Total Outage", icon: Zap, color: "text-red-400" },
-    { value: "voltage", label: "Voltage Drop / Fluctuations", icon: AlertTriangle, color: "text-yellow-400" },
-    { value: "surge", label: "Power Surge", icon: Zap, color: "text-orange-400" },
-    { value: "spark", label: "Sparking Wire / Transformer Issue", icon: AlertTriangle, color: "text-red-500" },
-    { value: "pole", label: "Fallen Pole", icon: MapPin, color: "text-orange-500" },
-    { value: "meter", label: "Meter Fault", icon: Home, color: "text-blue-400" },
+    { value: "no_power", label: "No Power / Total Outage", icon: Zap, color: "text-ohm-orange" },
+    { value: "voltage", label: "Voltage Drop / Fluctuations", icon: AlertTriangle, color: "text-ohm-orange" },
+    { value: "surge", label: "Power Surge", icon: Zap, color: "text-ohm-orange" },
+    { value: "spark", label: "Sparking Wire / Transformer Issue", icon: AlertTriangle, color: "text-ohm-orange" },
+    { value: "pole", label: "Fallen Pole", icon: MapPin, color: "text-ohm-orange" },
+    { value: "meter", label: "Meter Fault", icon: Home, color: "text-ohm-blue" },
     { value: "other", label: "Other", icon: AlertCircle, color: "text-gray-400" }
   ];
 
@@ -64,10 +64,10 @@ export default function ReportFault() {
   ];
 
   const emergencyTips = [
-    { icon: Shield, text: "Stay away from fallen power lines - at least 10 meters", color: "text-red-400" },
-    { icon: Phone, text: "Call emergency services if there's fire or injury", color: "text-orange-400" },
-    { icon: AlertTriangle, text: "Don't touch electrical panels with wet hands", color: "text-yellow-400" },
-    { icon: Clock, text: "Save your meter reading before reporting", color: "text-blue-400" }
+    { icon: Shield, text: "Stay away from fallen power lines - at least 10 meters", color: "text-ohm-orange" },
+    { icon: Phone, text: "Call emergency services if there's fire or injury", color: "text-ohm-orange" },
+    { icon: AlertTriangle, text: "Don't touch electrical panels with wet hands", color: "text-ohm-orange" },
+    { icon: Clock, text: "Save your meter reading before reporting", color: "text-ohm-blue" }
   ];
 
   return (
@@ -75,10 +75,10 @@ export default function ReportFault() {
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a] via-[#0f0f2a] to-[#1a1a3e]" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-500/10 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,114,206,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,114,206,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-ohm-orange/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-ohm-orange/10 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-ohm-blue/5 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,75,158,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,75,158,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
       </div>
 
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
@@ -89,12 +89,12 @@ export default function ReportFault() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/20 backdrop-blur-sm border border-orange-500/30 text-orange-500 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ohm-orange/20 backdrop-blur-sm border border-ohm-orange/30 text-ohm-orange text-sm font-medium mb-6">
             <AlertTriangle className="w-4 h-4" />
             24/7 Emergency Response
           </div>
           <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
-            Report a <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Fault</span>
+            Report a <span className="text-transparent bg-clip-text bg-gradient-to-r from-ohm-orange to-ohm-orange">Fault</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Experiencing power issues? Report an outage or technical fault to our rapid response team. 
@@ -109,10 +109,10 @@ export default function ReportFault() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-8"
         >
-          <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-4">
+          <div className="bg-ohm-orange/10 border border-ohm-orange/20 rounded-xl p-4">
             <div className="flex items-center gap-3 mb-3">
-              <AlertTriangle className="w-5 h-5 text-red-400" />
-              <h3 className="text-sm font-bold text-red-400">Safety First</h3>
+              <AlertTriangle className="w-5 h-5 text-ohm-orange" />
+              <h3 className="text-sm font-bold text-ohm-orange">Safety First</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {emergencyTips.map((tip, index) => (
@@ -131,18 +131,18 @@ export default function ReportFault() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Card className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border-green-500/30 text-center py-12 overflow-hidden">
-              <div className="absolute inset-0 bg-green-500/5" />
+            <Card className="bg-gradient-to-br from-ohm-green/10 to-ohm-green/10 border-ohm-green/30 text-center py-12 overflow-hidden">
+              <div className="absolute inset-0 bg-ohm-green/5" />
               <CardContent className="relative z-10">
-                <div className="w-24 h-24 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-green-500/50 animate-pulse">
-                  <CheckCircle2 className="w-12 h-12 text-green-500" />
+                <div className="w-24 h-24 bg-ohm-green/20 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-ohm-green/50 animate-pulse">
+                  <CheckCircle2 className="w-12 h-12 text-ohm-green" />
                 </div>
                 <h2 className="text-3xl font-bold text-white mb-3">Fault Reported Successfully!</h2>
                 <p className="text-gray-300 mb-6 max-w-md mx-auto">
                   Our technical team has been notified and will prioritize your issue. We'll contact you shortly if we need more information.
                 </p>
-                <div className="bg-black/40 backdrop-blur-sm border border-green-500/30 rounded-xl p-5 inline-block mb-8">
-                  <p className="text-sm text-green-400 mb-2">Your Ticket Reference Number</p>
+                <div className="bg-black/40 backdrop-blur-sm border border-ohm-green/30 rounded-xl p-5 inline-block mb-8">
+                  <p className="text-sm text-ohm-green mb-2">Your Ticket Reference Number</p>
                   <p className="text-3xl font-mono font-bold text-white tracking-wider" data-testid="text-ticket-id">
                     {ticketId}
                   </p>
@@ -157,13 +157,13 @@ export default function ReportFault() {
                       });
                     }} 
                     variant="outline" 
-                    className="border-green-500/30 text-white hover:bg-green-500/10"
+                    className="border-ohm-green/30 text-white hover:bg-ohm-green/10"
                     data-testid="button-report-another"
                   >
                     Report Another Fault
                   </Button>
                   <Link to="/contact">
-                    <Button className="bg-primary hover:bg-primary/90 text-white">
+                    <Button className="bg-ohm-blue hover:bg-ohm-blue/90 text-white">
                       Contact Support
                     </Button>
                   </Link>
@@ -177,8 +177,8 @@ export default function ReportFault() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Card className="bg-black/40 backdrop-blur-md border-orange-500/30 overflow-hidden">
-              <div className="h-1 bg-gradient-to-r from-orange-500 to-red-500" />
+            <Card className="bg-black/40 backdrop-blur-md border-ohm-orange/30 overflow-hidden">
+              <div className="h-1 bg-gradient-to-r from-ohm-orange to-ohm-orange" />
               <CardContent className="p-6 md:p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -193,7 +193,7 @@ export default function ReportFault() {
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="John Doe"
-                        className="bg-black/50 border-orange-500/30 text-white focus:border-orange-500 focus:ring-orange-500/20"
+                        className="bg-black/50 border-ohm-orange/30 text-white focus:border-ohm-orange focus:ring-ohm-orange/20"
                         data-testid="input-fault-name"
                       />
                     </div>
@@ -209,7 +209,7 @@ export default function ReportFault() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="+233 XX XXX XXXX"
-                        className="bg-black/50 border-orange-500/30 text-white focus:border-orange-500 focus:ring-orange-500/20"
+                        className="bg-black/50 border-ohm-orange/30 text-white focus:border-ohm-orange focus:ring-ohm-orange/20"
                         data-testid="input-fault-phone"
                       />
                     </div>
@@ -226,7 +226,7 @@ export default function ReportFault() {
                         value={formData.account}
                         onChange={handleInputChange}
                         placeholder="Enter your meter number"
-                        className="bg-black/50 border-orange-500/30 text-white focus:border-orange-500 focus:ring-orange-500/20"
+                        className="bg-black/50 border-ohm-orange/30 text-white focus:border-ohm-orange focus:ring-ohm-orange/20"
                         data-testid="input-fault-account"
                       />
                     </div>
@@ -236,12 +236,12 @@ export default function ReportFault() {
                         Region
                       </Label>
                       <Select required onValueChange={(value) => handleSelectChange("region", value)}>
-                        <SelectTrigger className="bg-black/50 border-orange-500/30 text-white focus:border-orange-500">
+                        <SelectTrigger className="bg-black/50 border-ohm-orange/30 text-white focus:border-ohm-orange">
                           <SelectValue placeholder="Select a region" />
                         </SelectTrigger>
-                        <SelectContent className="bg-black/90 border-orange-500/30">
+                        <SelectContent className="bg-black/90 border-ohm-orange/30">
                           {regions.map((region) => (
-                            <SelectItem key={region.value} value={region.value} className="text-white hover:bg-orange-500/20">
+                            <SelectItem key={region.value} value={region.value} className="text-white hover:bg-ohm-orange/20">
                               <span className="flex items-center gap-2">
                                 <span>{region.emoji}</span>
                                 <span>{region.label}</span>
@@ -259,12 +259,12 @@ export default function ReportFault() {
                       Fault Type
                     </Label>
                     <Select required onValueChange={(value) => handleSelectChange("faultType", value)}>
-                      <SelectTrigger className="bg-black/50 border-orange-500/30 text-white focus:border-orange-500">
+                      <SelectTrigger className="bg-black/50 border-ohm-orange/30 text-white focus:border-ohm-orange">
                         <SelectValue placeholder="What is the issue?" />
                       </SelectTrigger>
-                      <SelectContent className="bg-black/90 border-orange-500/30">
+                      <SelectContent className="bg-black/90 border-ohm-orange/30">
                         {faultTypes.map((fault) => (
-                          <SelectItem key={fault.value} value={fault.value} className="text-white hover:bg-orange-500/20">
+                          <SelectItem key={fault.value} value={fault.value} className="text-white hover:bg-ohm-orange/20">
                             <span className="flex items-center gap-2">
                               <fault.icon className={`w-4 h-4 ${fault.color}`} />
                               <span>{fault.label}</span>
@@ -286,7 +286,7 @@ export default function ReportFault() {
                       value={formData.address}
                       onChange={handleInputChange}
                       placeholder="House number, Street, Landmark for easy identification"
-                      className="bg-black/50 border-orange-500/30 text-white focus:border-orange-500 focus:ring-orange-500/20"
+                      className="bg-black/50 border-ohm-orange/30 text-white focus:border-ohm-orange focus:ring-ohm-orange/20"
                       data-testid="input-fault-address"
                     />
                   </div>
@@ -300,7 +300,7 @@ export default function ReportFault() {
                       value={formData.description}
                       onChange={handleInputChange}
                       placeholder="Please provide any additional details that might help our team diagnose and resolve the issue faster."
-                      className="bg-black/50 border-orange-500/30 text-white focus:border-orange-500 focus:ring-orange-500/20 resize-none"
+                      className="bg-black/50 border-ohm-orange/30 text-white focus:border-ohm-orange focus:ring-ohm-orange/20 resize-none"
                       data-testid="input-fault-desc"
                     />
                   </div>
@@ -308,7 +308,7 @@ export default function ReportFault() {
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-lg h-14 shadow-lg shadow-orange-500/20"
+                    className="w-full bg-gradient-to-r from-ohm-orange to-ohm-orange hover:from-ohm-orange/90 hover:to-ohm-orange/90 text-white text-lg h-14 shadow-lg shadow-ohm-orange/20"
                     disabled={isSubmitting}
                     data-testid="button-fault-submit"
                   >
@@ -338,10 +338,10 @@ export default function ReportFault() {
         >
           <p className="text-sm text-gray-400">
             Need immediate assistance? Call our emergency hotline: 
-            <span className="text-primary font-bold ml-2">+233 (0) 55 123 4567</span>
+            <span className="text-ohm-green font-bold ml-2">+233 (0) 55 123 4567</span>
           </p>
           <p className="text-xs text-gray-500 mt-2">
-            For Ghana • For Nigeria: <span className="text-primary">+234 (0) 80 123 4567</span>
+            For Ghana • For Nigeria: <span className="text-ohm-green">+234 (0) 80 123 4567</span>
           </p>
         </motion.div>
       </div>

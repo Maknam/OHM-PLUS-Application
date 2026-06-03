@@ -23,9 +23,9 @@ export default function Solutions() {
         "Dispute estimated bills with real data"
       ],
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
-      gradient: "from-blue-600/20 to-cyan-600/10",
-      borderColor: "border-blue-500/30",
-      iconBg: "bg-blue-500/20"
+      gradient: "from-ohm-blue/20 to-ohm-blue/10",
+      borderColor: "border-ohm-blue/30",
+      iconBg: "bg-ohm-blue/20"
     },
     {
       id: "smes-retail",
@@ -41,9 +41,9 @@ export default function Solutions() {
         "Automatic usage reports for accounting"
       ],
       image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop",
-      gradient: "from-green-600/20 to-emerald-600/10",
-      borderColor: "border-green-500/30",
-      iconBg: "bg-green-500/20"
+      gradient: "from-ohm-green/20 to-ohm-green/10",
+      borderColor: "border-ohm-green/30",
+      iconBg: "bg-ohm-green/20"
     },
     {
       id: "industrial",
@@ -59,9 +59,9 @@ export default function Solutions() {
         "Comprehensive three-phase monitoring"
       ],
       image: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&h=500&fit=crop",
-      gradient: "from-orange-600/20 to-red-600/10",
-      borderColor: "border-orange-500/30",
-      iconBg: "bg-orange-500/20"
+      gradient: "from-ohm-orange/20 to-ohm-orange/10",
+      borderColor: "border-ohm-orange/30",
+      iconBg: "bg-ohm-orange/20"
     },
     {
       id: "telecom",
@@ -77,9 +77,9 @@ export default function Solutions() {
         "Centralized dashboard for all sites"
       ],
       image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&h=500&fit=crop",
-      gradient: "from-purple-600/20 to-pink-600/10",
-      borderColor: "border-purple-500/30",
-      iconBg: "bg-purple-500/20"
+      gradient: "from-ohm-blue/20 to-ohm-blue/10",
+      borderColor: "border-ohm-blue/30",
+      iconBg: "bg-ohm-blue/20"
     },
     {
       id: "data-centers",
@@ -95,9 +95,9 @@ export default function Solutions() {
         "Reduce cooling energy by 25%"
       ],
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop",
-      gradient: "from-cyan-600/20 to-blue-600/10",
-      borderColor: "border-cyan-500/30",
-      iconBg: "bg-cyan-500/20"
+      gradient: "from-ohm-green/20 to-ohm-green/10",
+      borderColor: "border-ohm-green/30",
+      iconBg: "bg-ohm-green/20"
     },
     {
       id: "facility-managers",
@@ -113,17 +113,17 @@ export default function Solutions() {
         "Reduce management overhead by 50%"
       ],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-      gradient: "from-red-600/20 to-rose-600/10",
-      borderColor: "border-red-500/30",
-      iconBg: "bg-red-500/20"
+      gradient: "from-ohm-blue/20 to-ohm-blue/10",
+      borderColor: "border-ohm-blue/30",
+      iconBg: "bg-ohm-blue/20"
     }
   ];
 
   const stats = [
-    { icon: Users, value: "10,000+", label: "Happy Customers", color: "text-blue-400" },
-    { icon: Globe, value: "2", label: "Countries", color: "text-green-400" },
-    { icon: Zap, value: "30%", label: "Average Savings", color: "text-yellow-400" },
-    { icon: Award, value: "99.9%", label: "Uptime", color: "text-purple-400" },
+    { icon: Users, value: "10,000+", label: "Happy Customers", color: "text-ohm-blue" },
+    { icon: Globe, value: "2", label: "Countries", color: "text-ohm-green" },
+    { icon: Zap, value: "30%", label: "Average Savings", color: "text-ohm-green" },
+    { icon: Award, value: "99.9%", label: "Uptime", color: "text-ohm-blue" },
   ];
 
   return (
@@ -131,12 +131,12 @@ export default function Solutions() {
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a] via-[#0f0f2a] to-[#1a1a3e]" />
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=2070')] bg-cover bg-fixed opacity-10" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[100px]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/28214102/pexels-photo-28214102.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-10" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-ohm-blue/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-ohm-green/10 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-ohm-blue/5 rounded-full blur-[100px]" />
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,114,206,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,114,206,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,75,158,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,75,158,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
       </div>
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
@@ -147,12 +147,12 @@ export default function Solutions() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-primary text-sm font-medium mb-6 shadow-lg">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ohm-blue/20 backdrop-blur-sm border border-ohm-blue/30 text-ohm-green text-sm font-medium mb-6 shadow-lg">
             <Zap className="w-4 h-4" />
             Tailored Solutions for Every Need
           </div>
           <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
-            Solutions by <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">Industry</span>
+            Solutions by <span className="text-transparent bg-clip-text bg-gradient-to-r from-ohm-green to-ohm-blue">Industry</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             From single-family homes to distributed telecom infrastructure, Omhero scales to meet your energy monitoring needs.
@@ -167,8 +167,8 @@ export default function Solutions() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
         >
           {stats.map((stat, i) => (
-            <div key={i} className="bg-black/30 backdrop-blur-md rounded-2xl p-6 text-center border border-white/10 hover:border-primary/30 transition-all group">
-              <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div key={i} className="bg-black/30 backdrop-blur-md rounded-2xl p-6 text-center border border-white/10 hover:border-ohm-blue/30 transition-all group">
+              <div className="w-14 h-14 rounded-full bg-ohm-blue/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <stat.icon className={`w-7 h-7 ${stat.color}`} />
               </div>
               <div className={`text-3xl font-bold text-white mb-1 ${stat.color}`}>{stat.value}</div>
@@ -205,7 +205,7 @@ export default function Solutions() {
                 </div>
                 
                 <CardContent className="p-6 flex flex-col flex-1 pt-8">
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-ohm-green transition-colors">
                     {sol.title}
                   </h3>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">{sol.desc}</p>
@@ -214,17 +214,17 @@ export default function Solutions() {
                   <div className="space-y-2 mb-6">
                     {sol.benefits.slice(0, 3).map((benefit, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-gray-400">
-                        <CheckCircle2 className="w-3 h-3 text-primary shrink-0" />
+                        <CheckCircle2 className="w-3 h-3 text-ohm-green shrink-0" />
                         <span>{benefit}</span>
                       </div>
                     ))}
                     {sol.benefits.length > 3 && (
-                      <div className="text-xs text-primary">+{sol.benefits.length - 3} more benefits</div>
+                      <div className="text-xs text-ohm-green">+{sol.benefits.length - 3} more benefits</div>
                     )}
                   </div>
                   
                   <Link to={`/solutions/${sol.id}`} className="mt-auto">
-                    <Button variant="outline" className={`w-full ${sol.borderColor} text-white hover:bg-primary/20 hover:border-primary transition-all gap-2 group-hover:gap-3`}>
+                    <Button variant="outline" className={`w-full ${sol.borderColor} text-white hover:bg-ohm-blue/20 hover:border-ohm-green transition-all gap-2 group-hover:gap-3`}>
                       Learn More <ArrowRight className="w-4 h-4" />
                     </Button>
                   </Link>
@@ -241,15 +241,15 @@ export default function Solutions() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="relative mb-24"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-cyan-500/10 rounded-3xl blur-xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ohm-blue/10 via-transparent to-ohm-green/10 rounded-3xl blur-xl" />
           <div className="relative bg-black/40 backdrop-blur-md rounded-3xl p-10 md:p-16 border border-white/10">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-medium mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ohm-blue/20 border border-ohm-blue/30 text-ohm-green text-sm font-medium mb-4">
                 <Star className="w-4 h-4" />
                 Why Trust Us
               </div>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">OHM Plus?</span>
+                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-ohm-green to-ohm-blue">OHM Plus?</span>
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 We combine cutting-edge technology with local expertise to deliver solutions that work for Africa.
@@ -258,29 +258,29 @@ export default function Solutions() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center group">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all group-hover:shadow-lg group-hover:shadow-primary/20">
-                  <Zap className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-ohm-blue/30 to-ohm-blue/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all group-hover:shadow-lg group-hover:shadow-ohm-blue/20">
+                  <Zap className="w-8 h-8 text-ohm-green" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Save Up to 30%</h3>
                 <p className="text-gray-400 text-sm">On your energy bills</p>
               </div>
               <div className="text-center group">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500/30 to-purple-500/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
-                  <Shield className="w-8 h-8 text-purple-400" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-ohm-blue/30 to-ohm-blue/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
+                  <Shield className="w-8 h-8 text-ohm-green" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">24/7 Protection</h3>
                 <p className="text-gray-400 text-sm">From electrical hazards</p>
               </div>
               <div className="text-center group">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500/30 to-cyan-500/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
-                  <Clock className="w-8 h-8 text-cyan-400" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-ohm-blue/30 to-ohm-blue/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
+                  <Clock className="w-8 h-8 text-ohm-green" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Real-Time Data</h3>
                 <p className="text-gray-400 text-sm">Updated every 5 seconds</p>
               </div>
               <div className="text-center group">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-500/30 to-green-500/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
-                  <TrendingDown className="w-8 h-8 text-green-400" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-ohm-green/30 to-ohm-green/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
+                  <TrendingDown className="w-8 h-8 text-ohm-green" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Reduce Waste</h3>
                 <p className="text-gray-400 text-sm">Identify inefficiencies</p>
@@ -296,8 +296,8 @@ export default function Solutions() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="relative"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/10 to-cyan-500/30 rounded-2xl blur-2xl" />
-          <div className="relative bg-gradient-to-r from-primary/20 to-cyan-500/20 backdrop-blur-md rounded-2xl p-12 text-center border border-white/20 shadow-2xl">
+          <div className="absolute inset-0 bg-gradient-to-r from-ohm-blue/30 via-ohm-blue/10 to-ohm-green/30 rounded-2xl blur-2xl" />
+          <div className="relative bg-gradient-to-r from-ohm-blue/20 to-ohm-green/20 backdrop-blur-md rounded-2xl p-12 text-center border border-white/20 shadow-2xl">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
               Not Sure Which Solution Fits?
             </h2>
@@ -306,7 +306,7 @@ export default function Solutions() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/30 text-lg px-8 h-14">
+                <Button size="lg" className="bg-ohm-green hover:bg-ohm-green/90 text-white shadow-lg shadow-ohm-green/30 text-lg px-8 h-14">
                   Talk to an Expert <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
