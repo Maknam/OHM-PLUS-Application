@@ -82,7 +82,6 @@ export function Navbar() {
 
   const isActive = (path: string) => location.pathname === path;
   
-  // 30% OPERATIONAL STRUCTURES - Blue (#004B9E) for navigation links
   const linkClassName = "text-sm font-medium transition-colors duration-200 text-foreground/70 hover:text-[#004B9E]";
   const activeLinkClassName = "text-sm font-medium transition-colors duration-200 text-[#004B9E]";
 
@@ -101,23 +100,22 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        {/* Logo - Full size on both desktop and mobile */}
+        {/* Logo - Properly sized for both desktop and mobile */}
         <Link
           to="/"
-          className="flex items-center gap-3 text-foreground hover:text-[#004B9E] transition-colors flex-shrink-0"
+          className="flex items-center gap-2 md:gap-3 text-foreground hover:text-[#004B9E] transition-colors flex-shrink-0"
           data-testid="link-logo"
         >
-          <div className="w-15 h-12 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
+          <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
             <img 
               src={logoImage} 
               alt="OHM Plus Logo" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-          {/* Navigation Links - 30% Operational (Blue on hover/active) */}
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -129,7 +127,7 @@ export function Navbar() {
             </Link>
           ))}
 
-          {/* Services Dropdown - 30% Operational */}
+          {/* Services Dropdown */}
           <div className="relative" ref={servicesDropdownRef}>
             <button
               onClick={() => setServicesOpen((v) => !v)}
@@ -161,7 +159,7 @@ export function Navbar() {
             )}
           </div>
 
-          {/* Tools Dropdown - 30% Operational */}
+          {/* Tools Dropdown */}
           <div className="relative" ref={toolsDropdownRef}>
             <button
               onClick={() => setToolsOpen((v) => !v)}
@@ -195,12 +193,11 @@ export function Navbar() {
 
           <ThemeSwitcher />
 
-          {/* Auth Section - 30% Operational + 10% Action (Orange CTA) */}
+          {/* Auth Section */}
           <div className="flex items-center gap-4 pl-4 border-l border-theme ml-2">
             <Link to="/comingsoon" className={linkClassName}>
               Login
             </Link>
-            {/* 10% ACTION HIGHLIGHT - Brand Orange (#FF4E00) for high-priority CTA */}
             <Link to="/contact">
               <Button className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-[0_0_20px_rgba(255,78,0,0.4)] font-semibold transition-all duration-200 hover:scale-105">
                 Book Demo
@@ -219,12 +216,30 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu - Solid background for readability */}
+      {/* Mobile Menu */}
       <div
         className={`md:hidden fixed top-20 left-0 w-full bg-theme border-t border-theme shadow-2xl p-6 flex flex-col gap-4 max-h-[calc(100vh-5rem)] overflow-y-auto transition-all duration-300 transform ${
           isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
         }`}
       >
+        {/* Mobile Logo in Menu Header */}
+        <div className="flex items-center justify-between pb-4 border-b border-theme mb-2">
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-2"
+          >
+            <div className="w-10 h-10 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 overflow-hidden">
+              <img 
+                src={logoImage} 
+                alt="OHM Plus Logo" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <span className="font-display font-bold text-lg tracking-wide text-foreground">OHM PLUS</span>
+          </Link>
+        </div>
+
         {/* Mobile Navigation Links */}
         <div className="space-y-1">
           {navLinks.map((link) => (
@@ -243,7 +258,7 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Services Section - 30% Operational with Green accent */}
+        {/* Services Section */}
         <div className="mt-2">
           <p className="text-sm font-semibold text-[#0D9444] mb-2 px-3">Services</p>
           <div className="flex flex-col gap-1 pl-4 border-l-2 border-[#0D9444]/30 ml-2">
@@ -260,7 +275,7 @@ export function Navbar() {
           </div>
         </div>
 
-        {/* Tools Section - 30% Operational with Green accent */}
+        {/* Tools Section */}
         <div className="mt-2">
           <p className="text-sm font-semibold text-[#0D9444] mb-2 px-3">Tools</p>
           <div className="flex flex-col gap-1 pl-4 border-l-2 border-[#0D9444]/30 ml-2">
@@ -298,7 +313,7 @@ export function Navbar() {
           </Button>
         </Link>
 
-        {/* Social Media Icons - Brand Green for hover state (10% Action) */}
+        {/* Social Media Icons */}
         <div className="mt-6 pt-4 border-t border-theme">
           <p className="text-sm text-foreground/60 text-center mb-3">Follow Us</p>
           <div className="flex justify-center gap-6">

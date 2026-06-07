@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
-import { Zap, Mail, Phone, MapPin, FileText, Sparkles } from "lucide-react";
+import { Zap, Mail, Phone, MapPin, FileText, Sparkles, Facebook, Instagram, Linkedin } from "lucide-react";
 import logoImage from "@/assets/images/icon.jpeg";
 
 export function Footer() {
+  const socialLinks = [
+    { icon: Facebook, href: "https://facebook.com/ohmplus", label: "Facebook", color: "hover:text-[#1877F2]" },
+    { icon: Instagram, href: "https://instagram.com/ohmplus", label: "Instagram", color: "hover:text-[#E4405F]" },
+    { icon: Linkedin, href: "https://linkedin.com/company/ohmplus", label: "LinkedIn", color: "hover:text-[#0A66C2]" },
+  ];
+
   return (
     <footer className="bg-background border-t border-border pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -14,11 +20,11 @@ export function Footer() {
               className="flex items-center gap-2 text-foreground hover:text-[#0D9444] transition-colors"
               data-testid="link-logo"
             >
-              <div className="w-25 h-12 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
+              <div className="w-12 h-12 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
                 <img 
                   src={logoImage} 
                   alt="OHM Plus Logo" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </Link>
@@ -32,7 +38,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Product Links - 30% Operational (Blue on hover) */}
+          {/* Product Links - 30% Operational (Green on hover) */}
           <div>
             <h4 className="text-foreground font-display font-semibold tracking-wide text-lg mb-4">Product</h4>
             <ul className="space-y-3">
@@ -43,7 +49,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources Links - 30% Operational (Blue on hover) */}
+          {/* Resources Links - 30% Operational (Green on hover) */}
           <div>
             <h4 className="text-foreground font-display font-semibold tracking-wide text-lg mb-4">Resources</h4>
             <ul className="space-y-3">
@@ -80,6 +86,25 @@ export function Footer() {
                 <span>+234 (0) 701 234 5678</span>
               </li>
             </ul>
+
+            {/* Social Media Icons */}
+            <div className="mt-6">
+              <h4 className="text-foreground font-display font-semibold tracking-wide text-lg mb-4">Follow Us</h4>
+              <div className="flex gap-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 rounded-full bg-[#004B9E]/10 flex items-center justify-center text-foreground/60 ${social.color} hover:bg-[#004B9E]/20 transition-all hover:scale-110 transform duration-200`}
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
