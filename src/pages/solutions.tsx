@@ -23,9 +23,9 @@ export default function Solutions() {
         "Dispute estimated bills with real data"
       ],
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
-      gradient: "from-primary/20 to-primary/10",
-      borderColor: "border-primary/30",
-      iconBg: "bg-primary/20"
+      gradient: "from-[#004B9E]/20 to-[#004B9E]/10",
+      borderColor: "border-[#004B9E]/30",
+      iconBg: "bg-[#004B9E]/20"
     },
     {
       id: "smes-retail",
@@ -41,9 +41,9 @@ export default function Solutions() {
         "Automatic usage reports for accounting"
       ],
       image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop",
-      gradient: "from-secondary/20 to-secondary/10",
-      borderColor: "border-secondary/30",
-      iconBg: "bg-secondary/20"
+      gradient: "from-[#0D9444]/20 to-[#0D9444]/10",
+      borderColor: "border-[#0D9444]/30",
+      iconBg: "bg-[#0D9444]/20"
     },
     {
       id: "industrial",
@@ -59,9 +59,9 @@ export default function Solutions() {
         "Comprehensive three-phase monitoring"
       ],
       image: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&h=500&fit=crop",
-      gradient: "from-destructive/20 to-destructive/10",
-      borderColor: "border-destructive/30",
-      iconBg: "bg-destructive/20"
+      gradient: "from-[#FF4E00]/20 to-[#FF4E00]/10",
+      borderColor: "border-[#FF4E00]/30",
+      iconBg: "bg-[#FF4E00]/20"
     },
     {
       id: "telecom",
@@ -77,9 +77,9 @@ export default function Solutions() {
         "Centralized dashboard for all sites"
       ],
       image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&h=500&fit=crop",
-      gradient: "from-primary/20 to-primary/10",
-      borderColor: "border-primary/30",
-      iconBg: "bg-primary/20"
+      gradient: "from-[#004B9E]/20 to-[#004B9E]/10",
+      borderColor: "border-[#004B9E]/30",
+      iconBg: "bg-[#004B9E]/20"
     },
     {
       id: "data-centers",
@@ -95,9 +95,9 @@ export default function Solutions() {
         "Reduce cooling energy by 25%"
       ],
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop",
-      gradient: "from-secondary/20 to-secondary/10",
-      borderColor: "border-secondary/30",
-      iconBg: "bg-secondary/20"
+      gradient: "from-[#0D9444]/20 to-[#0D9444]/10",
+      borderColor: "border-[#0D9444]/30",
+      iconBg: "bg-[#0D9444]/20"
     },
     {
       id: "facility-managers",
@@ -113,28 +113,28 @@ export default function Solutions() {
         "Reduce management overhead by 50%"
       ],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-      gradient: "from-primary/20 to-primary/10",
-      borderColor: "border-primary/30",
-      iconBg: "bg-primary/20"
+      gradient: "from-[#004B9E]/20 to-[#004B9E]/10",
+      borderColor: "border-[#004B9E]/30",
+      iconBg: "bg-[#004B9E]/20"
     }
   ];
 
   const stats = [
-    { icon: Users, value: "10,000+", label: "Happy Customers", color: "text-primary" },
-    { icon: Globe, value: "2", label: "Countries", color: "text-secondary" },
-    { icon: Zap, value: "30%", label: "Average Savings", color: "text-secondary" },
-    { icon: Award, value: "99.9%", label: "Uptime", color: "text-primary" },
+    { icon: Users, value: "10,000+", label: "Happy Customers", color: "text-[#004B9E]" },
+    { icon: Globe, value: "2", label: "Countries", color: "text-[#0D9444]" },
+    { icon: Zap, value: "30%", label: "Average Savings", color: "text-[#0D9444]" },
+    { icon: Award, value: "99.9%", label: "Uptime", color: "text-[#004B9E]" },
   ];
 
   return (
-    <div className="pt-32 pb-20 min-h-screen relative overflow-hidden bg-theme">
+    <div className="pt-32 pb-20 min-h-screen relative overflow-hidden bg-background">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/28214102/pexels-photo-28214102.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#004B9E]/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0D9444]/10 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#004B9E]/5 rounded-full blur-[100px]" />
         {/* Theme-aware Grid Pattern */}
         <div className="theme-grid" />
       </div>
@@ -147,12 +147,12 @@ export default function Solutions() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-secondary text-sm font-medium mb-6 shadow-lg">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#004B9E]/20 backdrop-blur-sm border border-[#004B9E]/30 text-[#0D9444] text-sm font-medium mb-6 shadow-lg">
             <Zap className="w-4 h-4" />
             Tailored Solutions for Every Need
           </div>
           <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight">
-            Solutions by <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Industry</span>
+            Solutions by <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D9444] to-[#004B9E]">Industry</span>
           </h1>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
             From single-family homes to distributed telecom infrastructure, Omhero scales to meet your energy monitoring needs.
@@ -167,8 +167,8 @@ export default function Solutions() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
         >
           {stats.map((stat, i) => (
-            <div key={i} className="bg-muted/40 backdrop-blur-md rounded-2xl p-6 text-center border border-border hover:border-primary/30 transition-all group">
-              <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div key={i} className="bg-muted/40 backdrop-blur-md rounded-2xl p-6 text-center border border-border hover:border-[#004B9E]/30 transition-all group">
+              <div className="w-14 h-14 rounded-full bg-[#004B9E]/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <stat.icon className={`w-7 h-7 ${stat.color}`} />
               </div>
               <div className={`text-3xl font-bold text-foreground mb-1 ${stat.color}`}>{stat.value}</div>
@@ -205,7 +205,7 @@ export default function Solutions() {
                 </div>
                 
                 <CardContent className="p-6 flex flex-col flex-1 pt-8">
-                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-secondary transition-colors">
+                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-[#0D9444] transition-colors">
                     {sol.title}
                   </h3>
                   <p className="text-foreground/70 text-sm mb-4 leading-relaxed">{sol.desc}</p>
@@ -214,17 +214,17 @@ export default function Solutions() {
                   <div className="space-y-2 mb-6">
                     {sol.benefits.slice(0, 3).map((benefit, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-foreground/60">
-                        <CheckCircle2 className="w-3 h-3 text-secondary shrink-0" />
+                        <CheckCircle2 className="w-3 h-3 text-[#0D9444] shrink-0" />
                         <span>{benefit}</span>
                       </div>
                     ))}
                     {sol.benefits.length > 3 && (
-                      <div className="text-xs text-secondary">+{sol.benefits.length - 3} more benefits</div>
+                      <div className="text-xs text-[#0D9444]">+{sol.benefits.length - 3} more benefits</div>
                     )}
                   </div>
                   
                   <Link to={`/solutions/${sol.id}`} className="mt-auto">
-                    <Button variant="outline" className={`w-full ${sol.borderColor} text-foreground hover:bg-primary/20 hover:border-secondary transition-all gap-2 group-hover:gap-3`}>
+                    <Button variant="outline" className={`w-full ${sol.borderColor} text-foreground hover:bg-[#004B9E]/20 hover:border-[#0D9444] transition-all gap-2 group-hover:gap-3`}>
                       Learn More <ArrowRight className="w-4 h-4" />
                     </Button>
                   </Link>
@@ -241,15 +241,15 @@ export default function Solutions() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="relative mb-24"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-secondary/10 rounded-3xl blur-xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#004B9E]/10 via-transparent to-[#0D9444]/10 rounded-3xl blur-xl" />
           <div className="relative bg-muted/40 backdrop-blur-md rounded-3xl p-10 md:p-16 border border-border">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 text-secondary text-sm font-medium mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#004B9E]/20 border border-[#004B9E]/30 text-[#0D9444] text-sm font-medium mb-4">
                 <Star className="w-4 h-4" />
                 Why Trust Us
               </div>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
-                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">OHM Plus?</span>
+                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D9444] to-[#004B9E]">OHM Plus?</span>
               </h2>
               <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
                 We combine cutting-edge technology with local expertise to deliver solutions that work for Africa.
@@ -258,29 +258,29 @@ export default function Solutions() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center group">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all group-hover:shadow-lg group-hover:shadow-primary/20">
-                  <Zap className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#004B9E]/30 to-[#004B9E]/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all group-hover:shadow-lg group-hover:shadow-[#004B9E]/20">
+                  <Zap className="w-8 h-8 text-[#0D9444]" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Save Up to 30%</h3>
                 <p className="text-foreground/60 text-sm">On your energy bills</p>
               </div>
               <div className="text-center group">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
-                  <Shield className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#004B9E]/30 to-[#004B9E]/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
+                  <Shield className="w-8 h-8 text-[#0D9444]" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">24/7 Protection</h3>
                 <p className="text-foreground/60 text-sm">From electrical hazards</p>
               </div>
               <div className="text-center group">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
-                  <Clock className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#004B9E]/30 to-[#004B9E]/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
+                  <Clock className="w-8 h-8 text-[#0D9444]" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Real-Time Data</h3>
                 <p className="text-foreground/60 text-sm">Updated every 5 seconds</p>
               </div>
               <div className="text-center group">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-secondary/30 to-secondary/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
-                  <TrendingDown className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0D9444]/30 to-[#0D9444]/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all">
+                  <TrendingDown className="w-8 h-8 text-[#0D9444]" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Reduce Waste</h3>
                 <p className="text-foreground/60 text-sm">Identify inefficiencies</p>
@@ -289,15 +289,15 @@ export default function Solutions() {
           </div>
         </motion.div>
 
-        {/* CTA Section */}
+        {/* CTA Section - 10% ACTION HIGHLIGHT: Orange (#FF4E00) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="relative"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/10 to-secondary/30 rounded-2xl blur-2xl" />
-          <div className="relative bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur-md rounded-2xl p-12 text-center border border-border shadow-2xl">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#004B9E]/30 via-[#004B9E]/10 to-[#0D9444]/30 rounded-2xl blur-2xl" />
+          <div className="relative bg-gradient-to-r from-[#004B9E]/20 to-[#0D9444]/20 backdrop-blur-md rounded-2xl p-12 text-center border border-border shadow-2xl">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
               Not Sure Which Solution Fits?
             </h2>
@@ -306,12 +306,12 @@ export default function Solutions() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/contact">
-                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg shadow-secondary/30 text-lg px-8 h-14">
+                <Button size="lg" className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/30 text-lg px-8 h-14">
                   Talk to an Expert <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
               <Link to="/pricing">
-                <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-primary/10 text-lg px-8 h-14">
+                <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-[#004B9E]/10 text-lg px-8 h-14">
                   View Pricing
                 </Button>
               </Link>

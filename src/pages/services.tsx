@@ -21,7 +21,7 @@ const FloatingParticles = () => {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-primary/20"
+          className="absolute rounded-full bg-[#004B9E]/20"
           style={{
             width: particle.size,
             height: particle.size,
@@ -57,11 +57,11 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
       <Link to={service.href}>
         <div className="relative group h-full">
           {/* Glow effect on hover */}
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-secondary to-primary rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500" />
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0D9444] to-[#004B9E] rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500" />
           
-          <Card className="relative h-full bg-gradient-to-br from-muted/50 to-muted/30 backdrop-blur-md border border-border hover:border-secondary/40 transition-all duration-300 cursor-pointer overflow-hidden">
+          <Card className="relative h-full bg-gradient-to-br from-muted/50 to-muted/30 backdrop-blur-md border border-border hover:border-[#0D9444]/40 transition-all duration-300 cursor-pointer overflow-hidden">
             {/* Background gradient on hover */}
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0D9444]/5 to-[#004B9E]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
             <CardContent className="p-8 relative z-10">
               {/* Icon with animated background */}
@@ -74,8 +74,8 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
               </div>
 
               <h3 className="text-2xl font-display font-bold text-foreground mb-3 flex items-center justify-between gap-2">
-                <span className="group-hover:text-secondary transition-colors">{service.title}</span>
-                <ArrowRight className="w-5 h-5 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-secondary" />
+                <span className="group-hover:text-[#0D9444] transition-colors">{service.title}</span>
+                <ArrowRight className="w-5 h-5 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#0D9444]" />
               </h3>
               
               <p className="text-foreground/70 text-sm leading-relaxed mb-4">
@@ -106,13 +106,13 @@ const FeaturedService = () => (
     viewport={{ once: true }}
     className="relative mb-16"
   >
-    <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-3xl p-8 md:p-12 border border-border backdrop-blur-sm overflow-hidden">
-      <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl" />
+    <div className="bg-gradient-to-r from-[#004B9E]/20 via-[#0D9444]/20 to-[#004B9E]/20 rounded-3xl p-8 md:p-12 border border-border backdrop-blur-sm overflow-hidden">
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#004B9E]/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#0D9444]/20 rounded-full blur-3xl" />
       
       <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-secondary text-xs font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004B9E]/20 text-[#0D9444] text-xs font-medium mb-4">
             <Sparkles className="w-3 h-3" />
             Featured Service
           </div>
@@ -123,20 +123,20 @@ const FeaturedService = () => (
           </p>
           <div className="flex flex-wrap gap-4">
             <div className="flex items-center gap-2 text-sm text-foreground/70">
-              <CheckCircle2 className="w-4 h-4 text-secondary" />
+              <CheckCircle2 className="w-4 h-4 text-[#0D9444]" />
               Real-time rates
             </div>
             <div className="flex items-center gap-2 text-sm text-foreground/70">
-              <CheckCircle2 className="w-4 h-4 text-secondary" />
+              <CheckCircle2 className="w-4 h-4 text-[#0D9444]" />
               Savings estimate
             </div>
             <div className="flex items-center gap-2 text-sm text-foreground/70">
-              <CheckCircle2 className="w-4 h-4 text-secondary" />
+              <CheckCircle2 className="w-4 h-4 text-[#0D9444]" />
               Compare plans
             </div>
           </div>
           <Link to="/services/bill-calculator">
-            <Button className="mt-6 bg-gradient-to-r from-secondary to-secondary hover:from-secondary/90 hover:to-secondary/90 text-secondary-foreground">
+            <Button className="mt-6 bg-[#FF4E00] hover:bg-[#E04500] text-white">
               Try Calculator <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </Link>
@@ -145,7 +145,7 @@ const FeaturedService = () => (
           <div className="bg-muted/40 rounded-2xl p-6 border border-border">
             <div className="flex justify-between items-center mb-4">
               <span className="text-foreground/60 text-sm">Estimated Monthly Bill</span>
-              <span className="text-secondary text-sm">Savings: 30%</span>
+              <span className="text-[#0D9444] text-sm">Savings: 30%</span>
             </div>
             <div className="space-y-3">
               <div className="flex justify-between items-center">
@@ -153,14 +153,14 @@ const FeaturedService = () => (
                 <span className="text-foreground font-bold">₦25,000</span>
               </div>
               <div className="w-full bg-muted rounded-full h-2">
-                <div className="bg-secondary h-2 rounded-full" style={{ width: "70%" }} />
+                <div className="bg-[#0D9444] h-2 rounded-full" style={{ width: "70%" }} />
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-foreground/70">After Omhero</span>
-                <span className="text-secondary font-bold">₦17,500</span>
+                <span className="text-[#0D9444] font-bold">₦17,500</span>
               </div>
               <div className="mt-4 pt-4 border-t border-border text-center">
-                <span className="text-secondary font-bold">Save ₦7,500 monthly</span>
+                <span className="text-[#0D9444] font-bold">Save ₦7,500 monthly</span>
               </div>
             </div>
           </div>
@@ -187,9 +187,9 @@ const QuickStats = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: idx * 0.1 }}
-          className="bg-muted/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-border hover:border-primary/30 transition-all"
+          className="bg-muted/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-border hover:border-[#004B9E]/30 transition-all"
         >
-          <stat.icon className="w-8 h-8 text-secondary mx-auto mb-3" />
+          <stat.icon className="w-8 h-8 text-[#0D9444] mx-auto mb-3" />
           <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">{stat.value}</div>
           <div className="text-xs text-foreground/60">{stat.label}</div>
         </motion.div>
@@ -213,9 +213,9 @@ export default function Services() {
       description: "Estimate your monthly energy bill and calculate potential savings with our intelligent calculator.",
       icon: Calculator,
       href: "/services/bill-calculator",
-      color: "text-primary",
-      bg: "bg-primary/10",
-      borderColor: "border-primary/20",
+      color: "text-[#004B9E]",
+      bg: "bg-[#004B9E]/10",
+      borderColor: "border-[#004B9E]/20",
       tags: ["Real-time rates", "Savings estimate", "Compare plans"]
     },
     {
@@ -223,9 +223,9 @@ export default function Services() {
       description: "Log an outage, voltage drop, or sparking wire to our technical team for immediate response.",
       icon: AlertTriangle,
       href: "/services/report-fault",
-      color: "text-destructive",
-      bg: "bg-destructive/10",
-      borderColor: "border-destructive/20",
+      color: "text-[#FF4E00]",
+      bg: "bg-[#FF4E00]/10",
+      borderColor: "border-[#FF4E00]/20",
       tags: ["24/7 response", "Track status", "SMS alerts"]
     },
     {
@@ -233,9 +233,9 @@ export default function Services() {
       description: "Apply for a new property connection or Omhero device installation at your location.",
       icon: PlugZap,
       href: "/services/new-connection",
-      color: "text-secondary",
-      bg: "bg-secondary/10",
-      borderColor: "border-secondary/20",
+      color: "text-[#0D9444]",
+      bg: "bg-[#0D9444]/10",
+      borderColor: "border-[#0D9444]/20",
       tags: ["Fast approval", "Professional install", "3-5 days"]
     },
     {
@@ -243,9 +243,9 @@ export default function Services() {
       description: "Request an upgrade from your old post-paid meter to a smart pre-paid meter.",
       icon: Gauge,
       href: "/services/meter-upgrade",
-      color: "text-primary",
-      bg: "bg-primary/10",
-      borderColor: "border-primary/20",
+      color: "text-[#004B9E]",
+      bg: "bg-[#004B9E]/10",
+      borderColor: "border-[#004B9E]/20",
       tags: ["Smart meter", "Pre-paid option", "Remote control"]
     },
     {
@@ -253,9 +253,9 @@ export default function Services() {
       description: "Learn practical strategies to optimize your power usage and reduce monthly expenses.",
       icon: Lightbulb,
       href: "/energy-tips",
-      color: "text-destructive",
-      bg: "bg-destructive/10",
-      borderColor: "border-destructive/20",
+      color: "text-[#FF4E00]",
+      bg: "bg-[#FF4E00]/10",
+      borderColor: "border-[#FF4E00]/20",
       tags: ["Guides", "Video tutorials", "Checklists"]
     },
     {
@@ -263,24 +263,24 @@ export default function Services() {
       description: "View current residential and commercial electricity rates in Nigeria and Ghana.",
       icon: FileText,
       href: "/tariffs",
-      color: "text-secondary",
-      bg: "bg-secondary/10",
-      borderColor: "border-secondary/20",
+      color: "text-[#0D9444]",
+      bg: "bg-[#0D9444]/10",
+      borderColor: "border-[#0D9444]/20",
       tags: ["Updated rates", "Compare tariffs", "Calculator"]
     }
   ];
 
   return (
-    <div ref={containerRef} className="pt-32 pb-24 min-h-[100dvh] relative overflow-hidden bg-theme">
+    <div ref={containerRef} className="pt-32 pb-24 min-h-[100dvh] relative overflow-hidden bg-background">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
         
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/15 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-[#004B9E]/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#0D9444]/15 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#004B9E]/5 rounded-full blur-[100px]" />
         <div className="theme-grid" />
         
         <FloatingParticles />
@@ -298,12 +298,12 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-secondary text-sm font-medium mb-6 mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#004B9E]/20 backdrop-blur-sm border border-[#004B9E]/30 text-[#0D9444] text-sm font-medium mb-6 mx-auto">
               <Zap className="w-4 h-4 animate-pulse" />
               Self-Service Portal
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight text-center">
-              Quick <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Services</span>
+              Quick <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D9444] to-[#004B9E]">Services</span>
             </h1>
             <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed text-center">
               Manage your energy needs, request support, and estimate your costs from our comprehensive self-service portal. 
@@ -327,7 +327,7 @@ export default function Services() {
             className="text-center mb-10"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              All <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Services</span>
+              All <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D9444] to-[#004B9E]">Services</span>
             </h2>
             <p className="text-foreground/60 max-w-2xl mx-auto">
               Choose from our range of energy management services designed to make your life easier
@@ -341,12 +341,12 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Help Section */}
+        {/* Help Section - 10% ACTION HIGHLIGHT: Orange for CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-2xl p-8 border border-border"
+          className="bg-gradient-to-r from-[#004B9E]/10 via-[#0D9444]/10 to-[#004B9E]/10 rounded-2xl p-8 border border-border"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -356,22 +356,22 @@ export default function Services() {
               </p>
               <div className="space-y-2">
                 <div className="flex items-center gap-3 text-foreground/70">
-                  <Phone className="w-5 h-5 text-secondary" />
+                  <Phone className="w-5 h-5 text-[#0D9444]" />
                   <span>+233 (0) 55 123 4567 (Ghana)</span>
                 </div>
                 <div className="flex items-center gap-3 text-foreground/70">
-                  <Phone className="w-5 h-5 text-secondary" />
+                  <Phone className="w-5 h-5 text-[#0D9444]" />
                   <span>+234 (0) 701 234 5678 (Nigeria)</span>
                 </div>
                 <div className="flex items-center gap-3 text-foreground/70">
-                  <Mail className="w-5 h-5 text-secondary" />
+                  <Mail className="w-5 h-5 text-[#0D9444]" />
                   <span>support@ohmplus.africa</span>
                 </div>
               </div>
             </div>
             <div className="text-center md:text-right">
               <Link to="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-secondary to-secondary hover:from-secondary/90 hover:to-secondary/90 text-secondary-foreground shadow-lg shadow-secondary/30">
+                <Button size="lg" className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/30">
                   Contact Support <ChevronRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>

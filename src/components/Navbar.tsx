@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Facebook, Instagram, Linkedin } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import logoImage from "@/assets/images/icon.jpeg";
@@ -82,24 +82,32 @@ export function Navbar() {
 
   const isActive = (path: string) => location.pathname === path;
   
-  const linkClassName = "text-sm font-medium transition-colors duration-200 text-foreground/70 hover:text-primary";
-  const activeLinkClassName = "text-sm font-medium transition-colors duration-200 text-primary";
+  // 30% OPERATIONAL STRUCTURES - Blue (#004B9E) for navigation links
+  const linkClassName = "text-sm font-medium transition-colors duration-200 text-foreground/70 hover:text-[#004B9E]";
+  const activeLinkClassName = "text-sm font-medium transition-colors duration-200 text-[#004B9E]";
+
+  const socialLinks = [
+    { icon: Facebook, href: "https://facebook.com/ohmplus", label: "Facebook" },
+    { icon: Instagram, href: "https://instagram.com/ohmplus", label: "Instagram" },
+    { icon: Linkedin, href: "https://linkedin.com/company/ohmplus", label: "LinkedIn" },
+  ];
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-theme/90 backdrop-blur-md border-b border-border shadow-lg"
+          ? "bg-theme/95 backdrop-blur-md border-b border-theme shadow-lg"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        {/* Logo - Full size on both desktop and mobile */}
         <Link
           to="/"
-          className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
+          className="flex items-center gap-3 text-foreground hover:text-[#004B9E] transition-colors flex-shrink-0"
           data-testid="link-logo"
         >
-          <div className="w-15 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
+          <div className="w-15 h-12 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
             <img 
               src={logoImage} 
               alt="OHM Plus Logo" 
@@ -109,6 +117,7 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+          {/* Navigation Links - 30% Operational (Blue on hover/active) */}
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -120,13 +129,13 @@ export function Navbar() {
             </Link>
           ))}
 
-          {/* Services Dropdown */}
+          {/* Services Dropdown - 30% Operational */}
           <div className="relative" ref={servicesDropdownRef}>
             <button
               onClick={() => setServicesOpen((v) => !v)}
               aria-expanded={servicesOpen}
               aria-haspopup="true"
-              className={`${linkClassName} outline-none focus:ring-2 focus:ring-primary/50 rounded px-2 py-1 inline-flex items-center gap-1`}
+              className={`${linkClassName} outline-none focus:ring-2 focus:ring-[#004B9E]/50 rounded px-2 py-1 inline-flex items-center gap-1`}
               data-testid="dropdown-services"
             >
               Services
@@ -135,14 +144,14 @@ export function Navbar() {
 
             {servicesOpen && (
               <div 
-                className="absolute top-full left-0 mt-2 w-52 rounded-lg border border-border bg-theme shadow-xl shadow-black/40 py-1 z-50 backdrop-blur-sm"
+                className="absolute top-full left-0 mt-2 w-52 rounded-lg border border-theme bg-theme shadow-xl shadow-black/40 py-1 z-50 backdrop-blur-sm"
                 role="menu"
               >
                 {serviceLinks.map((s) => (
                   <Link
                     key={s.href}
                     to={s.href}
-                    className="block px-4 py-2.5 text-sm text-foreground/70 hover:bg-primary/10 hover:text-primary transition-colors"
+                    className="block px-4 py-2.5 text-sm text-foreground/70 hover:bg-[#004B9E]/10 hover:text-[#004B9E] transition-colors"
                     role="menuitem"
                   >
                     {s.label}
@@ -152,13 +161,13 @@ export function Navbar() {
             )}
           </div>
 
-          {/* Tools Dropdown */}
+          {/* Tools Dropdown - 30% Operational */}
           <div className="relative" ref={toolsDropdownRef}>
             <button
               onClick={() => setToolsOpen((v) => !v)}
               aria-expanded={toolsOpen}
               aria-haspopup="true"
-              className={`${linkClassName} outline-none focus:ring-2 focus:ring-primary/50 rounded px-2 py-1 inline-flex items-center gap-1`}
+              className={`${linkClassName} outline-none focus:ring-2 focus:ring-[#004B9E]/50 rounded px-2 py-1 inline-flex items-center gap-1`}
               data-testid="dropdown-tools"
             >
               Tools
@@ -167,14 +176,14 @@ export function Navbar() {
 
             {toolsOpen && (
               <div 
-                className="absolute top-full left-0 mt-2 w-52 rounded-lg border border-border bg-theme shadow-xl shadow-black/40 py-1 z-50 backdrop-blur-sm"
+                className="absolute top-full left-0 mt-2 w-52 rounded-lg border border-theme bg-theme shadow-xl shadow-black/40 py-1 z-50 backdrop-blur-sm"
                 role="menu"
               >
                 {toolLinks.map((s) => (
                   <Link
                     key={s.href}
                     to={s.href}
-                    className="block px-4 py-2.5 text-sm text-foreground/70 hover:bg-primary/10 hover:text-primary transition-colors"
+                    className="block px-4 py-2.5 text-sm text-foreground/70 hover:bg-[#004B9E]/10 hover:text-[#004B9E] transition-colors"
                     role="menuitem"
                   >
                     {s.label}
@@ -186,20 +195,23 @@ export function Navbar() {
 
           <ThemeSwitcher />
 
-          <div className="flex items-center gap-4 pl-4 border-l border-border ml-2">
+          {/* Auth Section - 30% Operational + 10% Action (Orange CTA) */}
+          <div className="flex items-center gap-4 pl-4 border-l border-theme ml-2">
             <Link to="/comingsoon" className={linkClassName}>
               Login
             </Link>
+            {/* 10% ACTION HIGHLIGHT - Brand Orange (#FF4E00) for high-priority CTA */}
             <Link to="/contact">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_20px_rgba(0,75,158,0.4)]">
+              <Button className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-[0_0_20px_rgba(255,78,0,0.4)] font-semibold transition-all duration-200 hover:scale-105">
                 Book Demo
               </Button>
             </Link>
           </div>
         </nav>
 
+        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-foreground p-2 hover:bg-primary/10 rounded-lg transition-colors"
+          className="md:hidden text-foreground p-2 hover:bg-[#004B9E]/10 rounded-lg transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
@@ -207,34 +219,40 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Solid background for readability */}
       <div
-        className={`md:hidden absolute top-20 left-0 w-full bg-theme/95 backdrop-blur-md border-b border-border shadow-xl p-4 flex flex-col gap-4 max-h-[calc(100vh-5rem)] overflow-y-auto transition-all duration-300 transform ${
+        className={`md:hidden fixed top-20 left-0 w-full bg-theme border-t border-theme shadow-2xl p-6 flex flex-col gap-4 max-h-[calc(100vh-5rem)] overflow-y-auto transition-all duration-300 transform ${
           isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
         }`}
       >
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            to={link.href}
-            onClick={() => setIsOpen(false)}
-            className={`text-lg font-medium p-2 block transition-colors ${
-              isActive(link.href) ? "text-primary" : "text-foreground/70 hover:text-primary"
-            }`}
-          >
-            {link.label}
-          </Link>
-        ))}
+        {/* Mobile Navigation Links */}
+        <div className="space-y-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              to={link.href}
+              onClick={() => setIsOpen(false)}
+              className={`text-base font-medium p-3 block transition-colors rounded-lg ${
+                isActive(link.href) 
+                  ? "text-[#004B9E] bg-[#004B9E]/10" 
+                  : "text-foreground hover:text-[#004B9E] hover:bg-[#004B9E]/5"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
 
-        <div className="py-2">
-          <p className="text-sm font-bold text-foreground mb-2 pl-2">Services</p>
-          <div className="flex flex-col gap-2 pl-4 border-l border-border ml-2">
+        {/* Services Section - 30% Operational with Green accent */}
+        <div className="mt-2">
+          <p className="text-sm font-semibold text-[#0D9444] mb-2 px-3">Services</p>
+          <div className="flex flex-col gap-1 pl-4 border-l-2 border-[#0D9444]/30 ml-2">
             {serviceLinks.map((s) => (
               <Link
                 key={s.href}
                 to={s.href}
                 onClick={() => setIsOpen(false)}
-                className="text-foreground/70 hover:text-primary block py-1 text-sm transition-colors"
+                className="text-foreground/80 hover:text-[#004B9E] hover:bg-[#004B9E]/5 block py-2 px-3 text-sm transition-colors rounded-lg"
               >
                 {s.label}
               </Link>
@@ -242,15 +260,16 @@ export function Navbar() {
           </div>
         </div>
 
-        <div className="py-2">
-          <p className="text-sm font-bold text-foreground mb-2 pl-2">Tools</p>
-          <div className="flex flex-col gap-2 pl-4 border-l border-border ml-2">
+        {/* Tools Section - 30% Operational with Green accent */}
+        <div className="mt-2">
+          <p className="text-sm font-semibold text-[#0D9444] mb-2 px-3">Tools</p>
+          <div className="flex flex-col gap-1 pl-4 border-l-2 border-[#0D9444]/30 ml-2">
             {toolLinks.map((s) => (
               <Link
                 key={s.href}
                 to={s.href}
                 onClick={() => setIsOpen(false)}
-                className="text-foreground/70 hover:text-primary block py-1 text-sm transition-colors"
+                className="text-foreground/80 hover:text-[#004B9E] hover:bg-[#004B9E]/5 block py-2 px-3 text-sm transition-colors rounded-lg"
               >
                 {s.label}
               </Link>
@@ -258,24 +277,45 @@ export function Navbar() {
           </div>
         </div>
 
-        <hr className="border-border my-2" />
+        <hr className="border-theme my-3" />
 
-        <div className="flex items-center justify-between gap-4">
+        {/* Auth Section - Mobile */}
+        <div className="flex items-center justify-between gap-4 p-2">
           <Link
             to="/comingsoon"
             onClick={() => setIsOpen(false)}
-            className="text-lg font-medium text-foreground/70 hover:text-primary p-2 block transition-colors"
+            className="text-base font-medium text-foreground/80 hover:text-[#004B9E] transition-colors"
           >
             Login to Dashboard
           </Link>
           <ThemeSwitcher />
         </div>
         
+        {/* 10% ACTION HIGHLIGHT - Orange CTA on mobile */}
         <Link to="/contact" onClick={() => setIsOpen(false)}>
-          <Button className="w-full mt-2 bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button className="w-full mt-2 bg-[#FF4E00] hover:bg-[#E04500] text-white font-semibold">
             Book Demo
           </Button>
         </Link>
+
+        {/* Social Media Icons - Brand Green for hover state (10% Action) */}
+        <div className="mt-6 pt-4 border-t border-theme">
+          <p className="text-sm text-foreground/60 text-center mb-3">Follow Us</p>
+          <div className="flex justify-center gap-6">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground/60 hover:text-[#0D9444] transition-all hover:scale-110 transform duration-200"
+                aria-label={social.label}
+              >
+                <social.icon className="w-5 h-5" />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </header>
   );

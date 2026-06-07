@@ -27,8 +27,8 @@ export default function EnergyTips() {
       id: "home",
       title: "At Home",
       icon: Home,
-      color: "from-primary to-primary/70",
-      bgColor: "bg-primary/10",
+      color: "from-[#004B9E] to-[#004B9E]/70",
+      bgColor: "bg-[#004B9E]/10",
       tips: [
         {
           title: "Optimize Air Conditioning",
@@ -37,7 +37,7 @@ export default function EnergyTips() {
           savings: "Up to 25% on cooling costs",
           statNGN: "₦15,000/month saved",
           statGHS: "₵150/month saved",
-          color: "from-primary to-primary/70"
+          color: "from-[#004B9E] to-[#004B9E]/70"
         },
         {
           title: "Switch to LEDs",
@@ -46,7 +46,7 @@ export default function EnergyTips() {
           savings: "80% less energy",
           statNGN: "₦5,000/year per bulb",
           statGHS: "₵50/year per bulb",
-          color: "from-destructive to-destructive/70"
+          color: "from-[#FF4E00] to-[#FF4E00]/70"
         },
         {
           title: "Unplug Idle Electronics",
@@ -55,7 +55,7 @@ export default function EnergyTips() {
           savings: "5-10% of your bill",
           statNGN: "Up to ₦10,000/month",
           statGHS: "Up to ₵100/month",
-          color: "from-secondary to-secondary/70"
+          color: "from-[#0D9444] to-[#0D9444]/70"
         },
         {
           title: "Efficient Refrigeration",
@@ -64,7 +64,7 @@ export default function EnergyTips() {
           savings: "15% energy reduction",
           statNGN: "₦8,000/month saved",
           statGHS: "₵80/month saved",
-          color: "from-primary to-primary/70"
+          color: "from-[#004B9E] to-[#004B9E]/70"
         },
         {
           title: "Wash Smart",
@@ -73,7 +73,7 @@ export default function EnergyTips() {
           savings: "90% of washer energy",
           statNGN: "Hot water heating savings",
           statGHS: "Hot water heating savings",
-          color: "from-secondary to-secondary/70"
+          color: "from-[#0D9444] to-[#0D9444]/70"
         },
         {
           title: "Natural Lighting",
@@ -82,7 +82,7 @@ export default function EnergyTips() {
           savings: "Free lighting",
           statNGN: "Zero energy cost",
           statGHS: "Zero energy cost",
-          color: "from-destructive to-destructive/70"
+          color: "from-[#FF4E00] to-[#FF4E00]/70"
         }
       ]
     },
@@ -90,8 +90,8 @@ export default function EnergyTips() {
       id: "business",
       title: "For Businesses",
       icon: Building2,
-      color: "from-secondary to-secondary/70",
-      bgColor: "bg-secondary/10",
+      color: "from-[#0D9444] to-[#0D9444]/70",
+      bgColor: "bg-[#0D9444]/10",
       tips: [
         {
           title: "Smart Lighting Controls",
@@ -100,7 +100,7 @@ export default function EnergyTips() {
           savings: "30-50% lighting savings",
           statNGN: "6-12 month ROI",
           statGHS: "6-12 month ROI",
-          color: "from-secondary to-secondary/70"
+          color: "from-[#0D9444] to-[#0D9444]/70"
         },
         {
           title: "Office Equipment Management",
@@ -109,7 +109,7 @@ export default function EnergyTips() {
           savings: "15-20% on equipment",
           statNGN: "₦50,000+ annually",
           statGHS: "₵500+ annually",
-          color: "from-primary to-primary/70"
+          color: "from-[#004B9E] to-[#004B9E]/70"
         },
         {
           title: "HVAC Optimization",
@@ -118,7 +118,7 @@ export default function EnergyTips() {
           savings: "25-40% HVAC savings",
           statNGN: "Extended equipment life",
           statGHS: "Extended equipment life",
-          color: "from-primary to-primary/70"
+          color: "from-[#004B9E] to-[#004B9E]/70"
         },
         {
           title: "Energy Audits",
@@ -127,7 +127,7 @@ export default function EnergyTips() {
           savings: "10-30% reduction",
           statNGN: "Identify hidden waste",
           statGHS: "Identify hidden waste",
-          color: "from-secondary to-secondary/70"
+          color: "from-[#0D9444] to-[#0D9444]/70"
         }
       ]
     },
@@ -135,8 +135,8 @@ export default function EnergyTips() {
       id: "industrial",
       title: "For Factories",
       icon: Factory,
-      color: "from-destructive to-destructive/70",
-      bgColor: "bg-destructive/10",
+      color: "from-[#FF4E00] to-[#FF4E00]/70",
+      bgColor: "bg-[#FF4E00]/10",
       tips: [
         {
           title: "Shift Heavy Loads",
@@ -145,7 +145,7 @@ export default function EnergyTips() {
           savings: "30-40% cost reduction",
           statNGN: "Lower demand charges",
           statGHS: "Lower demand charges",
-          color: "from-destructive to-destructive/70"
+          color: "from-[#FF4E00] to-[#FF4E00]/70"
         },
         {
           title: "Power Factor Correction",
@@ -154,7 +154,7 @@ export default function EnergyTips() {
           savings: "15-25% on bills",
           statNGN: "Avoid PF penalties",
           statGHS: "Avoid PF penalties",
-          color: "from-destructive to-destructive/70"
+          color: "from-[#FF4E00] to-[#FF4E00]/70"
         },
         {
           title: "Motor Upgrades",
@@ -163,7 +163,7 @@ export default function EnergyTips() {
           savings: "20-40% motor savings",
           statNGN: "2-3 year payback",
           statGHS: "2-3 year payback",
-          color: "from-primary to-primary/70"
+          color: "from-[#004B9E] to-[#004B9E]/70"
         },
         {
           title: "Compressed Air Systems",
@@ -172,7 +172,7 @@ export default function EnergyTips() {
           savings: "20-50% reduction",
           statNGN: "Major energy user",
           statGHS: "Major energy user",
-          color: "from-primary to-primary/70"
+          color: "from-[#004B9E] to-[#004B9E]/70"
         }
       ]
     }
@@ -188,13 +188,13 @@ export default function EnergyTips() {
   const currentCategory = categories.find(c => c.id === activeCategory) || categories[0];
 
   return (
-    <div className="pt-32 pb-24 min-h-screen relative overflow-hidden bg-theme">
+    <div className="pt-32 pb-24 min-h-screen relative overflow-hidden bg-background">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-destructive/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#FF4E00]/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0D9444]/10 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#004B9E]/5 rounded-full blur-[100px]" />
         <div className="theme-grid" />
       </div>
 
@@ -206,12 +206,12 @@ export default function EnergyTips() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/20 backdrop-blur-sm border border-destructive/30 text-destructive text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF4E00]/20 backdrop-blur-sm border border-[#FF4E00]/30 text-[#FF4E00] text-sm font-medium mb-6">
             <Lightbulb className="w-4 h-4" />
             Smart Energy Tips
           </div>
           <h1 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-6">
-            Energy Saving <span className="text-transparent bg-clip-text bg-gradient-to-r from-destructive to-destructive">Tips</span>
+            Energy Saving <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF4E00] to-[#FF4E00]">Tips</span>
           </h1>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto leading-relaxed mb-6">
             Practical advice to help you reduce waste, lower your monthly bills, and maximize the lifespan of your appliances.
@@ -223,7 +223,7 @@ export default function EnergyTips() {
               onClick={() => setCurrency("NGN")}
               className={`px-6 py-2 rounded-full transition-all font-medium ${
                 currency === "NGN" 
-                  ? "bg-gradient-to-r from-secondary to-secondary text-white shadow-lg" 
+                  ? "bg-gradient-to-r from-[#0D9444] to-[#0D9444] text-white shadow-lg" 
                   : "text-foreground/60 hover:text-foreground"
               }`}
             >
@@ -233,7 +233,7 @@ export default function EnergyTips() {
               onClick={() => setCurrency("GHS")}
               className={`px-6 py-2 rounded-full transition-all font-medium ${
                 currency === "GHS" 
-                  ? "bg-gradient-to-r from-secondary to-secondary text-white shadow-lg" 
+                  ? "bg-gradient-to-r from-[#0D9444] to-[#0D9444] text-white shadow-lg" 
                   : "text-foreground/60 hover:text-foreground"
               }`}
             >
@@ -242,19 +242,19 @@ export default function EnergyTips() {
           </div>
         </motion.div>
 
-        {/* Savings Calculator Banner */}
+        {/* Savings Calculator Banner - Green for success/savings */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-12"
         >
-          <div className="bg-gradient-to-r from-secondary/20 via-secondary/20 to-secondary/20 rounded-2xl p-1">
+          <div className="bg-gradient-to-r from-[#0D9444]/20 via-[#0D9444]/20 to-[#0D9444]/20 rounded-2xl p-1">
             <div className="bg-muted/60 backdrop-blur-md rounded-xl p-6 md:p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center gap-2 mb-4">
-                    <TrendingDown className="w-6 h-6 text-secondary" />
+                    <TrendingDown className="w-6 h-6 text-[#0D9444]" />
                     <h3 className="text-xl font-bold text-foreground">Savings Calculator</h3>
                   </div>
                   <p className="text-foreground/70 mb-4">
@@ -266,19 +266,19 @@ export default function EnergyTips() {
                       <div className="flex items-center gap-4 mt-2">
                         <button
                           onClick={() => setSavingsCalculator(prev => ({ ...prev, acTemp: 18 }))}
-                          className={`px-4 py-2 rounded-lg transition-all ${savingsCalculator.acTemp === 18 ? 'bg-primary text-white' : 'bg-muted/80 text-foreground/60 hover:bg-muted'}`}
+                          className={`px-4 py-2 rounded-lg transition-all ${savingsCalculator.acTemp === 18 ? 'bg-[#004B9E] text-white' : 'bg-muted/80 text-foreground/60 hover:bg-muted'}`}
                         >
                           18°C
                         </button>
                         <button
                           onClick={() => setSavingsCalculator(prev => ({ ...prev, acTemp: 22 }))}
-                          className={`px-4 py-2 rounded-lg transition-all ${savingsCalculator.acTemp === 22 ? 'bg-primary text-white' : 'bg-muted/80 text-foreground/60 hover:bg-muted'}`}
+                          className={`px-4 py-2 rounded-lg transition-all ${savingsCalculator.acTemp === 22 ? 'bg-[#004B9E] text-white' : 'bg-muted/80 text-foreground/60 hover:bg-muted'}`}
                         >
                           22°C
                         </button>
                         <button
                           onClick={() => setSavingsCalculator(prev => ({ ...prev, acTemp: 24 }))}
-                          className={`px-4 py-2 rounded-lg transition-all ${savingsCalculator.acTemp === 24 ? 'bg-secondary text-white' : 'bg-muted/80 text-foreground/60 hover:bg-muted'}`}
+                          className={`px-4 py-2 rounded-lg transition-all ${savingsCalculator.acTemp === 24 ? 'bg-[#0D9444] text-white' : 'bg-muted/80 text-foreground/60 hover:bg-muted'}`}
                         >
                           24°C (Optimal)
                         </button>
@@ -311,10 +311,10 @@ export default function EnergyTips() {
                     </div>
                   </div>
                 </div>
-                <div className="text-center bg-muted/40 rounded-xl p-6 border border-secondary/30">
-                  <Leaf className="w-10 h-10 text-secondary mx-auto mb-3" />
+                <div className="text-center bg-muted/40 rounded-xl p-6 border border-[#0D9444]/30">
+                  <Leaf className="w-10 h-10 text-[#0D9444] mx-auto mb-3" />
                   <div className="text-sm text-foreground/60 mb-1">Potential Monthly Savings</div>
-                  <div className="text-4xl font-bold text-secondary mb-2">
+                  <div className="text-4xl font-bold text-[#0D9444] mb-2">
                     {formatCurrency(calculateSavings())}
                   </div>
                   <div className="text-sm text-foreground/60">
@@ -362,7 +362,7 @@ export default function EnergyTips() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full bg-muted/40 backdrop-blur-md border border-border hover:border-primary/30 transition-all group hover:-translate-y-2 duration-300 overflow-hidden">
+                <Card className="h-full bg-muted/40 backdrop-blur-md border border-border hover:border-[#004B9E]/30 transition-all group hover:-translate-y-2 duration-300 overflow-hidden">
                   <div className={`h-2 bg-gradient-to-r ${tip.color}`} />
                   <CardContent className="p-6">
                     <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${tip.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg`}>
@@ -374,8 +374,8 @@ export default function EnergyTips() {
                     </p>
                     <div className="flex items-center justify-between pt-3 border-t border-border">
                       <div className="flex items-center gap-2">
-                        <Zap className="w-4 h-4 text-destructive" />
-                        <span className="text-xs text-secondary font-medium">{tip.savings}</span>
+                        <Zap className="w-4 h-4 text-[#FF4E00]" />
+                        <span className="text-xs text-[#0D9444] font-medium">{tip.savings}</span>
                       </div>
                       <div className="text-xs text-foreground/50">
                         {currency === "NGN" ? tip.statNGN : tip.statGHS}
@@ -395,9 +395,9 @@ export default function EnergyTips() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mb-12"
         >
-          <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl p-1">
+          <div className="bg-gradient-to-r from-[#004B9E]/20 via-[#0D9444]/20 to-[#004B9E]/20 rounded-2xl p-1">
             <div className="bg-muted/60 backdrop-blur-md rounded-xl p-8 text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 text-secondary text-sm font-medium mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#004B9E]/20 border border-[#004B9E]/30 text-[#0D9444] text-sm font-medium mb-4">
                 <Clock className="w-4 h-4" />
                 Seasonal Tips
               </div>
@@ -407,11 +407,11 @@ export default function EnergyTips() {
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <div className="flex items-center gap-2 text-sm text-foreground/60">
-                  <Droplets className="w-4 h-4 text-primary" />
+                  <Droplets className="w-4 h-4 text-[#004B9E]" />
                   High humidity? Use dehumidifier mode
                 </div>
                 <div className="flex items-center gap-2 text-sm text-foreground/60">
-                  <Sun className="w-4 h-4 text-destructive" />
+                  <Sun className="w-4 h-4 text-[#FF4E00]" />
                   Close blinds during peak sun hours
                 </div>
               </div>
@@ -427,42 +427,42 @@ export default function EnergyTips() {
           className="mb-12"
         >
           <h2 className="text-2xl font-display font-bold text-foreground text-center mb-6">
-            Energy Myth <span className="text-secondary">Busters</span>
+            Energy Myth <span className="text-[#0D9444]">Busters</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-muted/40 rounded-xl p-4 border border-border">
               <p className="text-sm text-foreground/70">❌ "Leaving lights on uses less energy than turning them off and on"</p>
-              <p className="text-sm text-secondary mt-2">✓ FALSE - Always turn off lights when leaving a room, even for a few minutes.</p>
+              <p className="text-sm text-[#0D9444] mt-2">✓ FALSE - Always turn off lights when leaving a room, even for a few minutes.</p>
             </div>
             <div className="bg-muted/40 rounded-xl p-4 border border-border">
               <p className="text-sm text-foreground/70">❌ "Electronics don't use power when turned off"</p>
-              <p className="text-sm text-secondary mt-2">✓ FALSE - Many devices draw "vampire power" - unplug them!</p>
+              <p className="text-sm text-[#0D9444] mt-2">✓ FALSE - Many devices draw "vampire power" - unplug them!</p>
             </div>
             <div className="bg-muted/40 rounded-xl p-4 border border-border">
               <p className="text-sm text-foreground/70">❌ "Higher AC temperature doesn't save much money"</p>
-              <p className="text-sm text-secondary mt-2">✓ FALSE - Each degree below 24°C increases consumption by 6-8%!</p>
+              <p className="text-sm text-[#0D9444] mt-2">✓ FALSE - Each degree below 24°C increases consumption by 6-8%!</p>
             </div>
             <div className="bg-muted/40 rounded-xl p-4 border border-border">
               <p className="text-sm text-foreground/70">❌ "LED bulbs are too expensive"</p>
-              <p className="text-sm text-secondary mt-2">✓ FALSE - They pay for themselves in 6-12 months and last 25x longer.</p>
+              <p className="text-sm text-[#0D9444] mt-2">✓ FALSE - They pay for themselves in 6-12 months and last 25x longer.</p>
             </div>
           </div>
         </motion.div>
 
-        {/* CTA to Omhero */}
+        {/* CTA to Omhero - 10% ACTION HIGHLIGHT: Orange (#FF4E00) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl p-8 border border-border backdrop-blur-sm">
+          <div className="bg-gradient-to-r from-[#004B9E]/20 to-[#0D9444]/20 rounded-2xl p-8 border border-border backdrop-blur-sm">
             <h3 className="text-2xl font-bold text-foreground mb-3">Want to Track Your Real Savings?</h3>
             <p className="text-foreground/70 mb-6 max-w-2xl mx-auto">
               Omhero gives you real-time visibility into your energy consumption. See exactly how much you're saving with every energy tip!
             </p>
             <Link to="/product">
-              <Button size="lg" className="bg-gradient-to-r from-secondary to-secondary hover:from-secondary/90 hover:to-secondary/90 text-secondary-foreground shadow-lg shadow-secondary/30">
+              <Button size="lg" className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/30">
                 Learn About Omhero <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>

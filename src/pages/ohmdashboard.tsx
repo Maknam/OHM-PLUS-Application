@@ -51,7 +51,7 @@ const FloatingParticles = () => {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-primary/20"
+          className="absolute rounded-full bg-[#004B9E]/20"
           style={{
             width: particle.size,
             height: particle.size,
@@ -89,20 +89,20 @@ const FeatureCard = ({ feature, index }: { feature: any; index: number }) => {
       onMouseLeave={() => setIsHovered(false)}
       className="relative group"
     >
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-secondary to-primary rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500" />
-      <Card className="relative h-full bg-gradient-to-br from-muted/50 to-muted/30 backdrop-blur-md border border-border hover:border-secondary/40 transition-all duration-300 overflow-hidden">
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0D9444] to-[#004B9E] rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500" />
+      <Card className="relative h-full bg-gradient-to-br from-muted/50 to-muted/30 backdrop-blur-md border border-border hover:border-[#0D9444]/40 transition-all duration-300 overflow-hidden">
         <CardContent className="p-6 text-center sm:text-left">
           <div className="relative mb-4 flex justify-center sm:justify-start">
             <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover:scale-110 transition-all duration-300`}>
               <feature.icon className="w-7 h-7 text-white" />
             </div>
             {feature.badge && (
-              <div className="absolute -top-2 -right-2 bg-secondary/80 text-white text-xs px-2 py-0.5 rounded-full">
+              <div className="absolute -top-2 -right-2 bg-[#0D9444]/80 text-white text-xs px-2 py-0.5 rounded-full">
                 {feature.badge}
               </div>
             )}
           </div>
-          <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-secondary transition-colors text-center sm:text-left">{feature.title}</h3>
+          <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-[#0D9444] transition-colors text-center sm:text-left">{feature.title}</h3>
           <p className="text-foreground/70 text-sm mb-4 leading-relaxed text-center sm:text-left">{feature.description}</p>
           <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
             {feature.tags?.map((tag: string, idx: number) => (
@@ -123,9 +123,9 @@ const StatCard = ({ stat, index }: { stat: any; index: number }) => (
     initial={{ opacity: 0, scale: 0.9 }}
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ delay: index * 0.1 }}
-    className="bg-muted/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-border hover:border-primary/30 transition-all group"
+    className="bg-muted/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-border hover:border-[#004B9E]/30 transition-all group"
   >
-    <stat.icon className="w-8 h-8 text-secondary mx-auto mb-3 group-hover:scale-110 transition-transform" />
+    <stat.icon className="w-8 h-8 text-[#0D9444] mx-auto mb-3 group-hover:scale-110 transition-transform" />
     <div className="text-2xl md:text-3xl font-bold text-foreground mb-1 text-center">{stat.value}</div>
     <div className="text-xs text-foreground/60 text-center">{stat.label}</div>
   </motion.div>
@@ -152,7 +152,7 @@ const RoadmapItem = ({ item, index }: { item: any; index: number }) => (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {item.features.map((feature: string, idx: number) => (
             <div key={idx} className="flex items-center gap-2 justify-center sm:justify-start">
-              <CheckCircle2 className="w-4 h-4 text-secondary shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[#0D9444] shrink-0" />
               <span className="text-foreground/70 text-sm text-center sm:text-left">{feature}</span>
             </div>
           ))}
@@ -161,7 +161,7 @@ const RoadmapItem = ({ item, index }: { item: any; index: number }) => (
     </div>
     {index < 3 && (
       <div className="absolute left-1/2 -translate-x-1/2 bottom-[-24px] hidden md:block">
-        <div className="w-0.5 h-8 bg-gradient-to-b from-secondary/50 to-transparent" />
+        <div className="w-0.5 h-8 bg-gradient-to-b from-[#0D9444]/50 to-transparent" />
       </div>
     )}
   </motion.div>
@@ -181,7 +181,7 @@ export default function DashboardOverview() {
       icon: LineChart,
       title: "Advanced Analytics Dashboard",
       description: "Comprehensive energy analytics with customizable charts, trends, and predictive insights. Track consumption patterns and identify optimization opportunities.",
-      color: "from-primary to-primary/70",
+      color: "from-[#004B9E] to-[#004B9E]/70",
       tags: ["Real-time", "Historical", "Predictive"],
       badge: "Core Feature"
     },
@@ -189,7 +189,7 @@ export default function DashboardOverview() {
       icon: Bell,
       title: "Smart Alerts & Notifications",
       description: "Receive instant alerts for anomalies, unusual usage patterns, potential faults, and maintenance reminders via SMS, email, or push notifications.",
-      color: "from-destructive to-destructive/70",
+      color: "from-[#FF4E00] to-[#FF4E00]/70",
       tags: ["SMS", "Email", "Push"],
       badge: "Coming Soon"
     },
@@ -197,7 +197,7 @@ export default function DashboardOverview() {
       icon: Shield,
       title: "Advanced Fault Detection",
       description: "AI-powered detection of electrical faults, overloads, and fire risks before they become dangerous. Real-time protection for your entire property.",
-      color: "from-secondary to-secondary/70",
+      color: "from-[#0D9444] to-[#0D9444]/70",
       tags: ["AI Detection", "Predictive", "Real-time"],
       badge: "Enhanced"
     },
@@ -205,7 +205,7 @@ export default function DashboardOverview() {
       icon: Globe,
       title: "Multi-Property Management",
       description: "Manage multiple properties from a single dashboard. Perfect for landlords, property managers, and businesses with multiple locations.",
-      color: "from-primary to-primary/70",
+      color: "from-[#004B9E] to-[#004B9E]/70",
       tags: ["Unlimited Properties", "Centralized"],
       badge: "Enterprise"
     },
@@ -213,7 +213,7 @@ export default function DashboardOverview() {
       icon: FileText,
       title: "Automated Reporting",
       description: "Generate detailed energy reports, compliance certificates, and custom analytics with one click. Export to PDF, CSV, or share via email.",
-      color: "from-destructive to-destructive/70",
+      color: "from-[#FF4E00] to-[#FF4E00]/70",
       tags: ["PDF", "CSV", "Auto-schedule"],
       badge: "New"
     },
@@ -221,7 +221,7 @@ export default function DashboardOverview() {
       icon: Users,
       title: "Team Access & Permissions",
       description: "Invite team members, set role-based permissions, and collaborate on energy management across your organization.",
-      color: "from-secondary to-secondary/70",
+      color: "from-[#0D9444] to-[#0D9444]/70",
       tags: ["Roles", "Permissions", "Audit Log"],
       badge: "Enterprise"
     },
@@ -229,7 +229,7 @@ export default function DashboardOverview() {
       icon: QrCode,
       title: "Device Health Monitoring",
       description: "Real-time health status of all connected devices. Get maintenance alerts and performance insights for each appliance.",
-      color: "from-primary to-primary/70",
+      color: "from-[#004B9E] to-[#004B9E]/70",
       tags: ["Health Score", "Maintenance"],
       badge: "IoT Ready"
     },
@@ -237,7 +237,7 @@ export default function DashboardOverview() {
       icon: Leaf,
       title: "Carbon Footprint Tracker",
       description: "Track your carbon emissions based on energy usage and get recommendations to reduce your environmental impact.",
-      color: "from-secondary to-secondary/70",
+      color: "from-[#0D9444] to-[#0D9444]/70",
       tags: ["Emissions", "Recommendations"],
       badge: "Coming Soon"
     },
@@ -245,7 +245,7 @@ export default function DashboardOverview() {
       icon: TrendingDown,
       title: "Cost Optimization Engine",
       description: "AI-driven recommendations to reduce energy costs. Compare tariff plans and get personalized savings suggestions.",
-      color: "from-primary to-primary/70",
+      color: "from-[#004B9E] to-[#004B9E]/70",
       tags: ["AI Recommendations", "ROI Calculator"],
       badge: "Smart"
     },
@@ -253,7 +253,7 @@ export default function DashboardOverview() {
       icon: Radio,
       title: "IoT Device Integration",
       description: "Connect and control smart plugs, thermostats, lighting systems, and other IoT devices from your dashboard.",
-      color: "from-destructive to-destructive/70",
+      color: "from-[#FF4E00] to-[#FF4E00]/70",
       tags: ["Zigbee", "Z-Wave", "MQTT"],
       badge: "Integration"
     },
@@ -261,7 +261,7 @@ export default function DashboardOverview() {
       icon: QrCode,
       title: "QR Code Scanning",
       description: "Quickly add new devices by scanning QR codes. Instantly access device information and configuration.",
-      color: "from-secondary to-secondary/70",
+      color: "from-[#0D9444] to-[#0D9444]/70",
       tags: ["Quick Setup", "Device Info"],
       badge: "New"
     },
@@ -269,7 +269,7 @@ export default function DashboardOverview() {
       icon: Database,
       title: "Data Export & Backup",
       description: "Export your energy data for external analysis. Automatic cloud backup ensures your data is always safe.",
-      color: "from-primary to-primary/70",
+      color: "from-[#004B9E] to-[#004B9E]/70",
       tags: ["Cloud Backup", "API Access"],
       badge: "Premium"
     }
@@ -286,7 +286,7 @@ export default function DashboardOverview() {
     {
       title: "Phase 1 - Foundation",
       status: "Completed",
-      statusColor: "bg-secondary/20 text-secondary",
+      statusColor: "bg-[#0D9444]/20 text-[#0D9444]",
       description: "Core monitoring and alerting features",
       features: [
         "Real-time energy monitoring",
@@ -299,7 +299,7 @@ export default function DashboardOverview() {
     {
       title: "Phase 2 - Intelligence",
       status: "In Development",
-      statusColor: "bg-destructive/20 text-destructive",
+      statusColor: "bg-[#FF4E00]/20 text-[#FF4E00]",
       description: "AI-powered insights and automation",
       features: [
         "AI fault detection",
@@ -312,7 +312,7 @@ export default function DashboardOverview() {
     {
       title: "Phase 3 - Integration",
       status: "Planned",
-      statusColor: "bg-primary/20 text-primary",
+      statusColor: "bg-[#004B9E]/20 text-[#004B9E]",
       description: "IoT ecosystem and third-party integrations",
       features: [
         "Smart device control",
@@ -344,12 +344,12 @@ export default function DashboardOverview() {
   );
 
   const integrations = [
-    { name: "Google Assistant", icon: SmartphoneIcon, color: "from-primary to-primary" },
-    { name: "Amazon Alexa", icon: Radio, color: "from-primary to-primary" },
-    { name: "Apple HomeKit", icon: Apple, color: "from-primary to-primary" },
-    { name: "Samsung SmartThings", icon: Monitor, color: "from-primary to-primary" },
-    { name: "IFTTT", icon: Share2, color: "from-secondary to-secondary" },
-    { name: "Zapier", icon: Zap, color: "from-destructive to-destructive" }
+    { name: "Google Assistant", icon: SmartphoneIcon, color: "from-[#004B9E] to-[#004B9E]" },
+    { name: "Amazon Alexa", icon: Radio, color: "from-[#004B9E] to-[#004B9E]" },
+    { name: "Apple HomeKit", icon: Apple, color: "from-[#004B9E] to-[#004B9E]" },
+    { name: "Samsung SmartThings", icon: Monitor, color: "from-[#004B9E] to-[#004B9E]" },
+    { name: "IFTTT", icon: Share2, color: "from-[#0D9444] to-[#0D9444]" },
+    { name: "Zapier", icon: Zap, color: "from-[#FF4E00] to-[#FF4E00]" }
   ];
 
   const upcomingFeatures = [
@@ -362,16 +362,16 @@ export default function DashboardOverview() {
   const [activeTab, setActiveTab] = useState<'features' | 'roadmap' | 'integrations'>('features');
 
   return (
-    <div ref={containerRef} className="pt-32 pb-20 min-h-screen relative overflow-hidden bg-theme">
+    <div ref={containerRef} className="pt-32 pb-20 min-h-screen relative overflow-hidden bg-background">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
         
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/15 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-[#004B9E]/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#0D9444]/15 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#004B9E]/5 rounded-full blur-[100px]" />
         <div className="theme-grid" />
         
         <FloatingParticles />
@@ -389,12 +389,12 @@ export default function DashboardOverview() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-secondary text-sm font-medium mb-6 mx-auto w-fit">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#004B9E]/20 backdrop-blur-sm border border-[#004B9E]/30 text-[#0D9444] text-sm font-medium mb-6 mx-auto w-fit">
               <Sparkles className="w-4 h-4 animate-pulse" />
               Beyond the App — Complete Energy Ecosystem
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight text-center">
-              OHM Plus <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Dashboard</span>
+              OHM Plus <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D9444] to-[#004B9E]">Dashboard</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed text-center">
               Experience the future of energy management with our comprehensive dashboard. 
@@ -419,7 +419,7 @@ export default function DashboardOverview() {
           className="mb-20"
         >
           <div className="relative rounded-2xl overflow-hidden border border-border shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/20 to-[#0D9444]/20 pointer-events-none" />
             <img 
               src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?w=1200&h=600&fit=crop"
               alt="Dashboard Preview"
@@ -427,7 +427,7 @@ export default function DashboardOverview() {
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/80 to-transparent p-6">
               <div className="flex items-center gap-2 text-foreground justify-center md:justify-start">
-                <Server className="w-5 h-5 text-secondary" />
+                <Server className="w-5 h-5 text-[#0D9444]" />
                 <span className="text-sm text-center md:text-left text-foreground/80">OHM Plus Dashboard — Centralized Energy Command Center</span>
               </div>
             </div>
@@ -447,7 +447,7 @@ export default function DashboardOverview() {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex items-center gap-2 px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
                   activeTab === tab.id 
-                    ? 'bg-gradient-to-r from-secondary to-primary text-white shadow-lg' 
+                    ? 'bg-gradient-to-r from-[#0D9444] to-[#004B9E] text-white shadow-lg' 
                     : 'text-foreground/60 hover:text-foreground'
                 }`}
               >
@@ -470,7 +470,7 @@ export default function DashboardOverview() {
         {/* Roadmap Timeline */}
         {activeTab === 'roadmap' && (
           <div className="relative mb-20">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-secondary/50 via-primary/50 to-transparent hidden md:block" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#0D9444]/50 via-[#004B9E]/50 to-transparent hidden md:block" />
             <div className="space-y-12">
               {roadmapItems.map((item, index) => (
                 <RoadmapItem key={index} item={item} index={index} />
@@ -487,14 +487,14 @@ export default function DashboardOverview() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: idx * 0.1 }}
-                    className="bg-muted/40 backdrop-blur-sm rounded-xl p-4 border border-border hover:border-primary/30 transition-all text-center sm:text-left"
+                    className="bg-muted/40 backdrop-blur-sm rounded-xl p-4 border border-border hover:border-[#004B9E]/30 transition-all text-center sm:text-left"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-3 mx-auto sm:mx-0">
-                      <feature.icon className="w-5 h-5 text-secondary" />
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#004B9E]/20 to-[#0D9444]/20 flex items-center justify-center mb-3 mx-auto sm:mx-0">
+                      <feature.icon className="w-5 h-5 text-[#0D9444]" />
                     </div>
                     <h4 className="text-foreground font-bold mb-1 text-center sm:text-left">{feature.name}</h4>
                     <p className="text-foreground/60 text-xs mb-2 text-center sm:text-left">{feature.desc}</p>
-                    <span className="text-xs text-secondary bg-secondary/10 px-2 py-0.5 rounded-full inline-block mx-auto sm:mx-0 w-fit">{feature.eta}</span>
+                    <span className="text-xs text-[#0D9444] bg-[#0D9444]/10 px-2 py-0.5 rounded-full inline-block mx-auto sm:mx-0 w-fit">{feature.eta}</span>
                   </motion.div>
                 ))}
               </div>
@@ -518,7 +518,7 @@ export default function DashboardOverview() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: idx * 0.05 }}
-                  className="bg-muted/40 backdrop-blur-sm rounded-xl p-4 text-center border border-border hover:border-secondary/30 transition-all group"
+                  className="bg-muted/40 backdrop-blur-sm rounded-xl p-4 text-center border border-border hover:border-[#0D9444]/30 transition-all group"
                 >
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${integration.color} flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform`}>
                     <integration.icon className="w-6 h-6 text-white" />
@@ -529,10 +529,10 @@ export default function DashboardOverview() {
             </div>
 
             {/* API Access */}
-            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20">
+            <div className="bg-gradient-to-r from-[#004B9E]/10 to-[#0D9444]/10 rounded-2xl p-8 border border-[#004B9E]/20">
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                  <Code className="w-8 h-8 text-secondary" />
+                <div className="w-16 h-16 rounded-full bg-[#004B9E]/20 flex items-center justify-center mx-auto mb-4">
+                  <Code className="w-8 h-8 text-[#0D9444]" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-3 text-center">REST API Access</h3>
                 <p className="text-foreground/70 mb-6 max-w-2xl mx-auto text-center">
@@ -540,7 +540,7 @@ export default function DashboardOverview() {
                   Access real-time data, control devices, and create custom workflows.
                 </p>
                 <div className="flex justify-center">
-                  <Button variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10">
+                  <Button variant="outline" className="border-[#004B9E]/30 text-foreground hover:bg-[#004B9E]/10">
                     View API Documentation <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </div>
@@ -557,12 +557,12 @@ export default function DashboardOverview() {
           className="mb-20"
         >
           <h2 className="text-3xl font-bold text-foreground text-center mb-8">
-            Omhero App <span className="text-secondary">vs</span> OHM Dashboard
+            Omhero App <span className="text-[#0D9444]">vs</span> OHM Dashboard
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-muted/40 backdrop-blur-sm rounded-2xl p-8 border border-border">
               <div className="flex items-center gap-3 mb-6 justify-center md:justify-start">
-                <SmartphoneIcon className="w-8 h-8 text-secondary" />
+                <SmartphoneIcon className="w-8 h-8 text-[#0D9444]" />
                 <h3 className="text-2xl font-bold text-foreground text-center md:text-left">Omhero Mobile App</h3>
               </div>
               <ul className="space-y-3">
@@ -574,15 +574,15 @@ export default function DashboardOverview() {
                   "Appliance health tracking"
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-2 text-foreground/70 text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-secondary shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#0D9444] shrink-0" />
                     <span className="text-center md:text-left">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/30">
+            <div className="bg-gradient-to-br from-[#004B9E]/10 to-[#0D9444]/10 rounded-2xl p-8 border border-[#004B9E]/30">
               <div className="flex items-center gap-3 mb-6 justify-center md:justify-start">
-                <Server className="w-8 h-8 text-secondary" />
+                <Server className="w-8 h-8 text-[#0D9444]" />
                 <h3 className="text-2xl font-bold text-foreground text-center md:text-left">OHM Plus Dashboard</h3>
               </div>
               <ul className="space-y-3">
@@ -598,7 +598,7 @@ export default function DashboardOverview() {
                   "Carbon footprint tracking"
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center gap-2 text-foreground/70 text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-secondary shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#0D9444] shrink-0" />
                     <span className="text-center md:text-left">{item}</span>
                   </li>
                 ))}
@@ -607,16 +607,16 @@ export default function DashboardOverview() {
           </div>
         </motion.div>
 
-        {/* CTA Section */}
+        {/* CTA Section - 10% ACTION HIGHLIGHT: Orange (#FF4E00) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl p-8 sm:p-12 border border-border backdrop-blur-sm relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
+          <div className="bg-gradient-to-r from-[#004B9E]/20 via-[#0D9444]/20 to-[#004B9E]/20 rounded-2xl p-8 sm:p-12 border border-border backdrop-blur-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#004B9E]/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#0D9444]/10 rounded-full blur-3xl" />
             
             <div className="relative z-10">
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-4 text-center">
@@ -627,12 +627,12 @@ export default function DashboardOverview() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-white shadow-lg shadow-secondary/30 text-base sm:text-lg px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto">
+                  <Button size="lg" className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/30 text-base sm:text-lg px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto">
                     Request Demo <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                   </Button>
                 </Link>
                 <Link to="/pricing">
-                  <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-primary/10 text-base sm:text-lg px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-[#004B9E]/10 text-base sm:text-lg px-6 sm:px-8 h-12 sm:h-14 w-full sm:w-auto">
                     View Pricing
                   </Button>
                 </Link>

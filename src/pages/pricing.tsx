@@ -23,7 +23,7 @@ export default function Pricing() {
         "Email support",
         "1-year warranty"
       ],
-      gradient: "from-primary to-primary/70",
+      gradient: "from-[#004B9E] to-[#004B9E]/70",
       badge: null,
       popular: false,
       type: "home"
@@ -43,7 +43,7 @@ export default function Pricing() {
         "Energy consumption analytics",
         "Monthly PDF reports"
       ],
-      gradient: "from-secondary to-primary",
+      gradient: "from-[#0D9444] to-[#004B9E]",
       badge: "MOST POPULAR",
       popular: true,
       type: "business"
@@ -63,7 +63,7 @@ export default function Pricing() {
         "White-label options",
         "Quarterly business reviews"
       ],
-      gradient: "from-destructive to-destructive/70",
+      gradient: "from-[#FF4E00] to-[#FF4E00]/70",
       badge: "CUSTOM",
       popular: false,
       type: "enterprise"
@@ -86,13 +86,13 @@ export default function Pricing() {
   };
 
   return (
-    <div className="pt-32 pb-24 min-h-screen relative overflow-hidden bg-theme">
+    <div className="pt-32 pb-24 min-h-screen relative overflow-hidden bg-background">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#004B9E]/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0D9444]/10 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#004B9E]/5 rounded-full blur-[100px]" />
         <div className="theme-grid" />
       </div>
 
@@ -105,12 +105,12 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-secondary text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#004B9E]/20 backdrop-blur-sm border border-[#004B9E]/30 text-[#0D9444] text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4" />
             Transparent Pricing
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-foreground mb-6">
-            Flexible <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Pricing</span> for Every Need
+            Flexible <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D9444] to-[#004B9E]">Pricing</span> for Every Need
           </h1>
           <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-6">
             Get the perfect solution for your home or business with pricing that scales with you
@@ -123,12 +123,12 @@ export default function Pricing() {
             transition={{ delay: 0.1 }}
             className="mt-4 mb-6"
           >
-            <div className="inline-flex flex-col items-center gap-2 px-6 py-3 rounded-xl bg-destructive/15 border-2 border-destructive/40 backdrop-blur-sm">
+            <div className="inline-flex flex-col items-center gap-2 px-6 py-3 rounded-xl bg-[#FF4E00]/15 border-2 border-[#FF4E00]/40 backdrop-blur-sm">
               <div className="flex items-center gap-2">
-                <AlertCircle className="w-5 h-5 text-destructive" />
-                <span className="text-destructive font-semibold text-sm sm:text-base">IMPORTANT NOTE</span>
+                <AlertCircle className="w-5 h-5 text-[#FF4E00]" />
+                <span className="text-[#FF4E00] font-semibold text-sm sm:text-base">IMPORTANT NOTE</span>
               </div>
-              <p className="text-destructive/90 text-xs sm:text-sm max-w-md">
+              <p className="text-[#FF4E00]/90 text-xs sm:text-sm max-w-md">
                 All pricing shown on this page are rough estimates only. Final pricing will be confirmed upon launch. 
                 Please contact our sales team for accurate quotes.
               </p>
@@ -152,7 +152,7 @@ export default function Pricing() {
             >
               {plan.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
-                  <div className="bg-gradient-to-r from-secondary to-primary text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+                  <div className="bg-gradient-to-r from-[#0D9444] to-[#004B9E] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
                     {plan.badge}
                   </div>
                 </div>
@@ -160,8 +160,8 @@ export default function Pricing() {
               
               <div className={`h-full bg-gradient-to-br from-muted/60 via-muted/50 to-muted/60 backdrop-blur-md rounded-2xl border transition-all duration-300 ${
                 plan.popular 
-                  ? 'border-secondary shadow-[0_0_30px_rgba(13,148,68,0.3)] hover:shadow-[0_0_40px_rgba(13,148,68,0.4)]' 
-                  : 'border-border hover:border-primary/50'
+                  ? 'border-[#0D9444] shadow-[0_0_30px_rgba(13,148,68,0.3)] hover:shadow-[0_0_40px_rgba(13,148,68,0.4)]' 
+                  : 'border-border hover:border-[#004B9E]/50'
               }`}>
                 <div className="p-8">
                   {/* Icon */}
@@ -174,7 +174,7 @@ export default function Pricing() {
                   
                   {/* Price Placeholder - Showing estimate only */}
                   <div className="mb-6 text-center md:text-left">
-                    <div className="text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">
+                    <div className="text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0D9444] to-[#004B9E]">
                       Estimate Available
                     </div>
                     <p className="text-xs text-foreground/50 mt-1">Contact for accurate pricing</p>
@@ -184,17 +184,18 @@ export default function Pricing() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm">
-                        <Check className={`w-4 h-4 mt-0.5 ${plan.popular ? 'text-secondary' : 'text-primary'} shrink-0`} />
+                        <Check className={`w-4 h-4 mt-0.5 ${plan.popular ? 'text-[#0D9444]' : 'text-[#004B9E]'} shrink-0`} />
                         <span className="text-foreground/70 text-left">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
+                  {/* 10% ACTION HIGHLIGHT - Orange for high-priority CTA on popular plan */}
                   <Button 
                     className={`w-full transition-all ${
                       plan.popular 
-                        ? 'bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-white shadow-lg shadow-secondary/30' 
-                        : 'bg-muted/50 hover:bg-muted/80 text-foreground border border-border'
+                        ? 'bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/30' 
+                        : 'bg-[#004B9E] hover:bg-[#003A7A] text-white'
                     }`}
                     onClick={() => {
                       window.location.href = "/contact";
@@ -216,7 +217,7 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-16"
         >
-          <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl p-1">
+          <div className="bg-gradient-to-r from-[#004B9E]/20 via-[#0D9444]/20 to-[#004B9E]/20 rounded-2xl p-1">
             <div className="bg-muted/60 backdrop-blur-md rounded-xl p-8">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-foreground mb-2">Volume Discounts Available</h3>
@@ -231,7 +232,7 @@ export default function Pricing() {
                   { min: 100, max: "+", discount: "25%", label: "Enterprise" }
                 ].map((tier, index) => (
                   <div key={index} className="text-center p-3 rounded-lg bg-muted/50 hover:bg-muted transition-all">
-                    <div className="text-lg font-bold text-secondary">{tier.discount}</div>
+                    <div className="text-lg font-bold text-[#0D9444]">{tier.discount}</div>
                     <div className="text-xs text-foreground/60 mt-1">OFF (est.)</div>
                     <div className="text-xs text-foreground/50 mt-2">{tier.min}-{tier.max} units</div>
                   </div>
@@ -251,8 +252,8 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mb-16"
         >
-          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-secondary text-sm font-medium mb-4 mx-auto w-fit">
+          <div className="bg-gradient-to-r from-[#004B9E]/10 to-[#0D9444]/10 rounded-2xl p-8 border border-[#004B9E]/20 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004B9E]/20 border border-[#004B9E]/30 text-[#0D9444] text-sm font-medium mb-4 mx-auto w-fit">
               <DollarSign className="w-4 h-4" />
               Need a Custom Quote?
             </div>
@@ -262,13 +263,15 @@ export default function Pricing() {
               volume needs, and installation preferences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {/* 10% ACTION HIGHLIGHT - Orange for high-priority CTA */}
               <Link to="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-white shadow-lg shadow-secondary/30">
+                <Button size="lg" className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/30">
                   Contact Sales <Phone className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
+              {/* 30% OPERATIONAL - Blue for secondary action */}
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10">
+                <Button size="lg" variant="outline" className="border-[#004B9E]/30 text-foreground hover:bg-[#004B9E]/10">
                   Request Quote via Email <Mail className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
@@ -287,32 +290,32 @@ export default function Pricing() {
             <h3 className="text-xl font-bold text-foreground mb-4">Frequently Asked Questions</h3>
             <div className="grid md:grid-cols-2 gap-4 text-left">
               <div>
-                <p className="text-secondary font-medium mb-1">What's included in the hardware cost?</p>
+                <p className="text-[#0D9444] font-medium mb-1">What's included in the hardware cost?</p>
                 <p className="text-sm text-foreground/60">The device, installation kit, and warranty. Contact us for detailed pricing.</p>
               </div>
               <div>
-                <p className="text-secondary font-medium mb-1">Is there a monthly subscription?</p>
+                <p className="text-[#0D9444] font-medium mb-1">Is there a monthly subscription?</p>
                 <p className="text-sm text-foreground/60">No monthly fees. One-time hardware purchase with free mobile app access.</p>
               </div>
               <div>
-                <p className="text-secondary font-medium mb-1">Do you offer installation services?</p>
+                <p className="text-[#0D9444] font-medium mb-1">Do you offer installation services?</p>
                 <p className="text-sm text-foreground/60">Yes, professional installation available. Pricing available upon request.</p>
               </div>
               <div>
-                <p className="text-secondary font-medium mb-1">What payment methods do you accept?</p>
+                <p className="text-[#0D9444] font-medium mb-1">What payment methods do you accept?</p>
                 <p className="text-sm text-foreground/60">Bank transfer, card payments, and financing options for bulk orders.</p>
               </div>
               <div>
-                <p className="text-secondary font-medium mb-1">Are these the final prices?</p>
+                <p className="text-[#0D9444] font-medium mb-1">Are these the final prices?</p>
                 <p className="text-sm text-foreground/60">All pricing shown are estimates. Final pricing will be confirmed upon official launch.</p>
               </div>
               <div>
-                <p className="text-secondary font-medium mb-1">How can I get an accurate quote?</p>
+                <p className="text-[#0D9444] font-medium mb-1">How can I get an accurate quote?</p>
                 <p className="text-sm text-foreground/60">Contact our sales team directly for a personalized quote based on your needs.</p>
               </div>
             </div>
             <div className="mt-6 pt-4 border-t border-border flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="text-secondary hover:text-secondary/80 text-sm inline-flex items-center gap-1 justify-center">
+              <Link to="/contact" className="text-[#0D9444] hover:text-[#0D9444]/80 text-sm inline-flex items-center gap-1 justify-center">
                 <MessageCircle className="w-3 h-3" /> Chat with Sales
               </Link>
               <Link to="/contact" className="text-foreground/60 hover:text-foreground text-sm inline-flex items-center gap-1 justify-center">
@@ -329,13 +332,14 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-12 text-center"
         >
-          <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl p-8 border border-border">
+          <div className="bg-gradient-to-r from-[#004B9E]/20 via-[#0D9444]/20 to-[#004B9E]/20 rounded-2xl p-8 border border-border">
             <p className="text-foreground/70 text-sm mb-4">
-              <AlertCircle className="w-4 h-4 inline-block mr-1 text-destructive" />
+              <AlertCircle className="w-4 h-4 inline-block mr-1 text-[#FF4E00]" />
               All pricing shown are preliminary estimates. Final pricing will be confirmed upon full launch.
             </p>
+            {/* 10% ACTION HIGHLIGHT - Orange for high-priority CTA */}
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-white">
+              <Button size="lg" className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/30">
                 Get Accurate Quote <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>

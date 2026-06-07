@@ -21,7 +21,7 @@ const FloatingParticles = () => {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-primary/20"
+          className="absolute rounded-full bg-[#004B9E]/20"
           style={{
             width: particle.size,
             height: particle.size,
@@ -94,8 +94,8 @@ const StatCard = ({ value, label, icon: Icon, delay }: { value: string; label: s
     transition={{ delay }}
     className="text-center"
   >
-    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mx-auto mb-4">
-      <Icon className="w-8 h-8 text-secondary" />
+    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#004B9E]/20 to-[#0D9444]/20 flex items-center justify-center mx-auto mb-4">
+      <Icon className="w-8 h-8 text-[#0D9444]" />
     </div>
     <div className="text-3xl md:text-4xl font-bold text-foreground mb-1">{value}</div>
     <div className="text-sm text-foreground/60">{label}</div>
@@ -151,11 +151,11 @@ const caseStudies = [
     client: "Steelworks Industries, Tema",
     type: "industrial",
     icon: Factory,
-    heroImage: "https://images.unsplash.com/photo-1716191300020-b52dec5b70a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fE1hbnVmYWN0dXJpbmclMjBQbGFudCUyME9wdGltaXplcyUyMFByb2R1Y3Rpb258ZW58MHx8MHx8fDA%3D?w=1200&h=600&fit=crop",
+    heroImage: "https://images.pexels.com/photos/380251/pexels-photo-380251.jpeg?w=1200&h=600&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1701328778019-e95dedbf5346?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fE1hbnVmYWN0dXJpbmclMjBQbGFudCUyME9wdGltaXplcyUyMFByb2R1Y3Rpb258ZW58MHx8MHx8fDA%3D?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1649777689164-c4ad5dd3a83c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fE1hbnVmYWN0dXJpbmclMjBQbGFudCUyME9wdGltaXplcyUyMFByb2R1Y3Rpb258ZW58MHx8MHx8fDA%3D?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1685302863485-e1a2af4a637f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc1fHxNYW51ZmFjdHVyaW5nJTIwUGxhbnQlMjBPcHRpbWl6ZXMlMjBQcm9kdWN0aW9ufGVufDB8fDB8fHww?w=600&h=400&fit=crop"
+      "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/3862134/pexels-photo-3862134.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/3862135/pexels-photo-3862135.jpeg?w=600&h=400&fit=crop"
     ],
     result: "28% energy reduction",
     savings: "₵180,000 saved annually",
@@ -194,8 +194,8 @@ const caseStudies = [
     icon: Building2,
     heroImage: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?w=1200&h=600&fit=crop",
     galleryImages: [
-      "https://images.unsplash.com/photo-1760776140488-32fcfab4066a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fHJldGFpbCUyMGNoYWlufGVufDB8fDB8fHww?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1758570764602-d57bc2922dea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHJldGFpbCUyMGNoYWlufGVufDB8fDB8fHww?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?w=600&h=400&fit=crop",
       "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?w=600&h=400&fit=crop"
     ],
     result: "42% reduction in standby power",
@@ -239,16 +239,16 @@ export default function CaseStudies() {
   const heroScale = useTransform(scrollYProgress, [0, 0.3], [1, 0.95]);
 
   return (
-    <div ref={containerRef} className="pt-32 pb-20 min-h-screen relative overflow-hidden bg-theme">
+    <div ref={containerRef} className="pt-32 pb-20 min-h-screen relative overflow-hidden bg-background">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
         
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/15 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-[#004B9E]/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#0D9444]/15 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#004B9E]/5 rounded-full blur-[100px]" />
         <div className="theme-grid" />
         
         <FloatingParticles />
@@ -266,12 +266,12 @@ export default function CaseStudies() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-secondary text-sm font-medium mb-6 mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#004B9E]/20 backdrop-blur-sm border border-[#004B9E]/30 text-[#0D9444] text-sm font-medium mb-6 mx-auto">
               <Sparkles className="w-4 h-4 animate-pulse" />
               Real Results from Real Customers
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-foreground mb-6 leading-tight text-center">
-              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">
+              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D9444] to-[#004B9E]">
                 Stories
               </span>
             </h1>
@@ -310,10 +310,10 @@ export default function CaseStudies() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 rounded-xl bg-primary/20 backdrop-blur-sm">
-                      <study.icon className="w-6 h-6 text-secondary" />
+                    <div className="p-2 rounded-xl bg-[#004B9E]/20 backdrop-blur-sm">
+                      <study.icon className="w-6 h-6 text-[#0D9444]" />
                     </div>
-                    <span className="text-sm text-secondary uppercase tracking-wider bg-primary/10 px-3 py-1 rounded-full">
+                    <span className="text-sm text-[#0D9444] uppercase tracking-wider bg-[#004B9E]/10 px-3 py-1 rounded-full">
                       {study.type} • Case Study
                     </span>
                   </div>
@@ -323,15 +323,15 @@ export default function CaseStudies() {
               </div>
 
               {/* Results Banner */}
-              <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl p-6 mb-8 border border-primary/20">
+              <div className="bg-gradient-to-r from-[#004B9E]/20 via-[#0D9444]/20 to-[#004B9E]/20 rounded-2xl p-6 mb-8 border border-[#004B9E]/20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="text-center md:text-left">
                     <p className="text-sm text-foreground/60 mb-1">Key Result</p>
-                    <p className="text-2xl font-bold text-secondary">{study.result}</p>
+                    <p className="text-2xl font-bold text-[#0D9444]">{study.result}</p>
                   </div>
                   <div className="text-center md:text-left">
                     <p className="text-sm text-foreground/60 mb-1">Annual Savings</p>
-                    <p className="text-2xl font-bold text-secondary">{study.savings}</p>
+                    <p className="text-2xl font-bold text-[#0D9444]">{study.savings}</p>
                   </div>
                 </div>
               </div>
@@ -343,8 +343,8 @@ export default function CaseStudies() {
                   <ul className="space-y-3">
                     {study.challenges.map((challenge, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-destructive/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-destructive" />
+                        <div className="w-5 h-5 rounded-full bg-[#FF4E00]/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-[#FF4E00]" />
                         </div>
                         <span className="text-foreground/70">{challenge}</span>
                       </li>
@@ -356,7 +356,7 @@ export default function CaseStudies() {
                   <ul className="space-y-3">
                     {study.solutions.map((solution, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-[#0D9444] shrink-0 mt-0.5" />
                         <span className="text-foreground/70">{solution}</span>
                       </li>
                     ))}
@@ -377,9 +377,9 @@ export default function CaseStudies() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: idx * 0.1 }}
-                    className="bg-muted/40 backdrop-blur-sm rounded-xl p-4 text-center border border-border hover:border-primary/30 transition-all"
+                    className="bg-muted/40 backdrop-blur-sm rounded-xl p-4 text-center border border-border hover:border-[#004B9E]/30 transition-all"
                   >
-                    <metric.icon className="w-8 h-8 text-secondary mx-auto mb-2" />
+                    <metric.icon className="w-8 h-8 text-[#0D9444] mx-auto mb-2" />
                     <div className="text-2xl font-bold text-foreground">{metric.value}</div>
                     <div className="text-xs text-foreground/60">{metric.label}</div>
                   </motion.div>
@@ -407,8 +407,8 @@ export default function CaseStudies() {
               </div>
 
               {/* Testimonial */}
-              <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-border">
-                <Quote className="w-10 h-10 text-secondary/40 mb-4" />
+              <div className="bg-gradient-to-r from-[#004B9E]/10 to-[#0D9444]/10 rounded-2xl p-8 border border-border">
+                <Quote className="w-10 h-10 text-[#0D9444]/40 mb-4" />
                 <p className="text-lg text-foreground/80 italic mb-6">"{study.testimonial.quote}"</p>
                 <div className="flex items-center gap-4">
                   <ImageWithFallback 
@@ -426,7 +426,7 @@ export default function CaseStudies() {
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action - 10% ACTION HIGHLIGHT: Orange (#FF4E00) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -434,9 +434,9 @@ export default function CaseStudies() {
           transition={{ duration: 0.6 }}
           className="text-center mt-24"
         >
-          <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl p-12 border border-border backdrop-blur-sm relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
+          <div className="bg-gradient-to-r from-[#004B9E]/20 via-[#0D9444]/20 to-[#004B9E]/20 rounded-2xl p-12 border border-border backdrop-blur-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#004B9E]/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#0D9444]/10 rounded-full blur-3xl" />
             
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -446,13 +446,15 @@ export default function CaseStudies() {
                 Join hundreds of satisfied customers who have transformed their energy management with Omhero.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
+                {/* 10% ACTION HIGHLIGHT - Orange (#FF4E00) for high-priority CTA */}
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-white shadow-lg shadow-secondary/30 text-lg px-8 h-14">
+                  <Button size="lg" className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/30 text-lg px-8 h-14">
                     Start Your Journey <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
+                {/* 30% OPERATIONAL - Blue outline for secondary action */}
                 <Link to="/product">
-                  <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-primary/10 text-lg px-8 h-14">
+                  <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-[#004B9E]/10 text-lg px-8 h-14">
                     Explore Omhero
                   </Button>
                 </Link>

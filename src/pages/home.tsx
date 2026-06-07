@@ -9,12 +9,12 @@ export default function Home() {
   const [activeVideo, setActiveVideo] = useState(0);
 
   const quickServices = [
-    { title: "Bill Calculator", icon: Calculator, href: "/services/bill-calculator", color: "from-primary to-primary/70" },
-    { title: "Report Fault", icon: AlertTriangle, href: "/services/report-fault", color: "from-destructive to-destructive/70" },
-    { title: "New Connection", icon: PlugZap, href: "/services/new-connection", color: "from-secondary to-secondary/70" },
-    { title: "Energy Tips", icon: Lightbulb, href: "/energy-tips", color: "from-destructive to-destructive/70" },
-    { title: "Tariffs", icon: FileText, href: "/tariffs", color: "from-primary to-primary/70" },
-    { title: "News", icon: Newspaper, href: "/news", color: "from-secondary to-secondary/70" },
+    { title: "Bill Calculator", icon: Calculator, href: "/services/bill-calculator", color: "from-[#004B9E] to-[#004B9E]/70" },
+    { title: "Report Fault", icon: AlertTriangle, href: "/services/report-fault", color: "from-[#FF4E00] to-[#FF4E00]/70" },
+    { title: "New Connection", icon: PlugZap, href: "/services/new-connection", color: "from-[#0D9444] to-[#0D9444]/70" },
+    { title: "Energy Tips", icon: Lightbulb, href: "/energy-tips", color: "from-[#FF4E00] to-[#FF4E00]/70" },
+    { title: "Tariffs", icon: FileText, href: "/tariffs", color: "from-[#004B9E] to-[#004B9E]/70" },
+    { title: "News", icon: Newspaper, href: "/news", color: "from-[#0D9444] to-[#0D9444]/70" },
   ];
 
   const galleryImages = [
@@ -180,91 +180,93 @@ export default function Home() {
   return (
     <div className="w-full relative min-h-screen overflow-hidden bg-background">
       
-      {/* Hero Section - With image but better text contrast */}
-    <section 
-      className="relative pt-32 pb-20 md:pt-48 md:pb-28 overflow-hidden"
-    >
-      {/* Background image with improved overlay */}
-      <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{
-            backgroundImage: "url('https://images.pexels.com/photos/2044447/pexels-photo-2044447.jpeg?q=80&w=2070')",
-          }}
-        />
-        {/* Darker overlay for better text contrast - adapts to theme */}
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-secondary/20" />
-      </div>
-
-      {/* Animated elements */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/30 rounded-full blur-[120px] pointer-events-none z-0" />
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/30 backdrop-blur-sm border border-primary/40 text-secondary text-sm font-medium mb-6 mx-auto w-fit">
-              <Sparkles className="w-4 h-4" />
-              Live in Ghana & Nigeria
-            </div>
-          </motion.div>
-          
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight text-center"
-          >
-            Smart Energy Control <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-secondary to-primary">
-              For Africa
-            </span>
-          </motion.h1>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed text-center font-medium"
-          >
-            Monitor electricity usage, detect electrical risks early, reduce waste, and gain intelligent energy insights with Omhero. Built for the unique challenges of African infrastructure.
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <Button size="lg" className="w-full sm:w-auto justify-center text-base sm:text-lg h-14 px-8 bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg shadow-secondary/30">
-              Book Demo <Sparkles className="ml-2 w-4 h-4" />
-            </Button>
-            <Link to="/product">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto justify-center text-base sm:text-lg h-14 px-8 border-white/30 bg-black/20 backdrop-blur-md text-white hover:bg-white/20">
-                Explore Omhero
-              </Button>
-            </Link>
-          </motion.div>
+      {/* Hero Section - 60% Dominant Surface */}
+      <section 
+        className="relative pt-32 pb-20 md:pt-48 md:pb-28 overflow-hidden"
+      >
+        {/* Background image with improved overlay */}
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-fixed"
+            style={{
+              backgroundImage: "url('https://images.pexels.com/photos/2044447/pexels-photo-2044447.jpeg?q=80&w=2070')",
+            }}
+          />
+          {/* Darker overlay for better text contrast - adapts to theme */}
+          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#004B9E]/20 via-transparent to-[#0D9444]/20" />
         </div>
-      </div>
-    </section>
 
-      {/* Quick Services Bar */}
+        {/* Animated elements */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#004B9E]/30 rounded-full blur-[120px] pointer-events-none z-0" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#004B9E]/30 backdrop-blur-sm border border-[#004B9E]/40 text-[#0D9444] text-sm font-medium mb-6 mx-auto w-fit">
+                <Sparkles className="w-4 h-4" />
+                Live in Ghana & Nigeria
+              </div>
+            </motion.div>
+            
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight text-center"
+            >
+              Smart Energy Control <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0D9444] via-[#0D9444] to-[#004B9E]">
+                For Africa
+              </span>
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-base sm:text-lg md:text-xl text-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed text-center font-medium"
+            >
+              Monitor electricity usage, detect electrical risks early, reduce waste, and gain intelligent energy insights with Omhero. Built for the unique challenges of African infrastructure.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            >
+              {/* 10% ACTION HIGHLIGHT - Orange (#FF4E00) for high-priority CTA */}
+              <Button size="lg" className="w-full sm:w-auto justify-center text-base sm:text-lg h-14 px-8 bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/30">
+                Book Demo <Sparkles className="ml-2 w-4 h-4" />
+              </Button>
+              {/* 30% OPERATIONAL - Blue outline for secondary action */}
+              <Link to="/product">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto justify-center text-base sm:text-lg h-14 px-8 border-white/30 bg-black/20 backdrop-blur-md text-white hover:bg-white/20">
+                  Explore Omhero
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Services Bar - 30% Operational & 10% Action */}
       <section className="pb-20 relative z-20 -mt-10">
         <div className="container mx-auto px-4">
           <div className="bg-theme/60 backdrop-blur-sm border border-border rounded-2xl p-4 shadow-2xl">
             <div className="flex overflow-x-auto gap-4 snap-x snap-mandatory hide-scrollbar">
               {quickServices.map((service) => (
                 <Link key={service.title} to={service.href} className="flex-1 min-w-[140px] snap-center">
-                  <div className="flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-primary/5 transition-all group cursor-pointer text-center">
+                  <div className="flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-[#004B9E]/5 transition-all group cursor-pointer text-center">
                     <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${service.color} flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg`}>
                       <service.icon className="w-5 h-5 text-white" />
                     </div>
-                    <span className="text-sm font-medium text-foreground/80 group-hover:text-primary transition-colors">{service.title}</span>
+                    <span className="text-sm font-medium text-foreground/80 group-hover:text-[#004B9E] transition-colors">{service.title}</span>
                   </div>
                 </Link>
               ))}
@@ -287,8 +289,8 @@ export default function Home() {
             <div className={`flex flex-col ${section.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20`}>
               <div className="lg:w-1/2 text-center lg:text-left">
                 <div className="mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center border border-primary/30 mb-6 shadow-lg mx-auto lg:mx-0">
-                    <section.icon className="w-8 h-8 text-secondary" />
+                  <div className="w-16 h-16 rounded-2xl bg-[#004B9E]/20 flex items-center justify-center border border-[#004B9E]/30 mb-6 shadow-lg mx-auto lg:mx-0">
+                    <section.icon className="w-8 h-8 text-[#0D9444]" />
                   </div>
                   <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 text-center lg:text-left">
                     {section.title}
@@ -299,14 +301,15 @@ export default function Home() {
                   <div className="flex flex-wrap gap-6 mb-8 justify-center lg:justify-start">
                     {section.stats.map((stat, idx) => (
                       <div key={idx} className="bg-muted/50 backdrop-blur-sm rounded-lg px-4 py-2 text-center">
-                        <div className="text-xl sm:text-2xl font-bold text-secondary">{stat.value}</div>
+                        <div className="text-xl sm:text-2xl font-bold text-[#0D9444]">{stat.value}</div>
                         <div className="text-xs sm:text-sm text-foreground/60">{stat.label}</div>
                       </div>
                     ))}
                   </div>
                   <div className="flex justify-center lg:justify-start">
                     <Link to="/contact">
-                      <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                      {/* 30% OPERATIONAL - Blue for standard actions */}
+                      <Button className="bg-[#004B9E] hover:bg-[#003A7A] text-white">
                         Learn More <ArrowRight className="ml-2 w-4 h-4" />
                       </Button>
                     </Link>
@@ -316,7 +319,7 @@ export default function Home() {
 
               <div className="lg:w-1/2">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent pointer-events-none z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#004B9E]/30 to-transparent pointer-events-none z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <img 
                     src={section.image}
                     alt={section.imageAlt}
@@ -330,16 +333,16 @@ export default function Home() {
         </motion.section>
       ))}
 
-      {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-br from-primary/5 to-secondary/5">
+      {/* Testimonials Section - Green accents for success */}
+      <section className="py-24 bg-gradient-to-br from-[#004B9E]/5 to-[#0D9444]/5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 text-secondary text-sm font-medium mb-4 mx-auto w-fit">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#004B9E]/20 border border-[#004B9E]/30 text-[#0D9444] text-sm font-medium mb-4 mx-auto w-fit">
               <Star className="w-4 h-4" />
               Customer Love
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-6 text-center">
-              What Our <span className="text-secondary">Customers Say</span>
+              What Our <span className="text-[#0D9444]">Customers Say</span>
             </h2>
             <p className="text-base sm:text-lg text-foreground/80 text-center">
               Join thousands of satisfied customers already saving with Omhero
@@ -354,13 +357,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-muted/40 backdrop-blur-md rounded-xl p-6 border border-border hover:border-secondary/30 transition-all group"
+                className="bg-muted/40 backdrop-blur-md rounded-xl p-6 border border-border hover:border-[#0D9444]/30 transition-all group"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <img 
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-14 h-14 rounded-full object-cover border-2 border-secondary"
+                    className="w-14 h-14 rounded-full object-cover border-2 border-[#0D9444]"
                   />
                   <div>
                     <h4 className="font-bold text-foreground">{testimonial.name}</h4>
@@ -369,7 +372,7 @@ export default function Home() {
                 </div>
                 <div className="flex gap-1 mb-3 justify-center md:justify-start">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                    <Star key={i} className="w-4 h-4 fill-[#0D9444] text-[#0D9444]" />
                   ))}
                 </div>
                 <p className="text-foreground/80 text-sm leading-relaxed italic text-center md:text-left">"{testimonial.quote}"</p>
@@ -384,12 +387,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
-                <ImageIcon className="w-8 h-8 text-secondary" />
+              <div className="w-16 h-16 rounded-full bg-[#004B9E]/20 flex items-center justify-center border border-[#004B9E]/30">
+                <ImageIcon className="w-8 h-8 text-[#0D9444]" />
               </div>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-6 text-center">
-              See Omhero in <span className="text-secondary">Action</span>
+              See Omhero in <span className="text-[#0D9444]">Action</span>
             </h2>
             <p className="text-base sm:text-lg text-foreground/80 text-center">
               Real installations, real results. Browse our gallery of Omhero deployments across Africa.
@@ -404,7 +407,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group cursor-pointer overflow-hidden rounded-xl bg-muted/40 backdrop-blur-sm border border-border hover:border-primary/50 transition-all duration-300"
+                className="group cursor-pointer overflow-hidden rounded-xl bg-muted/40 backdrop-blur-sm border border-border hover:border-[#004B9E]/50 transition-all duration-300"
               >
                 <div className="relative overflow-hidden h-64">
                   <img 
@@ -428,9 +431,9 @@ export default function Home() {
       <section className="py-24 bg-gradient-to-b from-muted/30 to-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Crown className="w-12 h-12 text-secondary mx-auto mb-4" />
+            <Crown className="w-12 h-12 text-[#0D9444] mx-auto mb-4" />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-6 text-center">
-              Why Choose <span className="text-secondary">OHM Plus?</span>
+              Why Choose <span className="text-[#0D9444]">OHM Plus?</span>
             </h2>
             <p className="text-base sm:text-lg text-foreground/80 text-center">
               We provide end-to-end energy management solutions tailored for African homes and businesses.
@@ -445,7 +448,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-muted/40 backdrop-blur-sm rounded-xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 group"
+                className="bg-muted/40 backdrop-blur-sm rounded-xl overflow-hidden border border-border hover:border-[#004B9E]/30 transition-all duration-300 group"
               >
                 <div className="h-48 overflow-hidden">
                   <img 
@@ -455,12 +458,12 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6 text-center md:text-left">
-                  <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4 border border-primary/30 mx-auto md:mx-0">
-                    <benefit.icon className="w-6 h-6 text-secondary" />
+                  <div className="w-12 h-12 rounded-lg bg-[#004B9E]/20 flex items-center justify-center mb-4 border border-[#004B9E]/30 mx-auto md:mx-0">
+                    <benefit.icon className="w-6 h-6 text-[#0D9444]" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2 text-center md:text-left">{benefit.title}</h3>
                   <p className="text-foreground/70 text-sm mb-3 text-center md:text-left">{benefit.description}</p>
-                  <div className="text-xs text-secondary font-semibold text-center md:text-left">{benefit.stat}</div>
+                  <div className="text-xs text-[#0D9444] font-semibold text-center md:text-left">{benefit.stat}</div>
                 </div>
               </motion.div>
             ))}
@@ -473,12 +476,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
-                <Play className="w-8 h-8 text-secondary" />
+              <div className="w-16 h-16 rounded-full bg-[#004B9E]/20 flex items-center justify-center border border-[#004B9E]/30">
+                <Play className="w-8 h-8 text-[#0D9444]" />
               </div>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-6 text-center">
-              Watch Our <span className="text-secondary">Story</span>
+              Watch Our <span className="text-[#0D9444]">Story</span>
             </h2>
             <p className="text-base sm:text-lg text-foreground/80 text-center">
               See how Omhero is transforming energy management across the continent.
@@ -513,7 +516,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 onClick={() => setActiveVideo(index)}
                 className={`cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                  activeVideo === index ? 'border-secondary shadow-lg shadow-secondary/20' : 'border-transparent'
+                  activeVideo === index ? 'border-[#0D9444] shadow-lg shadow-[#0D9444]/20' : 'border-transparent'
                 }`}
               >
                 <div className="relative aspect-video">
@@ -535,13 +538,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Outage Status */}
+      {/* Outage Status - 10% Action with Green success indicator */}
       <section className="py-12 border-t border-border bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto bg-secondary/10 border border-secondary/30 p-6 rounded-2xl text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto bg-[#0D9444]/10 border border-[#0D9444]/30 p-6 rounded-2xl text-center md:text-left">
             <div className="flex items-center gap-4 flex-col md:flex-row">
-              <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center shrink-0 border border-secondary/50">
-                <CheckCircle2 className="w-6 h-6 text-secondary" />
+              <div className="w-12 h-12 rounded-full bg-[#0D9444]/20 flex items-center justify-center shrink-0 border border-[#0D9444]/50">
+                <CheckCircle2 className="w-6 h-6 text-[#0D9444]" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-1 text-center md:text-left">Network Status: Normal</h3>
@@ -549,7 +552,7 @@ export default function Home() {
               </div>
             </div>
             <Link to="/services/report-fault">
-              <Button variant="outline" className="border-secondary/30 text-foreground hover:bg-secondary/10 w-full md:w-auto justify-center">
+              <Button variant="outline" className="border-[#FF4E00]/30 text-foreground hover:bg-[#FF4E00]/10 w-full md:w-auto justify-center">
                 Report an Outage
               </Button>
             </Link>
@@ -557,13 +560,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Energy Tips Teaser */}
-      <section className="py-24 bg-gradient-to-br from-destructive/5 to-destructive/10">
+      {/* Energy Tips Teaser - Orange accent for alerts/warnings */}
+      <section className="py-24 bg-gradient-to-br from-[#FF4E00]/5 to-[#FF4E00]/10">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
             <div className="lg:w-1/2 text-center lg:text-left">
-              <div className="w-16 h-16 bg-destructive/20 rounded-2xl flex items-center justify-center mb-6 border border-destructive/30 mx-auto lg:mx-0">
-                <Lightbulb className="w-8 h-8 text-destructive" />
+              <div className="w-16 h-16 bg-[#FF4E00]/20 rounded-2xl flex items-center justify-center mb-6 border border-[#FF4E00]/30 mx-auto lg:mx-0">
+                <Lightbulb className="w-8 h-8 text-[#FF4E00]" />
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-4xl font-display font-bold text-foreground mb-6 text-center lg:text-left">Did You Know?</h2>
               <p className="text-base sm:text-lg text-foreground/80 mb-8 leading-relaxed text-center lg:text-left">
@@ -571,7 +574,7 @@ export default function Home() {
               </p>
               <div className="flex justify-center lg:justify-start">
                 <Link to="/energy-tips">
-                  <Button variant="outline" className="border-destructive/30 hover:bg-destructive/10 gap-2 text-foreground">
+                  <Button variant="outline" className="border-[#FF4E00]/30 hover:bg-[#FF4E00]/10 gap-2 text-foreground">
                     View More Energy Tips <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
@@ -580,14 +583,14 @@ export default function Home() {
             <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Card className="bg-muted/40 backdrop-blur-sm border-border">
                 <CardContent className="p-6 text-center sm:text-left">
-                  <Zap className="w-6 h-6 text-secondary mb-4 mx-auto sm:mx-0" />
+                  <Zap className="w-6 h-6 text-[#0D9444] mb-4 mx-auto sm:mx-0" />
                   <h4 className="font-bold text-foreground mb-2 text-center sm:text-left">Vampire Power</h4>
                   <p className="text-sm text-foreground/70 text-center sm:text-left">Electronics left plugged in can account for 10% of your bill.</p>
                 </CardContent>
               </Card>
               <Card className="bg-muted/40 backdrop-blur-sm border-border">
                 <CardContent className="p-6 text-center sm:text-left">
-                  <Leaf className="w-6 h-6 text-secondary mb-4 mx-auto sm:mx-0" />
+                  <Leaf className="w-6 h-6 text-[#0D9444] mb-4 mx-auto sm:mx-0" />
                   <h4 className="font-bold text-foreground mb-2 text-center sm:text-left">LED Savings</h4>
                   <p className="text-sm text-foreground/70 text-center sm:text-left">LED bulbs use 80% less energy than standard bulbs.</p>
                 </CardContent>
@@ -606,7 +609,7 @@ export default function Home() {
               <p className="text-foreground/70">Updates from OHM Plus and the energy sector.</p>
             </div>
             <Link to="/news">
-              <Button variant="outline" className="border-primary/30 hover:bg-primary/10 gap-2 text-foreground">
+              <Button variant="outline" className="border-[#004B9E]/30 hover:bg-[#004B9E]/10 gap-2 text-foreground">
                 View All News <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
@@ -615,7 +618,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* News Card 1 */}
             <Link to="/news/ohm-plus-launch-accra">
-              <Card className="bg-muted/40 backdrop-blur-sm border-border hover:border-primary/30 transition-all group cursor-pointer flex flex-col overflow-hidden h-full">
+              <Card className="bg-muted/40 backdrop-blur-sm border-border hover:border-[#004B9E]/30 transition-all group cursor-pointer flex flex-col overflow-hidden h-full">
                 <div className="h-48 overflow-hidden">
                   <img 
                     src="https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg?w=400&h=200&fit=crop" 
@@ -624,10 +627,10 @@ export default function Home() {
                   />
                 </div>
                 <CardContent className="p-6 flex-1 flex flex-col text-center sm:text-left">
-                  <span className="text-xs text-secondary mb-2">Company News</span>
-                  <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">OHM Plus Launches Pilot Program in Accra</h4>
+                  <span className="text-xs text-[#0D9444] mb-2">Company News</span>
+                  <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-[#004B9E] transition-colors">OHM Plus Launches Pilot Program in Accra</h4>
                   <p className="text-sm text-foreground/70 line-clamp-2 mb-4">We are thrilled to announce the launch of our smart energy control pilot program in the Greater Accra region.</p>
-                  <span className="text-sm text-secondary font-medium mt-auto flex items-center justify-center sm:justify-start gap-1">
+                  <span className="text-sm text-[#0D9444] font-medium mt-auto flex items-center justify-center sm:justify-start gap-1">
                     Read more <ArrowRight className="w-3 h-3" />
                   </span>
                 </CardContent>
@@ -636,7 +639,7 @@ export default function Home() {
 
             {/* News Card 2 */}
             <Link to="/news/ghana-tariff-review-2025">
-              <Card className="bg-muted/40 backdrop-blur-sm border-border hover:border-primary/30 transition-all group cursor-pointer flex flex-col overflow-hidden h-full">
+              <Card className="bg-muted/40 backdrop-blur-sm border-border hover:border-[#004B9E]/30 transition-all group cursor-pointer flex flex-col overflow-hidden h-full">
                 <div className="h-48 overflow-hidden">
                   <img 
                     src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?w=400&h=200&fit=crop" 
@@ -645,10 +648,10 @@ export default function Home() {
                   />
                 </div>
                 <CardContent className="p-6 flex-1 flex flex-col text-center sm:text-left">
-                  <span className="text-xs text-secondary mb-2">Government Policy</span>
-                  <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Ghana's Electricity Tariff Review 2025</h4>
+                  <span className="text-xs text-[#0D9444] mb-2">Government Policy</span>
+                  <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-[#004B9E] transition-colors">Ghana's Electricity Tariff Review 2025</h4>
                   <p className="text-sm text-foreground/70 line-clamp-2 mb-4">The Public Utilities Regulatory Commission (PURC) has announced its quarterly tariff review.</p>
-                  <span className="text-sm text-secondary font-medium mt-auto flex items-center justify-center sm:justify-start gap-1">
+                  <span className="text-sm text-[#0D9444] font-medium mt-auto flex items-center justify-center sm:justify-start gap-1">
                     Read more <ArrowRight className="w-3 h-3" />
                   </span>
                 </CardContent>
@@ -657,7 +660,7 @@ export default function Home() {
 
             {/* News Card 3 */}
             <Link to="/news/smart-meters-changing-energy">
-              <Card className="bg-muted/40 backdrop-blur-sm border-border hover:border-primary/30 transition-all group cursor-pointer flex flex-col overflow-hidden h-full">
+              <Card className="bg-muted/40 backdrop-blur-sm border-border hover:border-[#004B9E]/30 transition-all group cursor-pointer flex flex-col overflow-hidden h-full">
                 <div className="h-48 overflow-hidden">
                   <img 
                     src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?w=400&h=200&fit=crop" 
@@ -666,10 +669,10 @@ export default function Home() {
                   />
                 </div>
                 <CardContent className="p-6 flex-1 flex flex-col text-center sm:text-left">
-                  <span className="text-xs text-secondary mb-2">Industry</span>
-                  <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">Smart Meters Are Changing Energy</h4>
+                  <span className="text-xs text-[#0D9444] mb-2">Industry</span>
+                  <h4 className="text-lg font-bold text-foreground mb-2 group-hover:text-[#004B9E] transition-colors">Smart Meters Are Changing Energy</h4>
                   <p className="text-sm text-foreground/70 line-clamp-2 mb-4">The transition from estimated billing to smart metering is transforming how Nigerians consume electricity.</p>
-                  <span className="text-sm text-secondary font-medium mt-auto flex items-center justify-center sm:justify-start gap-1">
+                  <span className="text-sm text-[#0D9444] font-medium mt-auto flex items-center justify-center sm:justify-start gap-1">
                     Read more <ArrowRight className="w-3 h-3" />
                   </span>
                 </CardContent>
@@ -679,13 +682,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - 10% Action with Orange high-priority CTA */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#004B9E]/20 via-[#0D9444]/20 to-[#004B9E]/20" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#004B9E]/20 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-secondary text-sm font-medium mb-6 mx-auto w-fit">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#004B9E]/20 backdrop-blur-sm border border-[#004B9E]/30 text-[#0D9444] text-sm font-medium mb-6 mx-auto w-fit">
             <ThumbsUp className="w-4 h-4" />
             Join the Revolution
           </div>
@@ -694,13 +697,15 @@ export default function Home() {
             Join the pilot program in Ghana and Nigeria today and be among the first to experience true energy intelligence.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {/* 10% ACTION HIGHLIGHT - Orange (#FF4E00) for high-priority CTA */}
             <Link to="/contact">
-              <Button size="lg" className="w-full sm:w-auto justify-center text-base sm:text-lg h-14 px-8 bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg shadow-secondary/30">
+              <Button size="lg" className="w-full sm:w-auto justify-center text-base sm:text-lg h-14 px-8 bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/30">
                 Contact Sales
               </Button>
             </Link>
+            {/* 30% OPERATIONAL - Blue outline for secondary action */}
             <Link to="/pricing">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto justify-center text-base sm:text-lg h-14 px-8 border-border text-foreground hover:bg-primary/10 backdrop-blur-sm">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto justify-center text-base sm:text-lg h-14 px-8 border-border text-foreground hover:bg-[#004B9E]/10 backdrop-blur-sm">
                 View Pricing
               </Button>
             </Link>

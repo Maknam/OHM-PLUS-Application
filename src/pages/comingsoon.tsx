@@ -129,12 +129,12 @@ export default function ComingSoon() {
   }
 
   const features = [
-    { icon: Zap, title: "Real-time Monitoring", description: "Track your energy usage as it happens", color: "from-destructive to-destructive/70" },
-    { icon: Activity, title: "Smart Analytics", description: "AI-powered insights to optimize usage", color: "from-secondary to-secondary/70" },
-    { icon: Calendar, title: "Predictive Alerts", description: "Never miss an important notification", color: "from-primary to-primary/70" },
-    { icon: Battery, title: "Battery Optimization", description: "Extend battery life by 30%", color: "from-secondary to-secondary/70" },
-    { icon: TrendingUp, title: "Cost Savings", description: "Reduce bills by up to 40%", color: "from-destructive to-destructive/70" },
-    { icon: Award, title: "Carbon Tracking", description: "Monitor your environmental impact", color: "from-primary to-primary/70" },
+    { icon: Zap, title: "Real-time Monitoring", description: "Track your energy usage as it happens", color: "from-[#FF4E00] to-[#FF4E00]/70" },
+    { icon: Activity, title: "Smart Analytics", description: "AI-powered insights to optimize usage", color: "from-[#0D9444] to-[#0D9444]/70" },
+    { icon: Calendar, title: "Predictive Alerts", description: "Never miss an important notification", color: "from-[#004B9E] to-[#004B9E]/70" },
+    { icon: Battery, title: "Battery Optimization", description: "Extend battery life by 30%", color: "from-[#0D9444] to-[#0D9444]/70" },
+    { icon: TrendingUp, title: "Cost Savings", description: "Reduce bills by up to 40%", color: "from-[#FF4E00] to-[#FF4E00]/70" },
+    { icon: Award, title: "Carbon Tracking", description: "Monitor your environmental impact", color: "from-[#004B9E] to-[#004B9E]/70" },
   ];
 
   const socialLinks = [
@@ -144,7 +144,7 @@ export default function ComingSoon() {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5 pt-20">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5 pt-20">
       
       {/* Animated Gradient Orbs with theme colors */}
       <div className="fixed inset-0 pointer-events-none">
@@ -155,7 +155,7 @@ export default function ComingSoon() {
             scale: [1, 1.1, 0.9, 1]
           }}
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[-150px] right-[-100px] w-[500px] h-[500px] rounded-full bg-gradient-to-r from-primary/30 to-secondary/20 blur-[100px]"
+          className="absolute top-[-150px] right-[-100px] w-[500px] h-[500px] rounded-full bg-gradient-to-r from-[#004B9E]/30 to-[#0D9444]/20 blur-[100px]"
         />
         <motion.div
           animate={{ 
@@ -164,7 +164,7 @@ export default function ComingSoon() {
             scale: [1, 0.9, 1.1, 1]
           }}
           transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute bottom-[-200px] left-[-150px] w-[600px] h-[600px] rounded-full bg-gradient-to-r from-secondary/20 to-primary/20 blur-[120px]"
+          className="absolute bottom-[-200px] left-[-150px] w-[600px] h-[600px] rounded-full bg-gradient-to-r from-[#0D9444]/20 to-[#004B9E]/20 blur-[120px]"
         />
         <motion.div
           animate={{ 
@@ -173,7 +173,7 @@ export default function ComingSoon() {
             scale: [1, 1.05, 0.95, 1]
           }}
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 5 }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-gradient-to-r from-destructive/10 to-destructive/10 blur-[100px]"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-gradient-to-r from-[#FF4E00]/10 to-[#FF4E00]/10 blur-[100px]"
         />
         <motion.div
           animate={{ 
@@ -181,7 +181,7 @@ export default function ComingSoon() {
             y: [0, 20, -20, 0],
           }}
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 8 }}
-          className="absolute bottom-[20%] right-[5%] w-[350px] h-[350px] rounded-full bg-gradient-to-r from-secondary/10 to-primary/10 blur-[100px]"
+          className="absolute bottom-[20%] right-[5%] w-[350px] h-[350px] rounded-full bg-gradient-to-r from-[#0D9444]/10 to-[#004B9E]/10 blur-[100px]"
         />
       </div>
 
@@ -214,7 +214,7 @@ export default function ComingSoon() {
 
       {/* Mouse-follow glow effect */}
       <motion.div
-        className="fixed w-[300px] h-[300px] rounded-full bg-gradient-to-r from-primary/10 to-secondary/5 blur-[80px] pointer-events-none z-0"
+        className="fixed w-[300px] h-[300px] rounded-full bg-gradient-to-r from-[#004B9E]/10 to-[#0D9444]/5 blur-[80px] pointer-events-none z-0"
         animate={{
           x: mousePosition.x - 150,
           y: mousePosition.y - 150,
@@ -234,7 +234,7 @@ export default function ComingSoon() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl w-full"
         >
-          <div className="bg-gradient-to-br from-muted/50 via-muted/40 to-muted/50 backdrop-blur-xl rounded-3xl shadow-2xl p-8 md:p-12 border border-border hover:border-primary/30 transition-all duration-500">
+          <div className="bg-gradient-to-br from-muted/50 via-muted/40 to-muted/50 backdrop-blur-xl rounded-3xl shadow-2xl p-8 md:p-12 border border-border hover:border-[#004B9E]/30 transition-all duration-500">
             
             {/* Animated Icon with glow */}
             <motion.div
@@ -243,8 +243,8 @@ export default function ComingSoon() {
               className="flex justify-center mb-6"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary rounded-2xl blur-xl opacity-50 animate-pulse" />
-                <div className="relative w-20 h-20 rounded-2xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0D9444] to-[#004B9E] rounded-2xl blur-xl opacity-50 animate-pulse" />
+                <div className="relative w-20 h-20 rounded-2xl bg-gradient-to-br from-[#0D9444] to-[#004B9E] flex items-center justify-center shadow-2xl">
                   <Zap className="w-10 h-10 text-white" />
                 </div>
               </div>
@@ -257,7 +257,7 @@ export default function ComingSoon() {
               transition={{ delay: 0.2 }}
               className="flex justify-center mb-6"
             >
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur-sm border border-primary/30 text-secondary text-sm font-medium shadow-lg">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#004B9E]/20 to-[#0D9444]/20 backdrop-blur-sm border border-[#004B9E]/30 text-[#0D9444] text-sm font-medium shadow-lg">
                 <Sparkles className="w-4 h-4 animate-pulse" />
                 Launching Soon - Be the First to Know
               </div>
@@ -274,7 +274,7 @@ export default function ComingSoon() {
                 Something Beautiful
               </span>
               <br />
-              <span className="bg-gradient-to-r from-secondary via-secondary to-primary bg-clip-text text-transparent animate-gradient">
+              <span className="bg-gradient-to-r from-[#0D9444] via-[#0D9444] to-[#004B9E] bg-clip-text text-transparent animate-gradient">
                 Is Coming
               </span>
             </motion.h1>
@@ -286,12 +286,12 @@ export default function ComingSoon() {
               transition={{ delay: 0.4 }}
               className="text-center text-foreground/70 text-lg md:text-xl mb-8 leading-relaxed flex items-center justify-center gap-2 flex-wrap"
             >
-              <Cloud className="w-5 h-5 text-primary" />
+              <Cloud className="w-5 h-5 text-[#004B9E]" />
               We're crafting an exceptional dashboard experience
-              <Sun className="w-5 h-5 text-destructive" />
+              <Sun className="w-5 h-5 text-[#FF4E00]" />
               <br />
               that puts humanity back into energy data.
-              <Moon className="w-5 h-5 text-primary" />
+              <Moon className="w-5 h-5 text-[#004B9E]" />
             </motion.p>
 
             {/* Countdown Timer with gradient backgrounds */}
@@ -303,10 +303,10 @@ export default function ComingSoon() {
             >
               {Object.entries(timeLeft).map(([unit, value], index) => {
                 const gradients = [
-                  "from-primary to-primary",
-                  "from-secondary to-secondary",
-                  "from-destructive to-destructive",
-                  "from-secondary to-primary"
+                  "from-[#004B9E] to-[#004B9E]",
+                  "from-[#0D9444] to-[#0D9444]",
+                  "from-[#FF4E00] to-[#FF4E00]",
+                  "from-[#0D9444] to-[#004B9E]"
                 ];
                 return (
                   <motion.div
@@ -316,8 +316,8 @@ export default function ComingSoon() {
                     transition={{ delay: 0.5 + index * 0.1 }}
                     className="relative group"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur group-hover:blur-md transition-all" />
-                    <div className="relative bg-gradient-to-br from-muted/60 to-muted/40 backdrop-blur-sm rounded-xl p-4 text-center border border-border hover:border-primary/30 transition-all hover:-translate-y-1">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#004B9E]/20 to-[#0D9444]/20 rounded-xl blur group-hover:blur-md transition-all" />
+                    <div className="relative bg-gradient-to-br from-muted/60 to-muted/40 backdrop-blur-sm rounded-xl p-4 text-center border border-border hover:border-[#004B9E]/30 transition-all hover:-translate-y-1">
                       <div className={`text-3xl md:text-4xl font-bold bg-gradient-to-r ${gradients[index]} bg-clip-text text-transparent mb-1`}>
                         {String(value).padStart(2, '0')}
                       </div>
@@ -342,8 +342,8 @@ export default function ComingSoon() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-6"
                 >
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-secondary/20 to-secondary/20 flex items-center justify-center mx-auto mb-4 border-2 border-secondary/50 animate-pulse">
-                    <CheckCircle2 className="w-10 h-10 text-secondary" />
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#0D9444]/20 to-[#0D9444]/20 flex items-center justify-center mx-auto mb-4 border-2 border-[#0D9444]/50 animate-pulse">
+                    <CheckCircle2 className="w-10 h-10 text-[#0D9444]" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-2">You're on the list! 🎉</h3>
                   <p className="text-foreground/70 mb-4">
@@ -352,7 +352,7 @@ export default function ComingSoon() {
                   <Button 
                     onClick={() => setIsSuccess(false)} 
                     variant="outline"
-                    className="border-primary/30 text-foreground hover:bg-primary/20 hover:border-primary/50 transition-all"
+                    className="border-[#004B9E]/30 text-foreground hover:bg-[#004B9E]/20 hover:border-[#004B9E]/50 transition-all"
                   >
                     Join with another email
                   </Button>
@@ -365,16 +365,17 @@ export default function ComingSoon() {
                         placeholder="Enter your email address"
                         type="email"
                         {...form.register("email")}
-                        className="h-12 bg-muted/50 border-border focus:border-secondary focus:ring-secondary/20 text-foreground placeholder:text-foreground/50 transition-all"
+                        className="h-12 bg-muted/50 border-border focus:border-[#0D9444] focus:ring-[#0D9444]/20 text-foreground placeholder:text-foreground/50 transition-all"
                       />
                       {form.formState.errors.email && (
-                        <p className="text-sm text-destructive mt-1">{form.formState.errors.email.message}</p>
+                        <p className="text-sm text-[#FF4E00] mt-1">{form.formState.errors.email.message}</p>
                       )}
                     </div>
+                    {/* 10% ACTION HIGHLIGHT - Orange for high-priority CTA */}
                     <Button 
                       type="submit"
                       disabled={submitWaitlist.isPending}
-                      className="h-12 px-8 bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-white shadow-lg shadow-secondary/20 transition-all hover:scale-105"
+                      className="h-12 px-8 bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/20 transition-all hover:scale-105"
                     >
                       {submitWaitlist.isPending ? (
                         <>
@@ -389,9 +390,9 @@ export default function ComingSoon() {
                     </Button>
                   </div>
                   <p className="text-xs text-foreground/50 text-center flex items-center justify-center gap-1">
-                    <Star className="w-3 h-3 text-secondary" />
+                    <Star className="w-3 h-3 text-[#0D9444]" />
                     No spam, ever. Unsubscribe anytime.
-                    <Star className="w-3 h-3 text-secondary" />
+                    <Star className="w-3 h-3 text-[#0D9444]" />
                   </p>
                 </form>
               )}
@@ -416,7 +417,7 @@ export default function ComingSoon() {
                     <feature.icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm text-foreground group-hover:text-secondary transition-colors">{feature.title}</h4>
+                    <h4 className="font-semibold text-sm text-foreground group-hover:text-[#0D9444] transition-colors">{feature.title}</h4>
                     <p className="text-xs text-foreground/60">{feature.description}</p>
                   </div>
                 </motion.div>
@@ -433,12 +434,12 @@ export default function ComingSoon() {
               <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <div className="flex items-center gap-3 text-sm">
                   <div className="flex items-center gap-2 text-foreground/60">
-                    <Clock className="w-4 h-4 text-secondary" />
+                    <Clock className="w-4 h-4 text-[#0D9444]" />
                     <span>Launching in 120 days</span>
                   </div>
                   <div className="w-px h-4 bg-border hidden sm:block" />
                   <div className="flex items-center gap-2 text-foreground/60">
-                    <Mail className="w-4 h-4 text-primary" />
+                    <Mail className="w-4 h-4 text-[#004B9E]" />
                     <span>Priority access for early signups</span>
                   </div>
                 </div>
@@ -471,24 +472,24 @@ export default function ComingSoon() {
           className="mt-8 text-center"
         >
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link to="/" className="text-foreground/60 hover:text-secondary transition-colors flex items-center gap-1">
+            <Link to="/" className="text-foreground/60 hover:text-[#0D9444] transition-colors flex items-center gap-1">
               Home
             </Link>
-            <Link to="/product" className="text-foreground/60 hover:text-secondary transition-colors flex items-center gap-1">
+            <Link to="/product" className="text-foreground/60 hover:text-[#0D9444] transition-colors flex items-center gap-1">
               Product
             </Link>
-            <Link to="/contact" className="text-foreground/60 hover:text-secondary transition-colors flex items-center gap-1">
+            <Link to="/contact" className="text-foreground/60 hover:text-[#0D9444] transition-colors flex items-center gap-1">
               Contact
             </Link>
-            <Link to="/pricing" className="text-foreground/60 hover:text-secondary transition-colors flex items-center gap-1">
+            <Link to="/pricing" className="text-foreground/60 hover:text-[#0D9444] transition-colors flex items-center gap-1">
               Pricing
             </Link>
-            <Link to="/energy-tips" className="text-foreground/60 hover:text-secondary transition-colors flex items-center gap-1">
+            <Link to="/energy-tips" className="text-foreground/60 hover:text-[#0D9444] transition-colors flex items-center gap-1">
               Energy Tips
             </Link>
           </div>
           <p className="text-xs text-foreground/50 mt-4 flex items-center justify-center gap-1">
-            © 2026 OhmPlus. All rights reserved. Built with <Heart className="w-3 h-3 inline text-destructive animate-pulse" /> for Africa.
+            © 2026 OhmPlus. All rights reserved. Built with <Heart className="w-3 h-3 inline text-[#FF4E00] animate-pulse" /> for Africa.
           </p>
         </motion.div>
       </div>
