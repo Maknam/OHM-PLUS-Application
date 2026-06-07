@@ -23,7 +23,7 @@ export default function Pricing() {
         "Email support",
         "1-year warranty"
       ],
-      gradient: "from-ohm-blue to-ohm-blue/70",
+      gradient: "from-primary to-primary/70",
       badge: null,
       popular: false,
       type: "home"
@@ -43,7 +43,7 @@ export default function Pricing() {
         "Energy consumption analytics",
         "Monthly PDF reports"
       ],
-      gradient: "from-ohm-green to-ohm-blue",
+      gradient: "from-secondary to-primary",
       badge: "MOST POPULAR",
       popular: true,
       type: "business"
@@ -63,7 +63,7 @@ export default function Pricing() {
         "White-label options",
         "Quarterly business reviews"
       ],
-      gradient: "from-ohm-orange to-ohm-orange/70",
+      gradient: "from-destructive to-destructive/70",
       badge: "CUSTOM",
       popular: false,
       type: "enterprise"
@@ -86,14 +86,14 @@ export default function Pricing() {
   };
 
   return (
-    <div className="pt-32 pb-24 min-h-screen relative overflow-hidden">
+    <div className="pt-32 pb-24 min-h-screen relative overflow-hidden bg-theme">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a] via-[#0f0f2a] to-[#1a1a3e]" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-ohm-blue/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-ohm-green/10 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-ohm-blue/5 rounded-full blur-[100px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,75,158,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,75,158,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="theme-grid" />
       </div>
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
@@ -105,14 +105,14 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ohm-blue/20 backdrop-blur-sm border border-ohm-blue/30 text-ohm-green text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-secondary text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4" />
             Transparent Pricing
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white mb-6">
-            Flexible <span className="text-transparent bg-clip-text bg-gradient-to-r from-ohm-green to-ohm-blue">Pricing</span> for Every Need
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-foreground mb-6">
+            Flexible <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Pricing</span> for Every Need
           </h1>
-          <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-6">
+          <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-6">
             Get the perfect solution for your home or business with pricing that scales with you
           </p>
           
@@ -123,12 +123,12 @@ export default function Pricing() {
             transition={{ delay: 0.1 }}
             className="mt-4 mb-6"
           >
-            <div className="inline-flex flex-col items-center gap-2 px-6 py-3 rounded-xl bg-ohm-orange/15 border-2 border-ohm-orange/40 backdrop-blur-sm">
+            <div className="inline-flex flex-col items-center gap-2 px-6 py-3 rounded-xl bg-destructive/15 border-2 border-destructive/40 backdrop-blur-sm">
               <div className="flex items-center gap-2">
-                <AlertCircle className="w-5 h-5 text-ohm-orange" />
-                <span className="text-ohm-orange font-semibold text-sm sm:text-base">IMPORTANT NOTE</span>
+                <AlertCircle className="w-5 h-5 text-destructive" />
+                <span className="text-destructive font-semibold text-sm sm:text-base">IMPORTANT NOTE</span>
               </div>
-              <p className="text-ohm-orange/90 text-xs sm:text-sm max-w-md">
+              <p className="text-destructive/90 text-xs sm:text-sm max-w-md">
                 All pricing shown on this page are rough estimates only. Final pricing will be confirmed upon launch. 
                 Please contact our sales team for accurate quotes.
               </p>
@@ -152,16 +152,16 @@ export default function Pricing() {
             >
               {plan.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
-                  <div className="bg-gradient-to-r from-ohm-green to-ohm-blue text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+                  <div className="bg-gradient-to-r from-secondary to-primary text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">
                     {plan.badge}
                   </div>
                 </div>
               )}
               
-              <div className={`h-full bg-gradient-to-br from-black/60 via-black/50 to-black/60 backdrop-blur-md rounded-2xl border transition-all duration-300 ${
+              <div className={`h-full bg-gradient-to-br from-muted/60 via-muted/50 to-muted/60 backdrop-blur-md rounded-2xl border transition-all duration-300 ${
                 plan.popular 
-                  ? 'border-ohm-green shadow-[0_0_30px_rgba(13,148,68,0.3)] hover:shadow-[0_0_40px_rgba(13,148,68,0.4)]' 
-                  : 'border-white/10 hover:border-ohm-blue/50'
+                  ? 'border-secondary shadow-[0_0_30px_rgba(13,148,68,0.3)] hover:shadow-[0_0_40px_rgba(13,148,68,0.4)]' 
+                  : 'border-border hover:border-primary/50'
               }`}>
                 <div className="p-8">
                   {/* Icon */}
@@ -169,23 +169,23 @@ export default function Pricing() {
                     <plan.icon className="w-7 h-7 text-white" />
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-2 text-center md:text-left">{plan.name}</h3>
-                  <p className="text-gray-400 text-sm mb-6 text-center md:text-left">{plan.description}</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-2 text-center md:text-left">{plan.name}</h3>
+                  <p className="text-foreground/70 text-sm mb-6 text-center md:text-left">{plan.description}</p>
                   
                   {/* Price Placeholder - Showing estimate only */}
                   <div className="mb-6 text-center md:text-left">
-                    <div className="text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-ohm-green to-ohm-blue">
+                    <div className="text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">
                       Estimate Available
                     </div>
-                    <p className="text-xs text-gray-500 mt-1">Contact for accurate pricing</p>
+                    <p className="text-xs text-foreground/50 mt-1">Contact for accurate pricing</p>
                   </div>
                   
                   {/* Features */}
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm">
-                        <Check className={`w-4 h-4 mt-0.5 ${plan.popular ? 'text-ohm-green' : 'text-ohm-blue'} shrink-0`} />
-                        <span className="text-gray-300 text-left">{feature}</span>
+                        <Check className={`w-4 h-4 mt-0.5 ${plan.popular ? 'text-secondary' : 'text-primary'} shrink-0`} />
+                        <span className="text-foreground/70 text-left">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -193,8 +193,8 @@ export default function Pricing() {
                   <Button 
                     className={`w-full transition-all ${
                       plan.popular 
-                        ? 'bg-gradient-to-r from-ohm-green to-ohm-blue hover:from-ohm-green/90 hover:to-ohm-blue/90 text-white shadow-lg shadow-ohm-green/30' 
-                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
+                        ? 'bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-white shadow-lg shadow-secondary/30' 
+                        : 'bg-muted/50 hover:bg-muted/80 text-foreground border border-border'
                     }`}
                     onClick={() => {
                       window.location.href = "/contact";
@@ -216,11 +216,11 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-16"
         >
-          <div className="bg-gradient-to-r from-ohm-blue/20 via-ohm-green/20 to-ohm-blue/20 rounded-2xl p-1">
-            <div className="bg-black/60 backdrop-blur-md rounded-xl p-8">
+          <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl p-1">
+            <div className="bg-muted/60 backdrop-blur-md rounded-xl p-8">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Volume Discounts Available</h3>
-                <p className="text-gray-300">The more you buy, the more you save — estimated discounts below</p>
+                <h3 className="text-2xl font-bold text-foreground mb-2">Volume Discounts Available</h3>
+                <p className="text-foreground/70">The more you buy, the more you save — estimated discounts below</p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
                 {[
@@ -230,14 +230,14 @@ export default function Pricing() {
                   { min: 50, max: 99, discount: "20%", label: "Large Business" },
                   { min: 100, max: "+", discount: "25%", label: "Enterprise" }
                 ].map((tier, index) => (
-                  <div key={index} className="text-center p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-all">
-                    <div className="text-lg font-bold text-ohm-green">{tier.discount}</div>
-                    <div className="text-xs text-gray-400 mt-1">OFF (est.)</div>
-                    <div className="text-xs text-gray-500 mt-2">{tier.min}-{tier.max} units</div>
+                  <div key={index} className="text-center p-3 rounded-lg bg-muted/50 hover:bg-muted transition-all">
+                    <div className="text-lg font-bold text-secondary">{tier.discount}</div>
+                    <div className="text-xs text-foreground/60 mt-1">OFF (est.)</div>
+                    <div className="text-xs text-foreground/50 mt-2">{tier.min}-{tier.max} units</div>
                   </div>
                 ))}
               </div>
-              <p className="text-center text-xs text-gray-500 mt-4">
+              <p className="text-center text-xs text-foreground/50 mt-4">
                 * Estimated volume discounts. Final discounts will be confirmed upon consultation.
               </p>
             </div>
@@ -251,24 +251,24 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mb-16"
         >
-          <div className="bg-gradient-to-r from-ohm-blue/10 to-ohm-green/10 rounded-2xl p-8 border border-ohm-blue/20 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ohm-blue/20 border border-ohm-blue/30 text-ohm-green text-sm font-medium mb-4 mx-auto w-fit">
+          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-secondary text-sm font-medium mb-4 mx-auto w-fit">
               <DollarSign className="w-4 h-4" />
               Need a Custom Quote?
             </div>
-            <h3 className="text-2xl font-bold text-white mb-3">Get Accurate Pricing for Your Needs</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-3">Get Accurate Pricing for Your Needs</h3>
+            <p className="text-foreground/70 mb-6 max-w-2xl mx-auto">
               Contact our sales team for a personalized quote based on your specific requirements, 
               volume needs, and installation preferences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-ohm-green to-ohm-blue hover:from-ohm-green/90 hover:to-ohm-blue/90 text-white shadow-lg shadow-ohm-green/30">
+                <Button size="lg" className="bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-white shadow-lg shadow-secondary/30">
                   Contact Sales <Phone className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-ohm-blue/30 text-white hover:bg-ohm-blue/10">
+                <Button size="lg" variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10">
                   Request Quote via Email <Mail className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
@@ -283,39 +283,39 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center"
         >
-          <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h3 className="text-xl font-bold text-white mb-4">Frequently Asked Questions</h3>
+          <div className="bg-muted/40 backdrop-blur-sm rounded-2xl p-8 border border-border">
+            <h3 className="text-xl font-bold text-foreground mb-4">Frequently Asked Questions</h3>
             <div className="grid md:grid-cols-2 gap-4 text-left">
               <div>
-                <p className="text-ohm-green font-medium mb-1">What's included in the hardware cost?</p>
-                <p className="text-sm text-gray-400">The device, installation kit, and warranty. Contact us for detailed pricing.</p>
+                <p className="text-secondary font-medium mb-1">What's included in the hardware cost?</p>
+                <p className="text-sm text-foreground/60">The device, installation kit, and warranty. Contact us for detailed pricing.</p>
               </div>
               <div>
-                <p className="text-ohm-green font-medium mb-1">Is there a monthly subscription?</p>
-                <p className="text-sm text-gray-400">No monthly fees. One-time hardware purchase with free mobile app access.</p>
+                <p className="text-secondary font-medium mb-1">Is there a monthly subscription?</p>
+                <p className="text-sm text-foreground/60">No monthly fees. One-time hardware purchase with free mobile app access.</p>
               </div>
               <div>
-                <p className="text-ohm-green font-medium mb-1">Do you offer installation services?</p>
-                <p className="text-sm text-gray-400">Yes, professional installation available. Pricing available upon request.</p>
+                <p className="text-secondary font-medium mb-1">Do you offer installation services?</p>
+                <p className="text-sm text-foreground/60">Yes, professional installation available. Pricing available upon request.</p>
               </div>
               <div>
-                <p className="text-ohm-green font-medium mb-1">What payment methods do you accept?</p>
-                <p className="text-sm text-gray-400">Bank transfer, card payments, and financing options for bulk orders.</p>
+                <p className="text-secondary font-medium mb-1">What payment methods do you accept?</p>
+                <p className="text-sm text-foreground/60">Bank transfer, card payments, and financing options for bulk orders.</p>
               </div>
               <div>
-                <p className="text-ohm-green font-medium mb-1">Are these the final prices?</p>
-                <p className="text-sm text-gray-400">All pricing shown are estimates. Final pricing will be confirmed upon official launch.</p>
+                <p className="text-secondary font-medium mb-1">Are these the final prices?</p>
+                <p className="text-sm text-foreground/60">All pricing shown are estimates. Final pricing will be confirmed upon official launch.</p>
               </div>
               <div>
-                <p className="text-ohm-green font-medium mb-1">How can I get an accurate quote?</p>
-                <p className="text-sm text-gray-400">Contact our sales team directly for a personalized quote based on your needs.</p>
+                <p className="text-secondary font-medium mb-1">How can I get an accurate quote?</p>
+                <p className="text-sm text-foreground/60">Contact our sales team directly for a personalized quote based on your needs.</p>
               </div>
             </div>
-            <div className="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="text-ohm-green hover:text-ohm-green/80 text-sm inline-flex items-center gap-1 justify-center">
+            <div className="mt-6 pt-4 border-t border-border flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="text-secondary hover:text-secondary/80 text-sm inline-flex items-center gap-1 justify-center">
                 <MessageCircle className="w-3 h-3" /> Chat with Sales
               </Link>
-              <Link to="/contact" className="text-gray-400 hover:text-white text-sm inline-flex items-center gap-1 justify-center">
+              <Link to="/contact" className="text-foreground/60 hover:text-foreground text-sm inline-flex items-center gap-1 justify-center">
                 More questions? Contact our sales team <ArrowRight className="w-3 h-3" />
               </Link>
             </div>
@@ -329,13 +329,13 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-12 text-center"
         >
-          <div className="bg-gradient-to-r from-ohm-blue/20 via-ohm-green/20 to-ohm-blue/20 rounded-2xl p-8 border border-white/20">
-            <p className="text-gray-300 text-sm mb-4">
-              <AlertCircle className="w-4 h-4 inline-block mr-1 text-ohm-orange" />
+          <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl p-8 border border-border">
+            <p className="text-foreground/70 text-sm mb-4">
+              <AlertCircle className="w-4 h-4 inline-block mr-1 text-destructive" />
               All pricing shown are preliminary estimates. Final pricing will be confirmed upon full launch.
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-ohm-green to-ohm-blue hover:from-ohm-green/90 hover:to-ohm-blue/90 text-white">
+              <Button size="lg" className="bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-white">
                 Get Accurate Quote <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>

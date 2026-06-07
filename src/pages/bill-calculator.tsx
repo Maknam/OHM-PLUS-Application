@@ -37,12 +37,12 @@ export default function BillCalculator() {
   };
 
   const applianceIcons = {
-    ac: { icon: Wind, label: "Air Conditioners", unit: "units", color: "from-ohm-blue to-ohm-blue/70" },
-    fridge: { icon: Refrigerator, label: "Refrigerators", unit: "units", color: "from-ohm-green to-ohm-green/70" },
-    tv: { icon: Tv, label: "Televisions", unit: "units", color: "from-ohm-blue to-ohm-blue/70" },
-    lights: { icon: Lightbulb, label: "Light Bulbs", unit: "bulbs", color: "from-ohm-orange to-ohm-orange/70" },
-    fan: { icon: Fan, label: "Fans", unit: "units", color: "from-ohm-blue to-ohm-blue/70" },
-    washingMachine: { icon: WashingMachine, label: "Washing Machines", unit: "units", color: "from-ohm-green to-ohm-green/70" },
+    ac: { icon: Wind, label: "Air Conditioners", unit: "units", color: "from-primary to-primary/70" },
+    fridge: { icon: Refrigerator, label: "Refrigerators", unit: "units", color: "from-secondary to-secondary/70" },
+    tv: { icon: Tv, label: "Televisions", unit: "units", color: "from-primary to-primary/70" },
+    lights: { icon: Lightbulb, label: "Light Bulbs", unit: "bulbs", color: "from-destructive to-destructive/70" },
+    fan: { icon: Fan, label: "Fans", unit: "units", color: "from-primary to-primary/70" },
+    washingMachine: { icon: WashingMachine, label: "Washing Machines", unit: "units", color: "from-secondary to-secondary/70" },
   };
 
   // Calculations
@@ -72,7 +72,7 @@ export default function BillCalculator() {
   };
 
   return (
-    <div className="pt-32 pb-24 min-h-screen relative overflow-hidden">
+    <div className="pt-32 pb-24 min-h-screen relative overflow-hidden bg-theme">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 z-0"
@@ -83,15 +83,15 @@ export default function BillCalculator() {
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90" />
-        <div className="absolute inset-0 bg-grid-white/5" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background/95" />
+        <div className="theme-grid" />
       </div>
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-ohm-blue/20 rounded-full blur-[100px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-ohm-green/10 rounded-full blur-[120px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-ohm-blue/5 rounded-full blur-[80px]" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[80px]" />
       </div>
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
@@ -102,14 +102,14 @@ export default function BillCalculator() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ohm-blue/20 border border-ohm-blue/30 text-ohm-green text-sm font-medium mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-secondary text-sm font-medium mb-6 backdrop-blur-sm">
             <Calculator className="w-4 h-4" />
             Interactive Tool
           </div>
-          <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-4">
-            Energy Bill <span className="text-ohm-green">Calculator</span>
+          <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-4">
+            Energy Bill <span className="text-secondary">Calculator</span>
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             Estimate your monthly electricity consumption and see how much you could save with Omhero.
           </p>
         </motion.div>
@@ -123,20 +123,20 @@ export default function BillCalculator() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <Card className="bg-black/40 backdrop-blur-md border-ohm-blue/20 shadow-xl">
+              <Card className="bg-muted/40 backdrop-blur-md border-primary/20 shadow-xl">
                 <CardContent className="p-6 md:p-8 space-y-8">
-                  <div className="flex items-center gap-3 border-b border-ohm-blue/30 pb-3">
-                    <div className="w-10 h-10 rounded-lg bg-ohm-blue/20 flex items-center justify-center">
-                      <Sparkles className="w-5 h-5 text-ohm-green" />
+                  <div className="flex items-center gap-3 border-b border-primary/30 pb-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Sparkles className="w-5 h-5 text-secondary" />
                     </div>
-                    <h3 className="text-xl font-display font-bold text-white">Property Details</h3>
+                    <h3 className="text-xl font-display font-bold text-foreground">Property Details</h3>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="space-y-2">
-                      <Label className="text-gray-300">Property Type</Label>
+                      <Label className="text-foreground/70">Property Type</Label>
                       <Select value={propertyType} onValueChange={setPropertyType}>
-                        <SelectTrigger className="bg-black/50 border-ohm-blue/30 text-white">
+                        <SelectTrigger className="bg-muted/50 border-primary/30 text-foreground">
                           <SelectValue />
                         </SelectTrigger>
                         <SelectContent>
@@ -147,9 +147,9 @@ export default function BillCalculator() {
                     </div>
                     
                     <div className="space-y-2">
-                      <Label className="text-gray-300">Currency</Label>
+                      <Label className="text-foreground/70">Currency</Label>
                       <Select value={currency} onValueChange={setCurrency}>
-                        <SelectTrigger className="bg-black/50 border-ohm-blue/30 text-white">
+                        <SelectTrigger className="bg-muted/50 border-primary/30 text-foreground">
                           <SelectValue />
                         </SelectTrigger>
                         <SelectContent>
@@ -160,7 +160,7 @@ export default function BillCalculator() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label className="text-gray-300">Daily Power Supply</Label>
+                      <Label className="text-foreground/70">Daily Power Supply</Label>
                       <div className="pt-2">
                         <Slider 
                           value={[hours]} 
@@ -170,9 +170,9 @@ export default function BillCalculator() {
                           step={1} 
                           className="py-2"
                         />
-                        <div className="flex justify-between mt-2 text-xs text-gray-400">
+                        <div className="flex justify-between mt-2 text-xs text-foreground/60">
                           <span>1 hr</span>
-                          <span className="text-ohm-green font-bold">{hours} hours/day</span>
+                          <span className="text-secondary font-bold">{hours} hours/day</span>
                           <span>24 hrs</span>
                         </div>
                       </div>
@@ -188,19 +188,19 @@ export default function BillCalculator() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Card className="bg-black/40 backdrop-blur-md border-ohm-blue/20 shadow-xl">
+              <Card className="bg-muted/40 backdrop-blur-md border-primary/20 shadow-xl">
                 <CardContent className="p-6 md:p-8 space-y-6">
-                  <div className="flex items-center gap-3 border-b border-ohm-blue/30 pb-3">
-                    <div className="w-10 h-10 rounded-lg bg-ohm-blue/20 flex items-center justify-center">
-                      <Zap className="w-5 h-5 text-ohm-green" />
+                  <div className="flex items-center gap-3 border-b border-primary/30 pb-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-secondary" />
                     </div>
-                    <h3 className="text-xl font-display font-bold text-white">Appliances & Devices</h3>
+                    <h3 className="text-xl font-display font-bold text-foreground">Appliances & Devices</h3>
                   </div>
                   
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {Object.entries(applianceIcons).map(([key, { icon: Icon, label, unit, color }]) => (
                       <div key={key} className="space-y-2 group">
-                        <Label className="text-gray-300 text-xs flex items-center gap-2">
+                        <Label className="text-foreground/70 text-xs flex items-center gap-2">
                           <div className={`w-6 h-6 rounded-lg bg-gradient-to-r ${color} flex items-center justify-center p-1`}>
                             <Icon className="w-3 h-3 text-white" />
                           </div>
@@ -211,7 +211,7 @@ export default function BillCalculator() {
                           min="0" 
                           value={appliances[key as keyof typeof appliances]} 
                           onChange={(e) => handleApplianceChange(key as keyof typeof appliances, e.target.value)}
-                          className="bg-black/50 border-ohm-blue/30 text-white focus:border-ohm-green transition-all group-hover:border-ohm-blue/60"
+                          className="bg-muted/50 border-primary/30 text-foreground focus:border-secondary transition-all group-hover:border-primary/60"
                         />
                       </div>
                     ))}
@@ -229,45 +229,45 @@ export default function BillCalculator() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="sticky top-24"
             >
-              <Card className="bg-gradient-to-br from-ohm-blue/20 via-black/60 to-black/80 backdrop-blur-md border-ohm-blue/30 shadow-2xl overflow-hidden">
+              <Card className="bg-gradient-to-br from-primary/20 via-muted/60 to-muted/80 backdrop-blur-md border-primary/30 shadow-2xl overflow-hidden">
                 {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 w-40 h-40 bg-ohm-blue/20 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-40 h-40 bg-ohm-green/10 rounded-full blur-3xl" />
+                <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-40 h-40 bg-secondary/10 rounded-full blur-3xl" />
                 
                 <CardContent className="p-8 relative z-10">
                   <div className="flex items-center gap-2 mb-6">
-                    <Gauge className="w-5 h-5 text-ohm-green" />
-                    <h3 className="text-lg font-display font-bold text-white">Your Energy Profile</h3>
+                    <Gauge className="w-5 h-5 text-secondary" />
+                    <h3 className="text-lg font-display font-bold text-foreground">Your Energy Profile</h3>
                   </div>
                   
                   <div className="space-y-6">
                     {/* Monthly Usage */}
-                    <div className="text-center p-4 bg-black/30 rounded-2xl border border-ohm-blue/20">
-                      <p className="text-sm text-gray-300 mb-2">Monthly Energy Consumption</p>
+                    <div className="text-center p-4 bg-muted/40 rounded-2xl border border-primary/20">
+                      <p className="text-sm text-foreground/70 mb-2">Monthly Energy Consumption</p>
                       <div className="flex items-baseline justify-center gap-2">
-                        <span className="text-6xl font-display font-bold text-ohm-green" data-testid="text-monthly-kwh">
+                        <span className="text-6xl font-display font-bold text-secondary" data-testid="text-monthly-kwh">
                           {Math.round(monthlyKwh).toLocaleString()}
                         </span>
-                        <span className="text-xl font-bold text-white">kWh</span>
+                        <span className="text-xl font-bold text-foreground">kWh</span>
                       </div>
-                      <p className="text-xs text-gray-400 mt-2">≈ {Math.round(dailyKwh)} kWh per day</p>
+                      <p className="text-xs text-foreground/60 mt-2">≈ {Math.round(dailyKwh)} kWh per day</p>
                     </div>
 
                     {/* Estimated Bill */}
                     <div className="space-y-3">
-                      <p className="text-sm text-gray-300">Estimated Monthly Bill</p>
+                      <p className="text-sm text-foreground/70">Estimated Monthly Bill</p>
                       
-                      <div className="bg-gradient-to-r from-ohm-blue/30 to-ohm-blue/10 rounded-xl p-5 border border-ohm-blue/30">
+                      <div className="bg-gradient-to-r from-primary/30 to-primary/10 rounded-xl p-5 border border-primary/30">
                         <div className="flex justify-between items-start mb-2">
                           <div>
-                            <span className="text-xs text-gray-300">Total Amount</span>
-                            <div className="text-4xl font-bold text-white mt-1">
+                            <span className="text-xs text-foreground/60">Total Amount</span>
+                            <div className="text-4xl font-bold text-foreground mt-1">
                               {currency === "NGN" ? "₦" : "₵"}{Math.round(currentBill).toLocaleString()}
                             </div>
                           </div>
-                          <DollarSign className="w-8 h-8 text-ohm-blue/50" />
+                          <DollarSign className="w-8 h-8 text-primary/50" />
                         </div>
-                        <p className="text-xs text-gray-400">
+                        <p className="text-xs text-foreground/60">
                           Based on {propertyType === "residential" ? "residential" : "commercial"} rates
                           {propertyType === "commercial" && " (+30% premium)"}
                         </p>
@@ -275,45 +275,45 @@ export default function BillCalculator() {
                     </div>
 
                     {/* Savings Card */}
-                    <div className="bg-gradient-to-r from-ohm-green/20 to-ohm-green/10 rounded-xl p-5 border border-ohm-green/30">
+                    <div className="bg-gradient-to-r from-secondary/20 to-secondary/10 rounded-xl p-5 border border-secondary/30">
                       <div className="flex gap-3 mb-3">
-                        <div className="w-10 h-10 rounded-full bg-ohm-green/30 flex items-center justify-center shrink-0">
-                          <TrendingDown className="w-5 h-5 text-ohm-green" />
+                        <div className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center shrink-0">
+                          <TrendingDown className="w-5 h-5 text-secondary" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-white text-sm">Potential Savings with Omhero</h4>
-                          <p className="text-xs text-gray-300 mt-1">Real-time monitoring & optimization</p>
+                          <h4 className="font-bold text-foreground text-sm">Potential Savings with Omhero</h4>
+                          <p className="text-xs text-foreground/70 mt-1">Real-time monitoring & optimization</p>
                         </div>
                       </div>
                       <div className="flex justify-between items-end">
                         <div>
-                          <span className="text-2xl font-bold text-ohm-green">Up to 25%</span>
-                          <p className="text-xs text-gray-400">reduction possible</p>
+                          <span className="text-2xl font-bold text-secondary">Up to 25%</span>
+                          <p className="text-xs text-foreground/60">reduction possible</p>
                         </div>
                         <div className="text-right">
-                          <p className="text-lg font-bold text-white">
+                          <p className="text-lg font-bold text-foreground">
                             {currency === "NGN" ? "₦" : "₵"}{Math.round(potentialSavings).toLocaleString()}
                           </p>
-                          <p className="text-xs text-gray-400">saved per month</p>
+                          <p className="text-xs text-foreground/60">saved per month</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Environmental Impact */}
-                    <div className="bg-ohm-blue/10 rounded-xl p-4 border border-ohm-blue/20">
+                    <div className="bg-primary/10 rounded-xl p-4 border border-primary/20">
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-ohm-blue/20 flex items-center justify-center">
-                          <Zap className="w-4 h-4 text-ohm-green" />
+                        <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                          <Zap className="w-4 h-4 text-secondary" />
                         </div>
                         <div>
-                          <p className="text-xs text-gray-300">Carbon Footprint Saved</p>
-                          <p className="text-sm font-bold text-ohm-green">~{co2Saved} kg CO₂/year</p>
+                          <p className="text-xs text-foreground/60">Carbon Footprint Saved</p>
+                          <p className="text-sm font-bold text-secondary">~{co2Saved} kg CO₂/year</p>
                         </div>
                       </div>
                     </div>
 
                     {/* CTA Button */}
-                    <Button className="w-full bg-ohm-green hover:bg-ohm-green/90 text-white h-12 text-base gap-2 group mt-4 shadow-lg shadow-ohm-green/20">
+                    <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground h-12 text-base gap-2 group mt-4 shadow-lg shadow-secondary/20">
                       Get Omhero Today <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>
@@ -328,9 +328,9 @@ export default function BillCalculator() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12 pt-8 border-t border-white/10"
+          className="text-center mt-12 pt-8 border-t border-border"
         >
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-foreground/60">
             <span className="inline-flex items-center gap-1">⚡</span> Estimates based on average consumption patterns • Actual savings may vary
           </p>
         </motion.div>

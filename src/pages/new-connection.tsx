@@ -43,25 +43,25 @@ export default function NewConnection() {
   };
 
   const propertyTypes = [
-    { value: "residential", label: "Residential (House/Apartment)", icon: Home, color: "from-ohm-blue to-ohm-blue/70" },
-    { value: "commercial", label: "Commercial (Office/Shop)", icon: Building2, color: "from-ohm-green to-ohm-green/70" },
-    { value: "industrial", label: "Industrial (Factory/Warehouse)", icon: Factory, color: "from-ohm-orange to-ohm-orange/70" }
+    { value: "residential", label: "Residential (House/Apartment)", icon: Home, color: "from-primary to-primary/70" },
+    { value: "commercial", label: "Commercial (Office/Shop)", icon: Building2, color: "from-secondary to-secondary/70" },
+    { value: "industrial", label: "Industrial (Factory/Warehouse)", icon: Factory, color: "from-destructive to-destructive/70" }
   ];
 
   const regions = [
-    { value: "accra", label: "Greater Accra, Ghana", emoji: "🌆", color: "text-ohm-blue" },
-    { value: "kumasi", label: "Kumasi, Ghana", emoji: "🏙️", color: "text-ohm-green" },
-    { value: "takoradi", label: "Takoradi, Ghana", emoji: "🏭", color: "text-ohm-orange" },
-    { value: "lagos", label: "Lagos, Nigeria", emoji: "🌉", color: "text-ohm-blue" },
-    { value: "abuja", label: "Abuja, Nigeria", emoji: "🏛️", color: "text-ohm-green" },
-    { value: "port_harcourt", label: "Port Harcourt, Nigeria", emoji: "⚓", color: "text-ohm-blue" }
+    { value: "accra", label: "Greater Accra, Ghana", emoji: "🌆", color: "text-primary" },
+    { value: "kumasi", label: "Kumasi, Ghana", emoji: "🏙️", color: "text-secondary" },
+    { value: "takoradi", label: "Takoradi, Ghana", emoji: "🏭", color: "text-destructive" },
+    { value: "lagos", label: "Lagos, Nigeria", emoji: "🌉", color: "text-primary" },
+    { value: "abuja", label: "Abuja, Nigeria", emoji: "🏛️", color: "text-secondary" },
+    { value: "port_harcourt", label: "Port Harcourt, Nigeria", emoji: "⚓", color: "text-primary" }
   ];
 
   const benefits = [
-    { icon: Zap, title: "Fast Installation", desc: "Within 5-7 business days", color: "text-ohm-blue" },
-    { icon: Shield, title: "Certified Technicians", desc: "Professional installation", color: "text-ohm-green" },
-    { icon: Wifi, title: "Remote Monitoring", desc: "Real-time energy tracking", color: "text-ohm-blue" },
-    { icon: Award, title: "1-Year Warranty", desc: "Full device coverage", color: "text-ohm-green" }
+    { icon: Zap, title: "Fast Installation", desc: "Within 5-7 business days", color: "text-primary" },
+    { icon: Shield, title: "Certified Technicians", desc: "Professional installation", color: "text-secondary" },
+    { icon: Wifi, title: "Remote Monitoring", desc: "Real-time energy tracking", color: "text-primary" },
+    { icon: Award, title: "1-Year Warranty", desc: "Full device coverage", color: "text-secondary" }
   ];
 
   const getMinDate = () => {
@@ -72,14 +72,14 @@ export default function NewConnection() {
   };
 
   return (
-    <div className="pt-32 pb-24 min-h-screen relative overflow-hidden">
+    <div className="pt-32 pb-24 min-h-screen relative overflow-hidden bg-theme">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a] via-[#0f0f2a] to-[#1a1a3e]" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-ohm-green/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-ohm-green/10 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-ohm-blue/5 rounded-full blur-[100px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,75,158,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,75,158,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-secondary/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="theme-grid" />
       </div>
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
@@ -90,14 +90,14 @@ export default function NewConnection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ohm-green/20 backdrop-blur-sm border border-ohm-green/30 text-ohm-green text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 backdrop-blur-sm border border-secondary/30 text-secondary text-sm font-medium mb-6">
             <PlugZap className="w-4 h-4" />
             Get Connected Today
           </div>
-          <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
-            Request New <span className="text-transparent bg-clip-text bg-gradient-to-r from-ohm-green to-ohm-green">Connection</span>
+          <h1 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-6">
+            Request New <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-secondary">Connection</span>
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
             Apply for a new property connection or schedule an Omhero device installation. 
             Our team will reach out within 24 hours.
           </p>
@@ -111,12 +111,12 @@ export default function NewConnection() {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
         >
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-black/30 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 group hover:border-ohm-green/30 transition-all">
-              <div className="w-10 h-10 rounded-lg bg-ohm-green/20 flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform">
+            <div key={index} className="bg-muted/40 backdrop-blur-sm rounded-xl p-4 text-center border border-border group hover:border-secondary/30 transition-all">
+              <div className="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform">
                 <benefit.icon className={`w-5 h-5 ${benefit.color}`} />
               </div>
-              <h4 className="text-sm font-bold text-white">{benefit.title}</h4>
-              <p className="text-xs text-gray-400">{benefit.desc}</p>
+              <h4 className="text-sm font-bold text-foreground">{benefit.title}</h4>
+              <p className="text-xs text-foreground/60">{benefit.desc}</p>
             </div>
           ))}
         </motion.div>
@@ -127,29 +127,29 @@ export default function NewConnection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Card className="bg-gradient-to-br from-ohm-green/10 to-ohm-green/10 border-ohm-green/30 text-center py-12 overflow-hidden">
-              <div className="absolute inset-0 bg-ohm-green/5" />
+            <Card className="bg-gradient-to-br from-secondary/10 to-secondary/10 border-secondary/30 text-center py-12 overflow-hidden">
+              <div className="absolute inset-0 bg-secondary/5" />
               <CardContent className="relative z-10">
-                <div className="w-24 h-24 bg-ohm-green/20 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-ohm-green/50 animate-pulse">
-                  <CheckCircle2 className="w-12 h-12 text-ohm-green" />
+                <div className="w-24 h-24 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-secondary/50 animate-pulse">
+                  <CheckCircle2 className="w-12 h-12 text-secondary" />
                 </div>
-                <h2 className="text-3xl font-bold text-white mb-3">Request Received Successfully!</h2>
-                <p className="text-gray-300 mb-6 max-w-md mx-auto">
+                <h2 className="text-3xl font-bold text-foreground mb-3">Request Received Successfully!</h2>
+                <p className="text-foreground/70 mb-6 max-w-md mx-auto">
                   Thank you for your application. Our installations team will review your request and contact you within 24-48 hours to confirm your preferred date.
                 </p>
-                <div className="bg-black/40 backdrop-blur-sm border border-ohm-green/30 rounded-xl p-5 inline-block mb-8">
-                  <p className="text-sm text-ohm-green mb-2">Next Steps</p>
-                  <ul className="text-left text-sm text-gray-300 space-y-2">
+                <div className="bg-muted/40 backdrop-blur-sm border border-secondary/30 rounded-xl p-5 inline-block mb-8">
+                  <p className="text-sm text-secondary mb-2">Next Steps</p>
+                  <ul className="text-left text-sm text-foreground/70 space-y-2">
                     <li className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-ohm-green" />
+                      <Clock className="w-4 h-4 text-secondary" />
                       <span>Assessment call within 24 hours</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 text-ohm-green" />
+                      <Calendar className="w-4 h-4 text-secondary" />
                       <span>Schedule installation date</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <PlugZap className="w-4 h-4 text-ohm-green" />
+                      <PlugZap className="w-4 h-4 text-secondary" />
                       <span>Professional installation by certified technicians</span>
                     </li>
                   </ul>
@@ -163,13 +163,13 @@ export default function NewConnection() {
                       });
                     }} 
                     variant="outline" 
-                    className="border-ohm-green/30 text-white hover:bg-ohm-green/10"
+                    className="border-secondary/30 text-foreground hover:bg-secondary/10"
                     data-testid="button-new-request"
                   >
                     Submit Another Request
                   </Button>
                   <Link to="/product">
-                    <Button className="bg-ohm-blue hover:bg-ohm-blue/90 text-white">
+                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
                       Learn About Omhero <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                   </Link>
@@ -183,13 +183,13 @@ export default function NewConnection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Card className="bg-black/40 backdrop-blur-md border-ohm-green/30 overflow-hidden">
-              <div className="h-1 bg-gradient-to-r from-ohm-green to-ohm-green" />
+            <Card className="bg-muted/40 backdrop-blur-md border-secondary/30 overflow-hidden">
+              <div className="h-1 bg-gradient-to-r from-secondary to-secondary" />
               <CardContent className="p-6 md:p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="name" className="text-gray-300 flex items-center gap-2">
+                      <Label htmlFor="name" className="text-foreground/70 flex items-center gap-2">
                         <User className="w-4 h-4" />
                         Full Name
                       </Label>
@@ -199,12 +199,12 @@ export default function NewConnection() {
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="John Doe"
-                        className="bg-black/50 border-ohm-green/30 text-white focus:border-ohm-green focus:ring-ohm-green/20"
+                        className="bg-muted/50 border-secondary/30 text-foreground focus:border-secondary focus:ring-secondary/20"
                         data-testid="input-conn-name"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone" className="text-gray-300 flex items-center gap-2">
+                      <Label htmlFor="phone" className="text-foreground/70 flex items-center gap-2">
                         <Phone className="w-4 h-4" />
                         Phone Number
                       </Label>
@@ -215,7 +215,7 @@ export default function NewConnection() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="+233 XX XXX XXXX"
-                        className="bg-black/50 border-ohm-green/30 text-white focus:border-ohm-green focus:ring-ohm-green/20"
+                        className="bg-muted/50 border-secondary/30 text-foreground focus:border-secondary focus:ring-secondary/20"
                         data-testid="input-conn-phone"
                       />
                     </div>
@@ -223,7 +223,7 @@ export default function NewConnection() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="email" className="text-gray-300 flex items-center gap-2">
+                      <Label htmlFor="email" className="text-foreground/70 flex items-center gap-2">
                         <Mail className="w-4 h-4" />
                         Email Address
                       </Label>
@@ -234,22 +234,22 @@ export default function NewConnection() {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="john@example.com"
-                        className="bg-black/50 border-ohm-green/30 text-white focus:border-ohm-green focus:ring-ohm-green/20"
+                        className="bg-muted/50 border-secondary/30 text-foreground focus:border-secondary focus:ring-secondary/20"
                         data-testid="input-conn-email"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="propertyType" className="text-gray-300 flex items-center gap-2">
+                      <Label htmlFor="propertyType" className="text-foreground/70 flex items-center gap-2">
                         <Home className="w-4 h-4" />
                         Property Type
                       </Label>
                       <Select required onValueChange={(value) => handleSelectChange("propertyType", value)}>
-                        <SelectTrigger className="bg-black/50 border-ohm-green/30 text-white focus:border-ohm-green">
+                        <SelectTrigger className="bg-muted/50 border-secondary/30 text-foreground focus:border-secondary">
                           <SelectValue placeholder="Select property type" />
                         </SelectTrigger>
-                        <SelectContent className="bg-black/90 border-ohm-green/30">
+                        <SelectContent className="bg-muted/90 border-secondary/30">
                           {propertyTypes.map((type) => (
-                            <SelectItem key={type.value} value={type.value} className="text-white hover:bg-ohm-green/20">
+                            <SelectItem key={type.value} value={type.value} className="text-foreground hover:bg-secondary/20">
                               <span className="flex items-center gap-2">
                                 <type.icon className="w-4 h-4" />
                                 <span>{type.label}</span>
@@ -263,17 +263,17 @@ export default function NewConnection() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="region" className="text-gray-300 flex items-center gap-2">
+                      <Label htmlFor="region" className="text-foreground/70 flex items-center gap-2">
                         <MapPin className="w-4 h-4" />
                         Region
                       </Label>
                       <Select required onValueChange={(value) => handleSelectChange("region", value)}>
-                        <SelectTrigger className="bg-black/50 border-ohm-green/30 text-white focus:border-ohm-green">
+                        <SelectTrigger className="bg-muted/50 border-secondary/30 text-foreground focus:border-secondary">
                           <SelectValue placeholder="Select your region" />
                         </SelectTrigger>
-                        <SelectContent className="bg-black/90 border-ohm-green/30">
+                        <SelectContent className="bg-muted/90 border-secondary/30">
                           {regions.map((region) => (
-                            <SelectItem key={region.value} value={region.value} className="text-white hover:bg-ohm-green/20">
+                            <SelectItem key={region.value} value={region.value} className="text-foreground hover:bg-secondary/20">
                               <span className="flex items-center gap-2">
                                 <span>{region.emoji}</span>
                                 <span>{region.label}</span>
@@ -284,7 +284,7 @@ export default function NewConnection() {
                       </Select>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="date" className="text-gray-300 flex items-center gap-2">
+                      <Label htmlFor="date" className="text-foreground/70 flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
                         Preferred Installation Date
                       </Label>
@@ -296,17 +296,17 @@ export default function NewConnection() {
                           min={getMinDate()}
                           value={formData.date}
                           onChange={handleInputChange}
-                          className="bg-black/50 border-ohm-green/30 text-white pl-10 focus:border-ohm-green focus:ring-ohm-green/20"
+                          className="bg-muted/50 border-secondary/30 text-foreground pl-10 focus:border-secondary focus:ring-secondary/20"
                           data-testid="input-conn-date"
                         />
-                        <Calendar className="w-4 h-4 text-gray-400 absolute left-3 top-3 pointer-events-none" />
+                        <Calendar className="w-4 h-4 text-foreground/50 absolute left-3 top-3 pointer-events-none" />
                       </div>
-                      <p className="text-xs text-gray-500">Earliest available date is {getMinDate()}</p>
+                      <p className="text-xs text-foreground/50">Earliest available date is {getMinDate()}</p>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="address" className="text-gray-300 flex items-center gap-2">
+                    <Label htmlFor="address" className="text-foreground/70 flex items-center gap-2">
                       <MapPin className="w-4 h-4" />
                       Full Address
                     </Label>
@@ -316,20 +316,20 @@ export default function NewConnection() {
                       value={formData.address}
                       onChange={handleInputChange}
                       placeholder="House number, Street name, Landmark for easy identification"
-                      className="bg-black/50 border-ohm-green/30 text-white focus:border-ohm-green focus:ring-ohm-green/20"
+                      className="bg-muted/50 border-secondary/30 text-foreground focus:border-secondary focus:ring-secondary/20"
                       data-testid="input-conn-address"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message" className="text-gray-300">Additional Details (Optional)</Label>
+                    <Label htmlFor="message" className="text-foreground/70">Additional Details (Optional)</Label>
                     <Textarea 
                       id="message" 
                       rows={3}
                       value={formData.message}
                       onChange={handleInputChange}
                       placeholder="Any specific instructions for our installation team? Special requirements or preferred times?"
-                      className="bg-black/50 border-ohm-green/30 text-white focus:border-ohm-green focus:ring-ohm-green/20 resize-none"
+                      className="bg-muted/50 border-secondary/30 text-foreground focus:border-secondary focus:ring-secondary/20 resize-none"
                       data-testid="input-conn-msg"
                     />
                   </div>
@@ -337,7 +337,7 @@ export default function NewConnection() {
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="w-full bg-gradient-to-r from-ohm-green to-ohm-green hover:from-ohm-green/90 hover:to-ohm-green/90 text-white text-lg h-14 shadow-lg shadow-ohm-green/20"
+                    className="w-full bg-gradient-to-r from-secondary to-secondary hover:from-secondary/90 hover:to-secondary/90 text-secondary-foreground text-lg h-14 shadow-lg shadow-secondary/20"
                     disabled={isSubmitting}
                     data-testid="button-conn-submit"
                   >
@@ -365,21 +365,21 @@ export default function NewConnection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-8 text-center"
         >
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-foreground/60">
             <span className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-ohm-green" />
+              <Shield className="w-4 h-4 text-secondary" />
               Certified Installation
             </span>
             <span className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-ohm-green" />
+              <Clock className="w-4 h-4 text-secondary" />
               24hr Response Time
             </span>
             <span className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-ohm-green" />
+              <Award className="w-4 h-4 text-secondary" />
               1-Year Warranty
             </span>
           </div>
-          <p className="text-xs text-gray-500 mt-4">
+          <p className="text-xs text-foreground/50 mt-4">
             By submitting this form, you agree to our terms of service and privacy policy.
           </p>
         </motion.div>

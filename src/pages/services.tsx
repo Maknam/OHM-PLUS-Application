@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { Calculator, AlertTriangle, PlugZap, Gauge, Lightbulb, FileText, ArrowRight, Zap, Shield, Clock, Sparkles, ChevronRight, CheckCircle2, Phone, Mail, MapPin, Star, TrendingUp, Award } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -21,7 +21,7 @@ const FloatingParticles = () => {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-ohm-blue/20"
+          className="absolute rounded-full bg-primary/20"
           style={{
             width: particle.size,
             height: particle.size,
@@ -54,14 +54,14 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
       transition={{ delay: index * 0.05, type: "spring", stiffness: 200 }}
       whileHover={{ y: -8 }}
     >
-      <Link href={service.href}>
+      <Link to={service.href}>
         <div className="relative group h-full">
           {/* Glow effect on hover */}
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-ohm-green to-ohm-blue rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500" />
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-secondary to-primary rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500" />
           
-          <Card className="relative h-full bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-md border border-white/10 hover:border-ohm-green/40 transition-all duration-300 cursor-pointer overflow-hidden">
+          <Card className="relative h-full bg-gradient-to-br from-muted/50 to-muted/30 backdrop-blur-md border border-border hover:border-secondary/40 transition-all duration-300 cursor-pointer overflow-hidden">
             {/* Background gradient on hover */}
-            <div className="absolute inset-0 bg-gradient-to-br from-ohm-green/5 to-ohm-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
             <CardContent className="p-8 relative z-10">
               {/* Icon with animated background */}
@@ -73,19 +73,19 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
                 <div className={`absolute inset-0 rounded-2xl ${service.bg} opacity-0 group-hover:opacity-100 animate-ping transition-opacity duration-700`} style={{ animationDuration: '1.5s' }} />
               </div>
 
-              <h3 className="text-2xl font-display font-bold text-white mb-3 flex items-center justify-between gap-2">
-                <span className="group-hover:text-ohm-green transition-colors">{service.title}</span>
-                <ArrowRight className="w-5 h-5 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-ohm-green" />
+              <h3 className="text-2xl font-display font-bold text-foreground mb-3 flex items-center justify-between gap-2">
+                <span className="group-hover:text-secondary transition-colors">{service.title}</span>
+                <ArrowRight className="w-5 h-5 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-secondary" />
               </h3>
               
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              <p className="text-foreground/70 text-sm leading-relaxed mb-4">
                 {service.description}
               </p>
 
               {/* Feature tags */}
               <div className="flex flex-wrap gap-2 mt-4">
                 {service.tags?.map((tag: string, idx: number) => (
-                  <span key={idx} className="text-xs bg-white/5 px-2 py-1 rounded-full text-gray-400">
+                  <span key={idx} className="text-xs bg-muted/50 px-2 py-1 rounded-full text-foreground/60">
                     {tag}
                   </span>
                 ))}
@@ -106,61 +106,61 @@ const FeaturedService = () => (
     viewport={{ once: true }}
     className="relative mb-16"
   >
-    <div className="bg-gradient-to-r from-ohm-blue/20 via-ohm-green/20 to-ohm-blue/20 rounded-3xl p-8 md:p-12 border border-white/20 backdrop-blur-sm overflow-hidden">
-      <div className="absolute top-0 right-0 w-64 h-64 bg-ohm-blue/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-ohm-green/20 rounded-full blur-3xl" />
+    <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-3xl p-8 md:p-12 border border-border backdrop-blur-sm overflow-hidden">
+      <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl" />
       
       <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ohm-blue/20 text-ohm-green text-xs font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-secondary text-xs font-medium mb-4">
             <Sparkles className="w-3 h-3" />
             Featured Service
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Bill Calculator</h2>
-          <p className="text-gray-300 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Bill Calculator</h2>
+          <p className="text-foreground/70 mb-6">
             Estimate your monthly energy bill and discover potential savings with our intelligent calculator. 
             Compare different tariff plans and find the best option for your home or business.
           </p>
           <div className="flex flex-wrap gap-4">
-            <div className="flex items-center gap-2 text-sm text-gray-300">
-              <CheckCircle2 className="w-4 h-4 text-ohm-green" />
+            <div className="flex items-center gap-2 text-sm text-foreground/70">
+              <CheckCircle2 className="w-4 h-4 text-secondary" />
               Real-time rates
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-300">
-              <CheckCircle2 className="w-4 h-4 text-ohm-green" />
+            <div className="flex items-center gap-2 text-sm text-foreground/70">
+              <CheckCircle2 className="w-4 h-4 text-secondary" />
               Savings estimate
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-300">
-              <CheckCircle2 className="w-4 h-4 text-ohm-green" />
+            <div className="flex items-center gap-2 text-sm text-foreground/70">
+              <CheckCircle2 className="w-4 h-4 text-secondary" />
               Compare plans
             </div>
           </div>
-          <Link href="/services/bill-calculator">
-            <Button className="mt-6 bg-gradient-to-r from-ohm-green to-ohm-green hover:from-ohm-green/90 hover:to-ohm-green/90 text-white">
+          <Link to="/services/bill-calculator">
+            <Button className="mt-6 bg-gradient-to-r from-secondary to-secondary hover:from-secondary/90 hover:to-secondary/90 text-secondary-foreground">
               Try Calculator <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </Link>
         </div>
         <div className="hidden md:block">
-          <div className="bg-black/40 rounded-2xl p-6 border border-white/10">
+          <div className="bg-muted/40 rounded-2xl p-6 border border-border">
             <div className="flex justify-between items-center mb-4">
-              <span className="text-gray-400 text-sm">Estimated Monthly Bill</span>
-              <span className="text-ohm-green text-sm">Savings: 30%</span>
+              <span className="text-foreground/60 text-sm">Estimated Monthly Bill</span>
+              <span className="text-secondary text-sm">Savings: 30%</span>
             </div>
             <div className="space-y-3">
               <div className="flex justify-between items-center">
-                <span className="text-gray-300">Current Bill</span>
-                <span className="text-white font-bold">₦25,000</span>
+                <span className="text-foreground/70">Current Bill</span>
+                <span className="text-foreground font-bold">₦25,000</span>
               </div>
-              <div className="w-full bg-gray-700 rounded-full h-2">
-                <div className="bg-ohm-green h-2 rounded-full" style={{ width: "70%" }} />
+              <div className="w-full bg-muted rounded-full h-2">
+                <div className="bg-secondary h-2 rounded-full" style={{ width: "70%" }} />
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-gray-300">After Omhero</span>
-                <span className="text-ohm-green font-bold">₦17,500</span>
+                <span className="text-foreground/70">After Omhero</span>
+                <span className="text-secondary font-bold">₦17,500</span>
               </div>
-              <div className="mt-4 pt-4 border-t border-white/10 text-center">
-                <span className="text-ohm-green font-bold">Save ₦7,500 monthly</span>
+              <div className="mt-4 pt-4 border-t border-border text-center">
+                <span className="text-secondary font-bold">Save ₦7,500 monthly</span>
               </div>
             </div>
           </div>
@@ -187,11 +187,11 @@ const QuickStats = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: idx * 0.1 }}
-          className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10 hover:border-ohm-blue/30 transition-all"
+          className="bg-muted/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-border hover:border-primary/30 transition-all"
         >
-          <stat.icon className="w-8 h-8 text-ohm-green mx-auto mb-3" />
-          <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
-          <div className="text-xs text-gray-400">{stat.label}</div>
+          <stat.icon className="w-8 h-8 text-secondary mx-auto mb-3" />
+          <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">{stat.value}</div>
+          <div className="text-xs text-foreground/60">{stat.label}</div>
         </motion.div>
       ))}
     </div>
@@ -213,9 +213,9 @@ export default function Services() {
       description: "Estimate your monthly energy bill and calculate potential savings with our intelligent calculator.",
       icon: Calculator,
       href: "/services/bill-calculator",
-      color: "text-ohm-blue",
-      bg: "bg-ohm-blue/10",
-      borderColor: "border-ohm-blue/20",
+      color: "text-primary",
+      bg: "bg-primary/10",
+      borderColor: "border-primary/20",
       tags: ["Real-time rates", "Savings estimate", "Compare plans"]
     },
     {
@@ -223,9 +223,9 @@ export default function Services() {
       description: "Log an outage, voltage drop, or sparking wire to our technical team for immediate response.",
       icon: AlertTriangle,
       href: "/services/report-fault",
-      color: "text-ohm-orange",
-      bg: "bg-ohm-orange/10",
-      borderColor: "border-ohm-orange/20",
+      color: "text-destructive",
+      bg: "bg-destructive/10",
+      borderColor: "border-destructive/20",
       tags: ["24/7 response", "Track status", "SMS alerts"]
     },
     {
@@ -233,9 +233,9 @@ export default function Services() {
       description: "Apply for a new property connection or Omhero device installation at your location.",
       icon: PlugZap,
       href: "/services/new-connection",
-      color: "text-ohm-green",
-      bg: "bg-ohm-green/10",
-      borderColor: "border-ohm-green/20",
+      color: "text-secondary",
+      bg: "bg-secondary/10",
+      borderColor: "border-secondary/20",
       tags: ["Fast approval", "Professional install", "3-5 days"]
     },
     {
@@ -243,9 +243,9 @@ export default function Services() {
       description: "Request an upgrade from your old post-paid meter to a smart pre-paid meter.",
       icon: Gauge,
       href: "/services/meter-upgrade",
-      color: "text-ohm-blue",
-      bg: "bg-ohm-blue/10",
-      borderColor: "border-ohm-blue/20",
+      color: "text-primary",
+      bg: "bg-primary/10",
+      borderColor: "border-primary/20",
       tags: ["Smart meter", "Pre-paid option", "Remote control"]
     },
     {
@@ -253,9 +253,9 @@ export default function Services() {
       description: "Learn practical strategies to optimize your power usage and reduce monthly expenses.",
       icon: Lightbulb,
       href: "/energy-tips",
-      color: "text-ohm-orange",
-      bg: "bg-ohm-orange/10",
-      borderColor: "border-ohm-orange/20",
+      color: "text-destructive",
+      bg: "bg-destructive/10",
+      borderColor: "border-destructive/20",
       tags: ["Guides", "Video tutorials", "Checklists"]
     },
     {
@@ -263,25 +263,25 @@ export default function Services() {
       description: "View current residential and commercial electricity rates in Nigeria and Ghana.",
       icon: FileText,
       href: "/tariffs",
-      color: "text-ohm-green",
-      bg: "bg-ohm-green/10",
-      borderColor: "border-ohm-green/20",
+      color: "text-secondary",
+      bg: "bg-secondary/10",
+      borderColor: "border-secondary/20",
       tags: ["Updated rates", "Compare tariffs", "Calculator"]
     }
   ];
 
   return (
-    <div ref={containerRef} className="pt-32 pb-24 min-h-[100dvh] relative overflow-hidden">
+    <div ref={containerRef} className="pt-32 pb-24 min-h-[100dvh] relative overflow-hidden bg-theme">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a] via-[#0f0f2a] to-[#1a1a3e]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
         
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-ohm-blue/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-ohm-green/15 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-ohm-blue/5 rounded-full blur-[100px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,75,158,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,75,158,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/15 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="theme-grid" />
         
         <FloatingParticles />
       </div>
@@ -298,14 +298,14 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ohm-blue/20 backdrop-blur-sm border border-ohm-blue/30 text-ohm-green text-sm font-medium mb-6 mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-secondary text-sm font-medium mb-6 mx-auto">
               <Zap className="w-4 h-4 animate-pulse" />
               Self-Service Portal
             </div>
-            <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight text-center">
-              Quick <span className="text-transparent bg-clip-text bg-gradient-to-r from-ohm-green to-ohm-blue">Services</span>
+            <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight text-center">
+              Quick <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Services</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed text-center">
+            <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed text-center">
               Manage your energy needs, request support, and estimate your costs from our comprehensive self-service portal. 
               Fast, efficient, and available 24/7.
             </p>
@@ -326,10 +326,10 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-center mb-10"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-              All <span className="text-transparent bg-clip-text bg-gradient-to-r from-ohm-green to-ohm-blue">Services</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+              All <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">Services</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-foreground/60 max-w-2xl mx-auto">
               Choose from our range of energy management services designed to make your life easier
             </p>
           </motion.div>
@@ -346,36 +346,36 @@ export default function Services() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-ohm-blue/10 via-ohm-green/10 to-ohm-blue/10 rounded-2xl p-8 border border-white/20"
+          className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-2xl p-8 border border-border"
         >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-3">Need Assistance?</h3>
-              <p className="text-gray-300 mb-4">
+              <h3 className="text-2xl font-bold text-foreground mb-3">Need Assistance?</h3>
+              <p className="text-foreground/70 mb-4">
                 Our customer support team is available 24/7 to help you with any questions or issues.
               </p>
               <div className="space-y-2">
-                <div className="flex items-center gap-3 text-gray-300">
-                  <Phone className="w-5 h-5 text-ohm-green" />
+                <div className="flex items-center gap-3 text-foreground/70">
+                  <Phone className="w-5 h-5 text-secondary" />
                   <span>+233 (0) 55 123 4567 (Ghana)</span>
                 </div>
-                <div className="flex items-center gap-3 text-gray-300">
-                  <Phone className="w-5 h-5 text-ohm-green" />
+                <div className="flex items-center gap-3 text-foreground/70">
+                  <Phone className="w-5 h-5 text-secondary" />
                   <span>+234 (0) 701 234 5678 (Nigeria)</span>
                 </div>
-                <div className="flex items-center gap-3 text-gray-300">
-                  <Mail className="w-5 h-5 text-ohm-green" />
+                <div className="flex items-center gap-3 text-foreground/70">
+                  <Mail className="w-5 h-5 text-secondary" />
                   <span>support@ohmplus.africa</span>
                 </div>
               </div>
             </div>
             <div className="text-center md:text-right">
-              <Link href="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-ohm-green to-ohm-green hover:from-ohm-green/90 hover:to-ohm-green/90 text-white shadow-lg shadow-ohm-green/30">
+              <Link to="/contact">
+                <Button size="lg" className="bg-gradient-to-r from-secondary to-secondary hover:from-secondary/90 hover:to-secondary/90 text-secondary-foreground shadow-lg shadow-secondary/30">
                   Contact Support <ChevronRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <p className="text-xs text-gray-500 mt-3">Average response time: &lt; 1 hour</p>
+              <p className="text-xs text-foreground/50 mt-3">Average response time: &lt; 1 hour</p>
             </div>
           </div>
         </motion.div>

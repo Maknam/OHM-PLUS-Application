@@ -21,7 +21,7 @@ const FloatingParticles = () => {
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full bg-ohm-blue/20"
+          className="absolute rounded-full bg-primary/20"
           style={{
             width: particle.size,
             height: particle.size,
@@ -94,11 +94,11 @@ const StatCard = ({ value, label, icon: Icon, delay }: { value: string; label: s
     transition={{ delay }}
     className="text-center"
   >
-    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-ohm-blue/20 to-ohm-green/20 flex items-center justify-center mx-auto mb-4">
-      <Icon className="w-8 h-8 text-ohm-green" />
+    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mx-auto mb-4">
+      <Icon className="w-8 h-8 text-secondary" />
     </div>
-    <div className="text-3xl md:text-4xl font-bold text-white mb-1">{value}</div>
-    <div className="text-sm text-gray-400">{label}</div>
+    <div className="text-3xl md:text-4xl font-bold text-foreground mb-1">{value}</div>
+    <div className="text-sm text-foreground/60">{label}</div>
   </motion.div>
 );
 
@@ -239,17 +239,17 @@ export default function CaseStudies() {
   const heroScale = useTransform(scrollYProgress, [0, 0.3], [1, 0.95]);
 
   return (
-    <div ref={containerRef} className="pt-32 pb-20 min-h-screen relative overflow-hidden">
+    <div ref={containerRef} className="pt-32 pb-20 min-h-screen relative overflow-hidden bg-theme">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a1a] via-[#0f0f2a] to-[#1a1a3e]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
         
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-ohm-blue/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-ohm-green/15 rounded-full blur-[140px] animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-ohm-blue/5 rounded-full blur-[100px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,75,158,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,75,158,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/15 rounded-full blur-[140px] animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px]" />
+        <div className="theme-grid" />
         
         <FloatingParticles />
       </div>
@@ -266,16 +266,16 @@ export default function CaseStudies() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ohm-blue/20 backdrop-blur-sm border border-ohm-blue/30 text-ohm-green text-sm font-medium mb-6 mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-secondary text-sm font-medium mb-6 mx-auto">
               <Sparkles className="w-4 h-4 animate-pulse" />
               Real Results from Real Customers
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6 leading-tight text-center">
-              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-ohm-green to-ohm-blue">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-foreground mb-6 leading-tight text-center">
+              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">
                 Stories
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed text-center">
+            <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed text-center">
               Discover how businesses and homeowners across Nigeria and Ghana are transforming their energy management with Omhero — saving money, improving safety, and reducing environmental impact.
             </p>
             
@@ -302,7 +302,7 @@ export default function CaseStudies() {
             >
               {/* Hero Image Section */}
               <div className="relative rounded-3xl overflow-hidden mb-8">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent z-10" />
                 <ImageWithFallback 
                   src={study.heroImage} 
                   alt={study.title}
@@ -310,28 +310,28 @@ export default function CaseStudies() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 rounded-xl bg-ohm-blue/20 backdrop-blur-sm">
-                      <study.icon className="w-6 h-6 text-ohm-green" />
+                    <div className="p-2 rounded-xl bg-primary/20 backdrop-blur-sm">
+                      <study.icon className="w-6 h-6 text-secondary" />
                     </div>
-                    <span className="text-sm text-ohm-green uppercase tracking-wider bg-ohm-blue/10 px-3 py-1 rounded-full">
+                    <span className="text-sm text-secondary uppercase tracking-wider bg-primary/10 px-3 py-1 rounded-full">
                       {study.type} • Case Study
                     </span>
                   </div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">{study.title}</h2>
-                  <p className="text-lg text-gray-200 max-w-2xl">{study.client}</p>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3">{study.title}</h2>
+                  <p className="text-lg text-foreground/80 max-w-2xl">{study.client}</p>
                 </div>
               </div>
 
               {/* Results Banner */}
-              <div className="bg-gradient-to-r from-ohm-blue/20 via-ohm-green/20 to-ohm-blue/20 rounded-2xl p-6 mb-8 border border-ohm-blue/20">
+              <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl p-6 mb-8 border border-primary/20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="text-center md:text-left">
-                    <p className="text-sm text-gray-400 mb-1">Key Result</p>
-                    <p className="text-2xl font-bold text-ohm-green">{study.result}</p>
+                    <p className="text-sm text-foreground/60 mb-1">Key Result</p>
+                    <p className="text-2xl font-bold text-secondary">{study.result}</p>
                   </div>
                   <div className="text-center md:text-left">
-                    <p className="text-sm text-gray-400 mb-1">Annual Savings</p>
-                    <p className="text-2xl font-bold text-ohm-green">{study.savings}</p>
+                    <p className="text-sm text-foreground/60 mb-1">Annual Savings</p>
+                    <p className="text-2xl font-bold text-secondary">{study.savings}</p>
                   </div>
                 </div>
               </div>
@@ -339,25 +339,25 @@ export default function CaseStudies() {
               {/* Full Description */}
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">The Challenge</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">The Challenge</h3>
                   <ul className="space-y-3">
                     {study.challenges.map((challenge, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-ohm-orange/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-ohm-orange" />
+                        <div className="w-5 h-5 rounded-full bg-destructive/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-destructive" />
                         </div>
-                        <span className="text-gray-300">{challenge}</span>
+                        <span className="text-foreground/70">{challenge}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">The Solution</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">The Solution</h3>
                   <ul className="space-y-3">
                     {study.solutions.map((solution, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-ohm-green shrink-0 mt-0.5" />
-                        <span className="text-gray-300">{solution}</span>
+                        <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                        <span className="text-foreground/70">{solution}</span>
                       </li>
                     ))}
                   </ul>
@@ -365,8 +365,8 @@ export default function CaseStudies() {
               </div>
 
               {/* Full Description Text */}
-              <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/10">
-                <p className="text-gray-300 leading-relaxed">{study.fullDescription}</p>
+              <div className="bg-muted/40 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-border">
+                <p className="text-foreground/70 leading-relaxed">{study.fullDescription}</p>
               </div>
 
               {/* Metrics Grid */}
@@ -377,18 +377,18 @@ export default function CaseStudies() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: idx * 0.1 }}
-                    className="bg-black/40 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-ohm-blue/30 transition-all"
+                    className="bg-muted/40 backdrop-blur-sm rounded-xl p-4 text-center border border-border hover:border-primary/30 transition-all"
                   >
-                    <metric.icon className="w-8 h-8 text-ohm-green mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-white">{metric.value}</div>
-                    <div className="text-xs text-gray-400">{metric.label}</div>
+                    <metric.icon className="w-8 h-8 text-secondary mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-foreground">{metric.value}</div>
+                    <div className="text-xs text-foreground/60">{metric.label}</div>
                   </motion.div>
                 ))}
               </div>
 
               {/* Gallery Section */}
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-white mb-4">Project Gallery</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">Project Gallery</h3>
                 <div className="grid grid-cols-3 gap-3">
                   {study.galleryImages.map((img, idx) => (
                     <motion.div
@@ -407,9 +407,9 @@ export default function CaseStudies() {
               </div>
 
               {/* Testimonial */}
-              <div className="bg-gradient-to-r from-ohm-blue/10 to-ohm-green/10 rounded-2xl p-8 border border-white/20">
-                <Quote className="w-10 h-10 text-ohm-green/40 mb-4" />
-                <p className="text-lg text-gray-200 italic mb-6">"{study.testimonial.quote}"</p>
+              <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-border">
+                <Quote className="w-10 h-10 text-secondary/40 mb-4" />
+                <p className="text-lg text-foreground/80 italic mb-6">"{study.testimonial.quote}"</p>
                 <div className="flex items-center gap-4">
                   <ImageWithFallback 
                     src={study.testimonial.avatar} 
@@ -417,8 +417,8 @@ export default function CaseStudies() {
                     className="w-12 h-12 rounded-full object-cover"
                   />
                   <div>
-                    <p className="font-bold text-white">{study.testimonial.author}</p>
-                    <p className="text-sm text-gray-400">{study.testimonial.role}</p>
+                    <p className="font-bold text-foreground">{study.testimonial.author}</p>
+                    <p className="text-sm text-foreground/60">{study.testimonial.role}</p>
                   </div>
                 </div>
               </div>
@@ -434,25 +434,25 @@ export default function CaseStudies() {
           transition={{ duration: 0.6 }}
           className="text-center mt-24"
         >
-          <div className="bg-gradient-to-r from-ohm-blue/20 via-ohm-green/20 to-ohm-blue/20 rounded-2xl p-12 border border-white/20 backdrop-blur-sm relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-ohm-blue/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-ohm-green/10 rounded-full blur-3xl" />
+          <div className="bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-2xl p-12 border border-border backdrop-blur-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
             
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Ready to Write Your Success Story?
               </h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-foreground/70 mb-8 max-w-2xl mx-auto">
                 Join hundreds of satisfied customers who have transformed their energy management with Omhero.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-gradient-to-r from-ohm-green to-ohm-blue hover:from-ohm-green/90 hover:to-ohm-blue/90 text-white shadow-lg shadow-ohm-green/30 text-lg px-8 h-14">
+                  <Button size="lg" className="bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-white shadow-lg shadow-secondary/30 text-lg px-8 h-14">
                     Start Your Journey <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
                 <Link to="/product">
-                  <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 h-14">
+                  <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-primary/10 text-lg px-8 h-14">
                     Explore Omhero
                   </Button>
                 </Link>

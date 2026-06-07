@@ -1,8 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; // Changed from BrowserRouter
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { useEffect } from "react";
 
 // Layouts
 import { MarketingLayout } from "@/layouts/MarketingLayout";
@@ -55,7 +54,7 @@ const queryClient = new QueryClient();
 function Placeholder({ title }: { title: string }) {
   return (
     <div className="container mx-auto px-4 py-32 text-center">
-      <h1 className="text-4xl font-display font-bold text-white">{title}</h1>
+      <h1 className="text-4xl font-display font-bold text-foreground">{title}</h1>
       <p className="text-muted-foreground mt-4">Coming soon</p>
     </div>
   );
@@ -94,9 +93,9 @@ function AppRoutes() {
         <Route path="/dashboard/billing" element={<DashboardLayout><DashboardBilling /></DashboardLayout>} />
         <Route path="/dashboard/settings" element={<DashboardLayout><DashboardSettings /></DashboardLayout>} />
         <Route path="/ohm" element={<MarketingLayout><OhmDashboard /></MarketingLayout>} />
+        
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminLayout><AdminDashboard /></AdminLayout>} />
-        {/* <Route path="/admin/:rest*" element={<AdminLayout><Placeholder title="Admin Module" /></AdminLayout>} /> */}
         <Route path="/admin/:rest/*" element={<AdminLayout><Placeholder title="Admin Module" /></AdminLayout>} />
 
         {/* Solution Detail Routes */}
@@ -116,26 +115,12 @@ function AppRoutes() {
 }
 
 function App() {
-  // Ensure dark mode is active on html root
-  useEffect(() => {
-    document.documentElement.classList.add("dark");
-  }, []);
-
+  // Remove the hardcoded dark mode useEffect
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <BrowserRouter
-          future={{
-            v7_startTransition: true,
-            v7_relativeSplatPath: true,
-          }}
-        >
-          <ScrollToTop />
-          <AppRoutes />
-        </BrowserRouter>
-        <Toaster />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <>
+      <AppRoutes />
+      <Toaster />
+    </>
   );
 }
 
