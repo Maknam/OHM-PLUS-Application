@@ -106,7 +106,7 @@ export function Navbar() {
           className="flex items-center gap-2 md:gap-3 text-foreground hover:text-[#004B9E] transition-colors flex-shrink-0"
           data-testid="link-logo"
         >
-          <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
+          <div className="w-14 h-14 md:w-12 md:h-12 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
             <img 
               src={logoImage} 
               alt="OHM Plus Logo" 

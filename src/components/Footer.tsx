@@ -20,7 +20,7 @@ export function Footer() {
               className="flex items-center gap-2 text-foreground hover:text-[#0D9444] transition-colors"
               data-testid="link-logo"
             >
-              <div className="w-12 h-12 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
+              <div className="w-20 h-20 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
                 <img 
                   src={logoImage} 
                   alt="OHM Plus Logo" 
