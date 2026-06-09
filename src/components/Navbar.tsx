@@ -2,18 +2,21 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Facebook, Instagram, Linkedin } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import logoImage from "@/assets/images/icon.jpeg";
+import logoImage from "@/assets/images/icon.png";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 const toolLinks = [
   { href: "/services/bill-calculator", label: "Bill Calculator" },
   { href: "/services/report-fault", label: "Report Fault" },
   { href: "/services/new-connection", label: "New Connection" },
+  { href: "/energy-tips", label: "Energy Tips" },
+  { href: "/tariffs", label: "Tariff Info" },
 ];
 
 const serviceLinks = [
-  { href: "/energy-tips", label: "Energy Tips" },
-  { href: "/tariffs", label: "Tariff Info" },
+  { href: "/energy-consumption", label: "Energy Consumption" },
+  { href: "/health-check", label: "Electrical Systems Health check" },
+  { href: "/repairs", label: "Diagnostics & Repairs" },
 ];
 
 export function Navbar() {
@@ -106,7 +109,7 @@ export function Navbar() {
           className="flex items-center gap-2 md:gap-3 text-foreground hover:text-[#004B9E] transition-colors flex-shrink-0"
           data-testid="link-logo"
         >
-          <div className="w-20 h-20 md:w-12 md:h-12 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
+          <div className="w-15 h-14 md:w-15 md:h-14 overflow-hidden">
             <img 
               src={logoImage} 
               alt="OHM Plus Logo" 
