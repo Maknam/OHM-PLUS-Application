@@ -17,7 +17,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link
               to="/"
-              className="flex items-center gap-2 text-foreground hover:text-[#0D9444] transition-colors"
+              className="flex items-center gap-2"
               data-testid="link-logo"
             >
               <div className="w-30 h-25 flex items-center justify-center overflow-hidden">
