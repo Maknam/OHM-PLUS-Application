@@ -26,7 +26,7 @@ export default function Industrial() {
       location: "Ogun State, Nigeria",
       savings: "₦1.2M",
       reduction: "28%",
-      image: "https://images.pexels.com/photos/1309766/pexels-photo-1309766.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/steel-manufacturing-plant.jpg",
       description: "Large-scale manufacturer reduced energy waste across production lines"
     },
     {
@@ -34,7 +34,7 @@ export default function Industrial() {
       location: "Accra, Ghana",
       savings: "₵42,000",
       reduction: "32%",
-      image: "https://images.pexels.com/photos/4722571/pexels-photo-4722571.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/food-processing-facility.jpg",
       description: "Food processor optimized refrigeration and HVAC systems"
     },
     {
@@ -42,7 +42,7 @@ export default function Industrial() {
       location: "Lagos, Nigeria",
       savings: "₦980,000",
       reduction: "35%",
-      image: "https://images.pexels.com/photos/4440593/pexels-photo-4440593.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/textile-factory.jpg",
       description: "Textile plant reduced energy costs with load balancing"
     }
   ];
@@ -124,7 +124,7 @@ export default function Industrial() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#FF4E00]/30 to-[#FF4E00]/30 rounded-3xl blur-2xl" />
             <div className="relative bg-gradient-to-br from-[#FF4E00]/20 to-[#FF4E00]/10 rounded-3xl p-6 border border-border backdrop-blur-sm overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=420&fit=crop"
+                src="/images/solutions/industrial-factory-monitoring.jpg"
                 alt="Industrial Factory Energy Monitoring"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />

@@ -26,7 +26,7 @@ export default function DataCenters() {
       location: "Lagos, Nigeria",
       savings: "₦85M",
       reduction: "28%",
-      image: "https://images.pexels.com/photos/1181312/pexels-photo-1181312.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/rack-centre-lagos.jpg",
       description: "Tier III data center reduced cooling costs with thermal optimization"
     },
     {
@@ -34,7 +34,7 @@ export default function DataCenters() {
       location: "Lagos, Nigeria",
       savings: "₦120M",
       reduction: "32%",
-      image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/mainone-data-centre.jpg",
       description: "Improved PUE from 1.9 to 1.45 with Omhero monitoring"
     },
     {
@@ -42,7 +42,7 @@ export default function DataCenters() {
       location: "Accra, Ghana",
       savings: "$450,000",
       reduction: "35%",
-      image: "https://images.pexels.com/photos/1181243/pexels-photo-1181243.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/africa-data-centres.jpg",
       description: "Achieved 99.999% uptime with proactive environmental monitoring"
     }
   ];
@@ -130,7 +130,7 @@ export default function DataCenters() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#0D9444]/30 to-[#004B9E]/30 rounded-3xl blur-2xl" />
             <div className="relative bg-gradient-to-br from-[#0D9444]/20 to-[#004B9E]/10 rounded-3xl p-6 border border-border backdrop-blur-sm overflow-hidden">
               <img 
-                src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?w=800&h=600&fit=crop"
+                src="/images/solutions/data-centre-server-room.jpg"
                 alt="Data Centre Server Room"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />

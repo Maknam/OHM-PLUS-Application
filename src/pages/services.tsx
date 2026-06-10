@@ -275,7 +275,7 @@ export default function Services() {
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/backgrounds/case-studies-bg.jpg')] bg-cover bg-fixed opacity-5" />
         
         {/* Animated gradient orbs */}
         <div className="absolute top-20 left-10 w-96 h-96 bg-[#004B9E]/20 rounded-full blur-[120px] animate-pulse" />

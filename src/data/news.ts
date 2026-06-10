@@ -28,7 +28,7 @@ Early results from the initial 50 installations have been impressive. Participan
 "This pilot is just the beginning," added Mensah. "Our goal is to expand nationwide by the end of 2025 and ultimately empower millions of African consumers with the tools they need to take control of their energy future."
 
 The pilot program is being conducted in partnership with local electrical contractors and regulatory bodies to ensure compliance with all safety and quality standards. OHM Plus plans to release a comprehensive report on the program's outcomes in Q2 2025.`,
-    imageUrl: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg?w=800&h=500&fit=crop'
+    imageUrl: '/images/blog/ohm-plus-launch-accra.jpg'
   },
   {
     id: '2',
@@ -48,7 +48,7 @@ However, residential customers consuming more than 300 kWh per month will see a 
 The new tariffs take effect immediately and will remain in force until the next quarterly review in April 2025. PURC has also announced plans to introduce time-of-use tariffs later this year, which would charge different rates for electricity consumed during peak versus off-peak hours.
 
 Industry experts recommend that consumers invest in energy monitoring devices like the Omhero smart monitor to track their consumption in real-time and avoid unexpected bill increases. "Understanding your consumption patterns is the first step to managing your electricity costs effectively," said energy economist Dr. Ama Serwaa.`,
-    imageUrl: 'https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?w=800&h=500&fit=crop'
+    imageUrl: '/images/blog/ghana-tariff-review-2025.jpg'
   },
   {
     id: '3',
@@ -74,7 +74,7 @@ Fifth, grid stability is improving. Distribution companies can now manage loads 
 "The impact of smart metering cannot be overstated," said NERC Chairman Sanusi Garba. "We are witnessing a fundamental shift in how electricity is bought and sold in this country, and consumers are the ultimate beneficiaries."
 
 As the rollout continues, complementary technologies like the Omhero device are providing additional value by offering appliance-level monitoring, surge protection, and predictive maintenance alerts that go beyond basic metering.`,
-    imageUrl: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?w=800&h=500&fit=crop'
+    imageUrl: '/images/blog/smart-meters-nigeria.jpg'
   },
   {
     id: '4',
@@ -96,7 +96,7 @@ The Professional edition integrates seamlessly with existing building management
 Early adopters include a major manufacturing facility in Tema, Ghana, which reported a 28% reduction in energy costs within three months of installation. A Lagos-based retail chain with 22 locations is currently deploying the system across its entire portfolio.
 
 The Omhero Professional is available immediately for businesses in Nigeria and Ghana, with enterprise pricing customized based on the number of units, installation complexity, and required support level.`,
-    imageUrl: 'https://images.pexels.com/photos/380251/pexels-photo-380251.jpeg?w=800&h=500&fit=crop'
+    imageUrl: '/images/blog/omhero-enterprise-launch.jpg'
   },
   {
     id: '5',
@@ -120,7 +120,7 @@ The combination of equipment upgrades, scheduling changes, and ongoing monitorin
 "The device paid for itself in less than two months," Ogunlesi said. "Now I have complete visibility into every kilowatt-hour I use. I can identify problems immediately and make data-driven decisions about my business."
 
 Ogunlesi has since installed Omhero devices in his two additional locations and has become an enthusiastic advocate for the technology within the local business community. "Small business owners often think they have no power over their electricity costs," he said. "Omhero proves that wrong."`,
-    imageUrl: 'https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?w=800&h=500&fit=crop'
+    imageUrl: '/images/blog/lagos-bakery-case-study.jpg'
   },
   {
     id: '6',
@@ -148,7 +148,7 @@ To verify that your bill is accurate, homeowners should keep track of their mont
 The easiest way to track your consumption accurately is to install a smart energy monitor like the Omhero device. Omhero provides real-time visibility into your electricity usage, sends alerts when consumption spikes unexpectedly, and helps you predict your monthly bill before it arrives.
 
 "Many of the billing disputes we see could be avoided if consumers had better visibility into their actual usage," said a consumer protection advocate. "Smart monitoring technology gives homeowners the evidence they need to question charges that seem incorrect."`,
-    imageUrl: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=800&h=500&fit=crop'
+    imageUrl: '/images/blog/ecg-bill-guide.jpg'
   },
   {
     id: '7',
@@ -172,7 +172,7 @@ For individual consumers, the most tangible benefit of the reform has been incre
 Technology companies like OHM Plus are playing an increasingly important role in filling the gaps left by traditional utilities. The Omhero smart monitor, for example, provides consumers with real-time energy data and surge protection that complements the basic functionality of utility meters.
 
 "The grid may not be perfect, but consumers no longer have to be passive recipients of whatever power quality the utility provides," said Okonkwo. "Smart monitoring technology gives them the tools to protect their appliances, optimize their usage, and advocate for better service."`,
-    imageUrl: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?w=800&h=500&fit=crop'
+    imageUrl: '/images/blog/nigeria-power-sector-reform.jpg'
   },
   {
     id: '8',
@@ -198,7 +198,7 @@ Be mindful of your lighting usage. With the hazy conditions reducing natural lig
 The most effective way to manage your energy consumption during Harmattan is to monitor it in real-time. The Omhero device provides instant feedback on how much power you are using, sends alerts when consumption spikes unexpectedly, and helps you identify which appliances are driving up your costs.
 
 "Many homeowners are surprised to discover that a space heater they only use occasionally is actually their biggest expense," said energy efficiency consultant Ama Tetteh. "Real-time monitoring reveals these hidden costs and empowers consumers to make informed decisions about their energy use."`,
-    imageUrl: 'https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?w=800&h=500&fit=crop'
+    imageUrl: '/images/blog/harmattan-energy-savings.jpg'
   },
   {
     id: '9',
@@ -222,7 +222,7 @@ The facility had installed the Omhero Professional edition just three months ear
 "Most people think of energy monitors as bill-saving devices, and they certainly do that," said Okonkwo. "But the safety benefits are equally important. We've already recommended Omhero to every other facility in our industrial park."
 
 Since the incident, OHM Plus has reported a surge in inquiries from industrial facilities across Nigeria and Ghana concerned about fire prevention. The company's fire-risk detection feature uses proprietary algorithms to identify thermal anomalies and electrical faults before they become dangerous.`,
-    imageUrl: 'https://images.pexels.com/photos/1309766/pexels-photo-1309766.jpeg?w=800&h=500&fit=crop'
+    imageUrl: '/images/blog/omhero-fire-prevention.jpg'
   },
   {
     id: '10',
@@ -250,6 +250,6 @@ The system also reduced operational costs by minimizing unnecessary site visits.
 The operator plans to expand the Omhero deployment to an additional 150 sites in 2025. Based on the pilot results, the projected annual savings across the full 200-site network will exceed ₦180 million.
 
 "Our network uptime has actually improved while our costs have dropped," the CTO concluded. "Omhero has delivered exceptional value, and we're excited to expand the relationship."`,
-    imageUrl: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?w=800&h=500&fit=crop'
+    imageUrl: '/images/blog/telecom-fuel-monitoring.jpg'
   }
 ];
