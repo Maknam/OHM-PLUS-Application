@@ -28,6 +28,7 @@ import Tariffs from "@/pages/tariffs";
 import Consumption from "@/pages/energy";
 import HealthCheck from "@/pages/health";
 import Repairs from "@/pages/repairs";
+import BookDemo from "@/pages/bookdemo";
 
 // Solution Detail Pages
 import SmartHomes from "@/pages/solutions/SmartHomes";
@@ -75,6 +76,7 @@ function AppRoutes() {
         <Route path="/solutions" element={<MarketingLayout><Solutions /></MarketingLayout>} />
         <Route path="/pricing" element={<MarketingLayout><Pricing /></MarketingLayout>} />
         <Route path="/contact" element={<MarketingLayout><Contact /></MarketingLayout>} />
+        <Route path="/book-demo" element={<MarketingLayout><BookDemo /></MarketingLayout>} />
         <Route path="/comingsoon" element={<MarketingLayout><ComingSoon /></MarketingLayout>} />
         <Route path="/case-studies" element={<MarketingLayout><CaseStudies /></MarketingLayout>} />
 

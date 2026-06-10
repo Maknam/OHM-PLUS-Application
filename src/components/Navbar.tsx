@@ -199,9 +199,9 @@ export function Navbar() {
           {/* Auth Section */}
           <div className="flex items-center gap-4 pl-4 border-l border-theme ml-2">
             <Link to="/comingsoon" className={linkClassName}>
-              Login
+              Sign Up
             </Link>
-            <Link to="/contact">
+            <Link to="/book-demo">
               <Button className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-[0_0_20px_rgba(255,78,0,0.4)] font-semibold transition-all duration-200 hover:scale-105">
                 Book Demo
               </Button>
