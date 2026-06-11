@@ -35,28 +35,28 @@ import {
 export default function About() {
   const teamMembers = [
     {
-      name: "Kofi Mensah",
-      role: "Chief Executive Officer",
+      name: "Chima Ajufo",
+      role: "Managing Director",
       bio: "20+ years of experience in energy infrastructure and smart grid technology across Africa. Previously led major energy projects at ECG Ghana.",
       image: "/images/team/kofi-mensah-ceo.jpg",
       linkedin: "#",
-      email: "kofi.mensah@ohmplus.africa"
+      email: "Chima@ohmplusenergy.com"
     },
     {
-      name: "Ngozi Okonkwo",
-      role: "Chief Technology Officer",
+      name: "David Carpi",
+      role: "Operations Director",
       bio: "Former lead engineer at Siemens with expertise in IoT systems, embedded devices, and cloud architecture. Holds multiple patents in smart metering.",
       image: "/images/team/ngozi-okonkwo-cto.jpg",
       linkedin: "#",
-      email: "ngozi.okonkwo@ohmplus.africa"
+      email: "David@ohmplusenergy.com"
     },
     {
-      name: "Adaobi Eze",
-      role: "Head of Operations - Nigeria",
+      name: "Maxwell Essel",
+      role: "Technical Director - Nigeria",
       bio: "15 years of experience in energy distribution and customer relations. Former regional manager at Ikeja Electric.",
       image: "/images/team/adaobi-eze-nigeria.jpg",
       linkedin: "#",
-      email: "adaobi.eze@ohmplus.africa"
+      email: "adaobi.eze@ohmplusenergy.com"
     },
     {
       name: "Michael Asare",

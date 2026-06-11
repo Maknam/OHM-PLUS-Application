@@ -52,19 +52,19 @@ export default function Home() {
 
   const videoGallery = [
     {
-      url: "https://www.w3schools.com/html/mov_bbb.mp4",
+      url: "https://youtu.be/FDdl5FofPEo?feature=shared",
       title: "Introducing Omhero",
       thumbnail: "/images/hero/smart-home-monitoring.jpg",
       description: "Meet the smart energy monitor transforming how Africa manages power"
     },
     {
-      url: "https://www.w3schools.com/html/movie.mp4",
+      url: "https://youtu.be/f58PS7yd4FI?si=120PXJUs-pA37bpe4",
       title: "Customer Testimonial",
       thumbnail: "/images/hero/business-energy-management.jpg",
       description: "Hear from real customers about their energy savings"
     },
     {
-      url: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      url: "https://youtu.be/mJHIBfJyjOQ?si=nkzsalGrjz3yPlAc",
       title: "Installation Guide",
       thumbnail: "/images/hero/server-room-monitoring.jpg",
       description: "Quick and easy professional installation process"
