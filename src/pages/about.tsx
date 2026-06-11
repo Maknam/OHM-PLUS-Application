@@ -147,7 +147,7 @@ export default function About() {
             {/* 30% OPERATIONAL - Blue outline for secondary action */}
             <Link to="/product">
               <Button size="lg" variant="outline" className="border-[#004B9E]/30 text-foreground hover:bg-[#004B9E]/10 text-lg px-8 h-14">
-                Explore Omhero
+                Explore Omhero 
               </Button>
             </Link>
           </div>
