@@ -217,7 +217,7 @@ export default function Product() {
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/35158378/pexels-photo-35158378.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/backgrounds/product-bg.jpg')] bg-cover bg-fixed opacity-5" />
         
         {/* Animated gradient orbs */}
         <GlowingOrb className="top-20 left-10 w-96 h-96 bg-[#004B9E]/20" />
@@ -385,7 +385,7 @@ export default function Product() {
                   <div className="relative">
                     <div className="aspect-square rounded-2xl bg-gradient-to-br from-[#004B9E]/10 to-[#0D9444]/10 border border-border overflow-hidden">
                       <img 
-                        src={`https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=500&h=500&fit=crop`}
+                        src="/images/products/omhero-feature-display.jpg"
                         alt={currentFeature.title}
                         className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
                       />
@@ -815,7 +815,7 @@ export default function Product() {
                 transition={{ type: "spring", stiffness: 200 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=600&fit=crop"
+                  src="/images/products/omhero-app-interface.jpg"
                   alt="Omhero App Interface"
                   className="rounded-2xl shadow-2xl border border-border mx-auto max-w-[280px]"
                 />

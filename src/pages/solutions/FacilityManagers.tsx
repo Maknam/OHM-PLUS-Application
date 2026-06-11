@@ -26,7 +26,7 @@ export default function FacilityManagers() {
       location: "Lagos, Nigeria",
       savings: "₦45M",
       reduction: "32%",
-      image: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/palm-grove-estates-hero.jpg",
       description: "120-unit residential estate reduced common area energy costs"
     },
     {
@@ -34,7 +34,7 @@ export default function FacilityManagers() {
       location: "Accra, Ghana",
       savings: "₵320,000",
       reduction: "28%",
-      image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/ocean-view-tower.jpg",
       description: "Commercial office building optimized HVAC across 15 floors"
     },
     {
@@ -42,7 +42,7 @@ export default function FacilityManagers() {
       location: "Ogun State, Nigeria",
       savings: "₦78M",
       reduction: "35%",
-      image: "https://images.pexels.com/photos/164558/pexels-photo-164558.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/industrial-park.jpg",
       description: "Multi-tenant industrial park with sub-metering for 50+ tenants"
     }
   ];
@@ -123,7 +123,7 @@ export default function FacilityManagers() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#FF4E00]/30 to-[#FF4E00]/30 rounded-3xl blur-2xl" />
             <div className="relative bg-gradient-to-br from-[#FF4E00]/20 to-[#FF4E00]/10 rounded-3xl p-6 border border-border backdrop-blur-sm overflow-hidden">
               <img 
-                src="https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?w=800&h=600&fit=crop"
+                src="/images/solutions/facility-management-dashboard.jpg"
                 alt="Facility Management Dashboard"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />

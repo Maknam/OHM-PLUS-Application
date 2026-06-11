@@ -26,7 +26,7 @@ export default function Telecom() {
       location: "Lagos, Nigeria",
       savings: "₦45M",
       reduction: "32%",
-      image: "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/mtn-nigeria-towers.jpg",
       description: "Reduced fuel costs across 50 tower sites with real-time monitoring"
     },
     {
@@ -34,7 +34,7 @@ export default function Telecom() {
       location: "Accra, Ghana",
       savings: "₵280,000",
       reduction: "28%",
-      image: "https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/airtel-ghana-towers.jpg",
       description: "Improved generator efficiency and reduced downtime by 45%"
     },
     {
@@ -42,7 +42,7 @@ export default function Telecom() {
       location: "Port Harcourt, Nigeria",
       savings: "₦38M",
       reduction: "35%",
-      image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/glo-nigeria-towers.jpg",
       description: "Detected fuel theft and optimized maintenance schedules"
     }
   ];
@@ -124,7 +124,7 @@ export default function Telecom() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#0D9444]/30 to-[#004B9E]/30 rounded-3xl blur-2xl" />
             <div className="relative bg-gradient-to-br from-[#0D9444]/20 to-[#004B9E]/10 rounded-3xl p-6 border border-border backdrop-blur-sm overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1533664488202-6af66d26c44a?w=800&h=420&fit=crop"
+                src="/images/solutions/telecom-tower-hero.jpg"
                 alt="Telecom Tower Monitoring"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />

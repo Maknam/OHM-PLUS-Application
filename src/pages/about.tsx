@@ -35,34 +35,34 @@ import {
 export default function About() {
   const teamMembers = [
     {
-      name: "Kofi Mensah",
-      role: "Chief Executive Officer",
+      name: "Chima Ajufo",
+      role: "Managing Director",
       bio: "20+ years of experience in energy infrastructure and smart grid technology across Africa. Previously led major energy projects at ECG Ghana.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
+      image: "/images/team/kofi-mensah-ceo.jpg",
       linkedin: "#",
-      email: "kofi.mensah@ohmplus.africa"
+      email: "Chima@ohmplusenergy.com"
     },
     {
-      name: "Ngozi Okonkwo",
-      role: "Chief Technology Officer",
+      name: "David Carpi",
+      role: "Operations Director",
       bio: "Former lead engineer at Siemens with expertise in IoT systems, embedded devices, and cloud architecture. Holds multiple patents in smart metering.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+      image: "/images/team/ngozi-okonkwo-cto.jpg",
       linkedin: "#",
-      email: "ngozi.okonkwo@ohmplus.africa"
+      email: "David@ohmplusenergy.com"
     },
     {
-      name: "Adaobi Eze",
-      role: "Head of Operations - Nigeria",
+      name: "Maxwell Essel",
+      role: "Technical Director - Nigeria",
       bio: "15 years of experience in energy distribution and customer relations. Former regional manager at Ikeja Electric.",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
+      image: "/images/team/adaobi-eze-nigeria.jpg",
       linkedin: "#",
-      email: "adaobi.eze@ohmplus.africa"
+      email: "adaobi.eze@ohmplusenergy.com"
     },
     {
       name: "Michael Asare",
       role: "Head of Operations - Ghana",
       bio: "Energy economist with deep expertise in Ghana's power sector. Former advisor to the Ministry of Energy on smart grid initiatives.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
+      image: "/images/team/michael-asare-ghana.jpg",
       linkedin: "#",
       email: "michael.asare@ohmplus.africa"
     }
@@ -108,7 +108,7 @@ export default function About() {
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/36631700/pexels-photo-36631700.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/backgrounds/about-bg.jpg')] bg-cover bg-fixed opacity-5" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#004B9E]/20 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0D9444]/10 rounded-full blur-[140px] animate-pulse delay-1000" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#004B9E]/5 rounded-full blur-[100px]" />

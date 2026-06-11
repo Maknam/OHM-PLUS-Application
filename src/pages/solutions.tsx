@@ -22,7 +22,7 @@ export default function Solutions() {
         "Remote power control from anywhere",
         "Dispute estimated bills with real data"
       ],
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop",
+      image: "/images/solutions/smart-homes-hero.jpg",
       gradient: "from-[#004B9E]/20 to-[#004B9E]/10",
       borderColor: "border-[#004B9E]/30",
       iconBg: "bg-[#004B9E]/20"
@@ -40,7 +40,7 @@ export default function Solutions() {
         "Monitor multiple locations from one dashboard",
         "Automatic usage reports for accounting"
       ],
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=500&fit=crop",
+      image: "/images/solutions/smes-retail-hero.jpg",
       gradient: "from-[#0D9444]/20 to-[#0D9444]/10",
       borderColor: "border-[#0D9444]/30",
       iconBg: "bg-[#0D9444]/20"
@@ -58,7 +58,7 @@ export default function Solutions() {
         "Reduce unplanned downtime by 50%",
         "Comprehensive three-phase monitoring"
       ],
-      image: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&h=500&fit=crop",
+      image: "/images/solutions/industrial-factory-monitoring.jpg",
       gradient: "from-[#FF4E00]/20 to-[#FF4E00]/10",
       borderColor: "border-[#FF4E00]/30",
       iconBg: "bg-[#FF4E00]/20"
@@ -76,7 +76,7 @@ export default function Solutions() {
         "Reduce site visit frequency by 40%",
         "Centralized dashboard for all sites"
       ],
-      image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=800&h=500&fit=crop",
+      image: "/images/solutions/telecom-towers-hero.jpg",
       gradient: "from-[#004B9E]/20 to-[#004B9E]/10",
       borderColor: "border-[#004B9E]/30",
       iconBg: "bg-[#004B9E]/20"
@@ -94,7 +94,7 @@ export default function Solutions() {
         "Compliance reporting",
         "Reduce cooling energy by 25%"
       ],
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop",
+      image: "/images/solutions/data-centres-hero.jpg",
       gradient: "from-[#0D9444]/20 to-[#0D9444]/10",
       borderColor: "border-[#0D9444]/30",
       iconBg: "bg-[#0D9444]/20"
@@ -112,7 +112,7 @@ export default function Solutions() {
         "Energy benchmarking",
         "Reduce management overhead by 50%"
       ],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+      image: "/images/hero/energy-savings-dashboard.jpg",
       gradient: "from-[#004B9E]/20 to-[#004B9E]/10",
       borderColor: "border-[#004B9E]/30",
       iconBg: "bg-[#004B9E]/20"
@@ -131,7 +131,7 @@ export default function Solutions() {
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/28214102/pexels-photo-28214102.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/backgrounds/solutions-bg.jpg')] bg-cover bg-fixed opacity-5" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#004B9E]/20 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0D9444]/10 rounded-full blur-[140px] animate-pulse delay-1000" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#004B9E]/5 rounded-full blur-[100px]" />

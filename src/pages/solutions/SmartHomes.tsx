@@ -18,21 +18,21 @@ export default function SmartHomes() {
       name: "James Okafor",
       location: "Lagos, Nigeria",
       quote: "Omhero helped me discover my old AC was consuming 40% more energy than it should. I replaced it and my bill dropped by ₦35,000 monthly!",
-      image: "https://images.unsplash.com/photo-1656313836297-0cd072f08f43?w=600&h=600&fit=crop",
+      image: "/images/team/james-okafor.jpg",
       savings: "35% reduction"
     },
     {
       name: "Ama Serwaa",
       location: "Accra, Ghana",
       quote: "The real-time monitoring feature is a game-changer. I can finally see exactly what I'm paying for and dispute ECG's estimated bills.",
-      image: "https://images.unsplash.com/photo-1632765866070-3fadf25d3d5b?w=600&h=600&fit=crop",
+      image: "/images/team/ama-serwaa.jpg",
       savings: "28% reduction"
     },
     {
       name: "Michael Adeyemi",
       location: "Abuja, Nigeria",
       quote: "Installation was seamless and the app is incredibly intuitive. I've recommended Omhero to all my neighbors.",
-      image: "https://images.unsplash.com/photo-1596580817363-a4a8f67d4bc8?w=600&h=600&fit=crop",
+      image: "/images/team/michael-adeyemi.jpg",
       savings: "₦25,000 saved"
     }
   ];
@@ -104,7 +104,7 @@ export default function SmartHomes() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#0D9444]/30 to-[#004B9E]/30 rounded-3xl blur-2xl" />
             <div className="relative bg-gradient-to-br from-[#0D9444]/20 to-[#004B9E]/10 rounded-3xl p-6 border border-border backdrop-blur-sm overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?w=800&h=420&fit=crop"
+                src="/images/solutions/smart-homes-interior.jpg"
                 alt="Smart Home Energy Monitoring"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
@@ -191,7 +191,7 @@ export default function SmartHomes() {
                 </div>
                 <div className="relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?w=600&h=400&fit=crop"
+                    src="/images/solutions/energy-savings-chart.jpg"
                     alt="Energy Savings Chart"
                     className="rounded-xl shadow-2xl w-full"
                   />

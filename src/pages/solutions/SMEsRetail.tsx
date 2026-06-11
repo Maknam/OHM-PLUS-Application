@@ -26,7 +26,7 @@ export default function SMEsRetail() {
       location: "Lagos, Nigeria",
       savings: "₦280,000",
       reduction: "32%",
-      image: "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/bakery-retail-gallery.jpg",
       description: "Retail chain reduced energy costs across 5 locations"
     },
     {
@@ -34,7 +34,7 @@ export default function SMEsRetail() {
       location: "Accra, Ghana",
       savings: "₵8,500",
       reduction: "28%",
-      image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/commercial-gallery-1.jpg",
       description: "Corporate office identified after-hours energy waste"
     },
     {
@@ -42,7 +42,7 @@ export default function SMEsRetail() {
       location: "Abuja, Nigeria",
       savings: "₦145,000",
       reduction: "35%",
-      image: "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?w=600&h=400&fit=crop",
+      image: "/images/case-studies/bakery-retail-gallery.jpg",
       description: "Shopping mall reduced HVAC energy consumption"
     }
   ];
@@ -128,7 +128,7 @@ export default function SMEsRetail() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#0D9444]/30 to-[#0D9444]/30 rounded-3xl blur-2xl" />
             <div className="relative bg-gradient-to-br from-[#0D9444]/20 to-[#0D9444]/10 rounded-3xl p-6 border border-border backdrop-blur-sm overflow-hidden">
               <img 
-                src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?w=800&h=600&fit=crop"
+                src="/images/solutions/smes-retail-dashboard.jpg"
                 alt="SME Business Energy Monitoring"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
@@ -298,7 +298,7 @@ export default function SMEsRetail() {
               </div>
               <div className="relative">
                 <img 
-                  src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?w=600&h=400&fit=crop"
+                  src="/images/solutions/smes-retail-dashboard.jpg"
                   alt="Business Energy Savings"
                   className="rounded-xl shadow-2xl w-full"
                 />

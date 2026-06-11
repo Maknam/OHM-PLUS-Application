@@ -50,12 +50,12 @@ const ImageWithFallback = ({ src, alt, className }: { src: string; alt: string; 
   const [imgError, setImgError] = useState(false);
   
   const fallbackImages = {
-    residential: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=800&h=500&fit=crop",
-    industrial: "https://images.pexels.com/photos/380251/pexels-photo-380251.jpeg?w=800&h=500&fit=crop",
-    commercial: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?w=800&h=500&fit=crop",
-    residentialGallery: "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?w=600&h=400&fit=crop",
-    industrialGallery: "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?w=600&h=400&fit=crop",
-    commercialGallery: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?w=600&h=400&fit=crop",
+    residential: "/images/case-studies/palm-groove-estates-hero.jpg",
+    industrial: "/images/case-studies/steelworks-industries-hero.jpg",
+    commercial: "/images/case-studies/freshmart-supermarkets-hero.jpg",
+    residentialGallery: "/images/case-studies/residential-gallery-1.jpg",
+    industrialGallery: "/images/case-studies/industrial-gallery-1.jpg",
+    commercialGallery: "/images/case-studies/commercial-gallery-1.jpg",
     avatar1: "https://randomuser.me/api/portraits/men/32.jpg",
     avatar2: "https://randomuser.me/api/portraits/men/45.jpg",
     avatar3: "https://randomuser.me/api/portraits/women/68.jpg"
@@ -110,11 +110,11 @@ const caseStudies = [
     client: "Palm Groove Estates, Lagos",
     type: "residential",
     icon: Home,
-    heroImage: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=1200&h=600&fit=crop",
+    heroImage: "/images/case-studies/palm-groove-estates-hero.jpg",
     galleryImages: [
-      "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?w=600&h=400&fit=crop",
-      "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?w=600&h=400&fit=crop",
-      "https://images.pexels.com/photos/2079249/pexels-photo-2079249.jpeg?w=600&h=400&fit=crop"
+      "/images/case-studies/residential-gallery-1.jpg",
+      "/images/case-studies/residential-gallery-2.jpg",
+      "/images/case-studies/residential-gallery-3.jpg"
     ],
     result: "35% reduction in electricity bills",
     savings: "₦2.5M saved annually",
@@ -151,11 +151,11 @@ const caseStudies = [
     client: "Steelworks Industries, Tema",
     type: "industrial",
     icon: Factory,
-    heroImage: "https://images.pexels.com/photos/380251/pexels-photo-380251.jpeg?w=1200&h=600&fit=crop",
+    heroImage: "/images/case-studies/steelworks-industries-hero.jpg",
     galleryImages: [
-      "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?w=600&h=400&fit=crop",
-      "https://images.pexels.com/photos/3862134/pexels-photo-3862134.jpeg?w=600&h=400&fit=crop",
-      "https://images.pexels.com/photos/3862135/pexels-photo-3862135.jpeg?w=600&h=400&fit=crop"
+      "/images/case-studies/industrial-gallery-1.jpg",
+      "/images/case-studies/industrial-gallery-2.jpg",
+      "/images/case-studies/industrial-gallery-3.jpg"
     ],
     result: "28% energy reduction",
     savings: "₵180,000 saved annually",
@@ -192,11 +192,11 @@ const caseStudies = [
     client: "FreshMart Supermarkets",
     type: "commercial",
     icon: Building2,
-    heroImage: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?w=1200&h=600&fit=crop",
+    heroImage: "/images/case-studies/freshmart-supermarkets-hero.jpg",
     galleryImages: [
-      "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?w=600&h=400&fit=crop",
-      "https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?w=600&h=400&fit=crop",
-      "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?w=600&h=400&fit=crop"
+      "/images/case-studies/commercial-gallery-1.jpg",
+      "/images/case-studies/commercial-gallery-2.jpg",
+      "/images/case-studies/bakery-retail-gallery.jpg"
     ],
     result: "42% reduction in standby power",
     savings: "₦4.2M saved across locations",
@@ -243,7 +243,7 @@ export default function CaseStudies() {
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/backgrounds/case-studies-bg.jpg')] bg-cover bg-fixed opacity-5" />
         
         {/* Animated gradient orbs */}
         <div className="absolute top-20 left-10 w-96 h-96 bg-[#004B9E]/20 rounded-full blur-[120px] animate-pulse" />

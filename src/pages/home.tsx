@@ -19,32 +19,32 @@ export default function Home() {
 
   const galleryImages = [
     {
-      url: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80",
+      url: "/images/hero/smart-home-monitoring.jpg",
       alt: "Smart home energy monitoring",
       caption: "Real-time energy tracking from your smartphone"
     },
     {
-      url: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+      url: "/images/hero/business-energy-management.jpg",
       alt: "Business energy management",
       caption: "Enterprise solutions for commercial properties"
     },
     {
-      url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+      url: "/images/hero/energy-savings-dashboard.jpg",
       alt: "Energy savings dashboard",
       caption: "Track your savings with detailed analytics"
     },
     {
-      url: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+      url: "/images/hero/server-room-monitoring.jpg",
       alt: "Server room monitoring",
       caption: "Data centre power quality management"
     },
     {
-      url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      url: "/images/hero/modern-building-energy.jpg",
       alt: "Modern building energy control",
       caption: "Centralized control for facility managers"
     },
     {
-      url: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80",
+      url: "/images/hero/telecom-tower-monitoring.jpg",
       alt: "Telecom tower monitoring",
       caption: "Remote monitoring for telecom infrastructure"
     }
@@ -52,21 +52,21 @@ export default function Home() {
 
   const videoGallery = [
     {
-      url: "https://www.w3schools.com/html/mov_bbb.mp4",
+      url: "https://youtu.be/FDdl5FofPEo?feature=shared",
       title: "Introducing Omhero",
-      thumbnail: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80",
+      thumbnail: "/images/hero/smart-home-monitoring.jpg",
       description: "Meet the smart energy monitor transforming how Africa manages power"
     },
     {
-      url: "https://www.w3schools.com/html/movie.mp4",
+      url: "https://youtu.be/f58PS7yd4FI?si=120PXJUs-pA37bpe4",
       title: "Customer Testimonial",
-      thumbnail: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80",
+      thumbnail: "/images/hero/business-energy-management.jpg",
       description: "Hear from real customers about their energy savings"
     },
     {
-      url: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      url: "https://youtu.be/mJHIBfJyjOQ?si=nkzsalGrjz3yPlAc",
       title: "Installation Guide",
-      thumbnail: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+      thumbnail: "/images/hero/server-room-monitoring.jpg",
       description: "Quick and easy professional installation process"
     }
   ];
@@ -75,7 +75,7 @@ export default function Home() {
     {
       title: "Real-Time Energy Monitoring",
       description: "Track your electricity consumption minute by minute with our advanced smart sensors. Get instant alerts when usage spikes and identify energy-hungry appliances immediately.",
-      image: "https://images.unsplash.com/photo-1568378710933-345c61fc7520?w=800&h=370&fit=crop",
+      image: "/images/hero/realtime-energy-monitoring.jpg",
       imageAlt: "Real-time energy monitoring dashboard",
       reverse: false,
       icon: Zap,
@@ -87,7 +87,7 @@ export default function Home() {
     {
       title: "Surge & Fault Protection",
       description: "Protect your valuable appliances from dangerous voltage fluctuations and electrical faults. Our system detects anomalies instantly and alerts you before damage occurs.",
-      image: "https://images.unsplash.com/photo-1576446470246-499c738d1c8e?w=800&h=380&fit=crop",
+      image: "/images/hero/surge-fault-protection.jpg",
       imageAlt: "Surge protection system",
       reverse: true,
       icon: ShieldAlert,
@@ -99,7 +99,7 @@ export default function Home() {
     {
       title: "Reduce Energy Waste",
       description: "Identify which appliances are driving up your bills and get personalized recommendations to optimize usage. Save up to 30% on your monthly electricity costs.",
-      image: "https://plus.unsplash.com/premium_photo-1714826810176-54a0e55eafab?w=800&h=380&fit=crop",
+      image: "/images/hero/reduce-energy-waste.jpg",
       imageAlt: "Energy savings graph",
       reverse: false,
       icon: TrendingDown,
@@ -111,7 +111,7 @@ export default function Home() {
     {
       title: "Enterprise Solutions",
       description: "Scale your energy management across multiple properties. Perfect for businesses, apartment complexes, and commercial buildings with centralized control and reporting.",
-      image: "https://images.unsplash.com/photo-1774186184398-1cc2da3d029e?w=800&h=380&fit=crop",
+      image: "/images/hero/enterprise-solutions.jpg",
       imageAlt: "Enterprise energy management",
       reverse: true,
       icon: BarChart3,
@@ -126,28 +126,28 @@ export default function Home() {
     {
       title: "Expert Installation",
       description: "Certified technicians handle the entire setup process with minimal disruption.",
-      image: "https://plus.unsplash.com/premium_photo-1661963753278-af66c671bbe7?w=400&h=300&fit=crop",
+      image: "/images/hero/expert-installation.jpg",
       icon: Users,
       stat: "500+ Installations"
     },
     {
       title: "24/7 Support",
       description: "Our customer support team is always available to assist you.",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=300&fit=crop",
+      image: "/images/hero/customer-support.jpg",
       icon: Clock,
       stat: "Always Available"
     },
     {
       title: "Cost Effective",
       description: "Save money while reducing your carbon footprint.",
-      image: "https://images.unsplash.com/photo-1729077555348-4ab768b4a90e?w=400&h=300&fit=crop",
+      image: "/images/hero/cost-effective.jpg",
       icon: DollarSign,
       stat: "30% Average Savings"
     },
     {
       title: "Data-Driven Insights",
       description: "Make informed decisions with comprehensive analytics.",
-      image: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=400&h=300&fit=crop",
+      image: "/images/hero/data-driven-insights.jpg",
       icon: Target,
       stat: "99.9% Accuracy"
     }
@@ -158,21 +158,21 @@ export default function Home() {
       name: "James Loco Efetomiwa",
       location: "Lagos, Nigeria",
       quote: "My electricity bill dropped by 35% in just two months. The real-time monitoring helped me identify my old AC was consuming too much power.",
-      image: "https://randomuser.me/api/portraits/men/30.jpg",
+      image: "/images/team/james-okafor.jpg",
       rating: 5
     },
     {
       name: "Abigail Kwarteng",
       location: "Kumasi, Ghana",
       quote: "Finally, I have proof to dispute ECG's estimated bills. The Omhero app gives me exactly what I need to pay only for what I use.",
-      image: "https://randomuser.me/api/portraits/women/92.jpg",
+      image: "/images/team/ama-serwaa.jpg",
       rating: 5
     },
     {
       name: "Michael Okereke",
       location: "Abuja, Nigeria",
       quote: "Installation was seamless and the support team is fantastic. I've recommended Omhero to all my business partners.",
-      image: "https://randomuser.me/api/portraits/men/59.jpg",
+      image: "/images/team/michael-adeyemi.jpg",
       rating: 5
     }
   ];
@@ -189,7 +189,7 @@ export default function Home() {
           <div 
             className="absolute inset-0 bg-cover bg-center bg-fixed"
             style={{
-              backgroundImage: "url('https://images.pexels.com/photos/2044447/pexels-photo-2044447.jpeg?q=80&w=2070')",
+              backgroundImage: "url('/images/backgrounds/hero-energy-bg.jpg')",
             }}
           />
           {/* Darker overlay for better text contrast - adapts to theme */}
@@ -411,7 +411,7 @@ export default function Home() {
               >
                 <div className="relative overflow-hidden h-64">
                   <img 
-                    src={`${image.url}?w=600&h=400&fit=crop`} 
+        src={`${image.url}`} 
                     alt={image.alt}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
@@ -621,7 +621,7 @@ export default function Home() {
               <Card className="bg-muted/40 backdrop-blur-sm border-border hover:border-[#004B9E]/30 transition-all group cursor-pointer flex flex-col overflow-hidden h-full">
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg?w=400&h=200&fit=crop" 
+                    src="/images/blog/ohm-plus-launch-accra.jpg" 
                     alt="OHM Plus Launch"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -642,7 +642,7 @@ export default function Home() {
               <Card className="bg-muted/40 backdrop-blur-sm border-border hover:border-[#004B9E]/30 transition-all group cursor-pointer flex flex-col overflow-hidden h-full">
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?w=400&h=200&fit=crop" 
+                    src="/images/blog/ghana-tariff-review-2025.jpg" 
                     alt="Tariff Review"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -663,7 +663,7 @@ export default function Home() {
               <Card className="bg-muted/40 backdrop-blur-sm border-border hover:border-[#004B9E]/30 transition-all group cursor-pointer flex flex-col overflow-hidden h-full">
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?w=400&h=200&fit=crop" 
+                    src="/images/blog/telecom-fuel-monitoring.jpg" 
                     alt="Smart Meters"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
