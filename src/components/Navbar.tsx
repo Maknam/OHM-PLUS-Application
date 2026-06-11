@@ -2,18 +2,21 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Facebook, Instagram, Linkedin } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import logoImage from "@/assets/images/icon.jpeg";
+import logoImage from "@/assets/images/icon.png";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 const toolLinks = [
   { href: "/services/bill-calculator", label: "Bill Calculator" },
   { href: "/services/report-fault", label: "Report Fault" },
   { href: "/services/new-connection", label: "New Connection" },
+  { href: "/energy-tips", label: "Energy Tips" },
+  { href: "/tariffs", label: "Tariff Info" },
 ];
 
 const serviceLinks = [
-  { href: "/energy-tips", label: "Energy Tips" },
-  { href: "/tariffs", label: "Tariff Info" },
+  { href: "/energy-consumption", label: "Energy Consumption" },
+  { href: "/health-check", label: "Electrical Systems Health check" },
+  { href: "/repairs", label: "Diagnostics & Repairs" },
 ];
 
 export function Navbar() {
@@ -103,10 +106,10 @@ export function Navbar() {
         {/* Logo - Properly sized for both desktop and mobile */}
         <Link
           to="/"
-          className="flex items-center gap-2 md:gap-3 text-foreground hover:text-[#004B9E] transition-colors flex-shrink-0"
+          className="flex items-center gap-2 md:gap-3 flex-shrink-0"
           data-testid="link-logo"
         >
-          <div className="w-20 h-20 md:w-12 md:h-12 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
+          <div className="w-15 h-14 overflow-hidden">
             <img 
               src={logoImage} 
               alt="OHM Plus Logo" 
@@ -196,9 +199,9 @@ export function Navbar() {
           {/* Auth Section */}
           <div className="flex items-center gap-4 pl-4 border-l border-theme ml-2">
             <Link to="/comingsoon" className={linkClassName}>
-              Login
+              Sign Up
             </Link>
-            <Link to="/contact">
+            <Link to="/book-demo">
               <Button className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-[0_0_20px_rgba(255,78,0,0.4)] font-semibold transition-all duration-200 hover:scale-105">
                 Book Demo
               </Button>
@@ -223,22 +226,6 @@ export function Navbar() {
         }`}
       >
         {/* Mobile Logo in Menu Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-theme mb-2">
-          <Link
-            to="/"
-            onClick={() => setIsOpen(false)}
-            className="flex items-center gap-2"
-          >
-            <div className="w-10 h-10 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 overflow-hidden">
-              <img 
-                src={logoImage} 
-                alt="OHM Plus Logo" 
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <span className="font-display font-bold text-lg tracking-wide text-foreground">OHM PLUS</span>
-          </Link>
-        </div>
 
         {/* Mobile Navigation Links */}
         <div className="space-y-1">
@@ -301,7 +288,7 @@ export function Navbar() {
             onClick={() => setIsOpen(false)}
             className="text-base font-medium text-foreground/80 hover:text-[#004B9E] transition-colors"
           >
-            Login to Dashboard
+            Sign Up
           </Link>
           <ThemeSwitcher />
         </div>

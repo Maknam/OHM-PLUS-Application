@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Zap, Mail, Phone, MapPin, FileText, Sparkles, Facebook, Instagram, Linkedin } from "lucide-react";
-import logoImage from "@/assets/images/icon.jpeg";
+import logoImage from "@/assets/images/icon.png";
 
 export function Footer() {
   const socialLinks = [
@@ -17,10 +17,10 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link
               to="/"
-              className="flex items-center gap-2 text-foreground hover:text-[#0D9444] transition-colors"
+              className="flex items-center gap-2"
               data-testid="link-logo"
             >
-              <div className="w-20 h-20 rounded-lg bg-[#004B9E]/10 flex items-center justify-center border border-[#004B9E]/20 shadow-[0_0_15px_rgba(0,75,158,0.3)] overflow-hidden">
+              <div className="w-30 h-25 flex items-center justify-center overflow-hidden">
                 <img 
                   src={logoImage} 
                   alt="OHM Plus Logo" 

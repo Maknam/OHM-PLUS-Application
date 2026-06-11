@@ -25,6 +25,10 @@ import News from "@/pages/news";
 import NewsArticle from "@/pages/news-article";
 import EnergyTips from "@/pages/energy-tips";
 import Tariffs from "@/pages/tariffs";
+import Consumption from "@/pages/energy";
+import HealthCheck from "@/pages/health";
+import Repairs from "@/pages/repairs";
+import BookDemo from "@/pages/bookdemo";
 
 // Solution Detail Pages
 import SmartHomes from "@/pages/solutions/SmartHomes";
@@ -72,6 +76,7 @@ function AppRoutes() {
         <Route path="/solutions" element={<MarketingLayout><Solutions /></MarketingLayout>} />
         <Route path="/pricing" element={<MarketingLayout><Pricing /></MarketingLayout>} />
         <Route path="/contact" element={<MarketingLayout><Contact /></MarketingLayout>} />
+        <Route path="/book-demo" element={<MarketingLayout><BookDemo /></MarketingLayout>} />
         <Route path="/comingsoon" element={<MarketingLayout><ComingSoon /></MarketingLayout>} />
         <Route path="/case-studies" element={<MarketingLayout><CaseStudies /></MarketingLayout>} />
 
@@ -80,12 +85,18 @@ function AppRoutes() {
         <Route path="/services/bill-calculator" element={<MarketingLayout><BillCalculator /></MarketingLayout>} />
         <Route path="/services/report-fault" element={<MarketingLayout><ReportFault /></MarketingLayout>} />
         <Route path="/services/new-connection" element={<MarketingLayout><NewConnection /></MarketingLayout>} />
+
         
         <Route path="/news" element={<MarketingLayout><News /></MarketingLayout>} />
         <Route path="/news/:slug" element={<MarketingLayout><NewsArticle /></MarketingLayout>} />
         
         <Route path="/energy-tips" element={<MarketingLayout><EnergyTips /></MarketingLayout>} />
         <Route path="/tariffs" element={<MarketingLayout><Tariffs /></MarketingLayout>} />
+        <Route path="/energy-consumption" element={<MarketingLayout><Consumption /></MarketingLayout>} />
+        <Route path="/health-check" element={<MarketingLayout><HealthCheck /></MarketingLayout>} />
+        <Route path="/repairs" element={<MarketingLayout><Repairs /></MarketingLayout>} />
+
+        
         
         {/* Dashboard Routes */}
         <Route path="/dashboard" element={<DashboardLayout><DashboardOverview /></DashboardLayout>} />
