@@ -4,7 +4,7 @@ import logoImage from "@/assets/images/icon.png";
 
 export function Footer() {
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com/ohmplus", label: "Facebook", color: "hover:text-[#1877F2]" },
+    { icon: Facebook, href: "https://facebook.com/ohmplusenergy", label: "Facebook", color: "hover:text-[#1877F2]" },
     { icon: Instagram, href: "https://instagram.com/ohmplus", label: "Instagram", color: "hover:text-[#E4405F]" },
     { icon: Linkedin, href: "https://linkedin.com/company/ohmplus", label: "LinkedIn", color: "hover:text-[#0A66C2]" },
   ];
