@@ -96,8 +96,8 @@ export default function Contact() {
 
   const contactMethods = [
     { icon: MapPin, title: "Offices", details: ["Accra, Ghana", "Lagos, Nigeria"], color: "from-primary to-primary/70", hover: "map" },
-    { icon: Mail, title: "Email Us", details: ["hello@ohmplus.africa", "support@ohmplus.africa"], color: "from-secondary to-secondary/70", hover: "mail" },
-    { icon: Phone, title: "Call Us", details: ["+233 (0) 55 123 4567", "+234 (0) 80 123 4567"], color: "from-secondary to-secondary/70", hover: "phone" },
+    { icon: Mail, title: "Email Us", details: ["info@ohmplusenergy.com", "support@ohmplusenergy.com"], color: "from-secondary to-secondary/70", hover: "mail" },
+    { icon: Phone, title: "Call Us", details: ["+233(0)555896464", "+234 (0) 80 123 4567"], color: "from-secondary to-secondary/70", hover: "phone" },
     { icon: Clock, title: "Support Hours", details: ["Monday - Friday: 8AM - 8PM", "Saturday: 9AM - 5PM"], color: "from-primary to-primary/70", hover: "clock" }
   ];
 
