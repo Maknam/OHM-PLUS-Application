@@ -1,6 +1,6 @@
 // pages/CaseStudies.tsx
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Building2, Home, Factory, TrendingDown, Shield, Zap, Users, Clock, Award, ArrowRight, Star, CheckCircle2, BarChart3, Leaf, Wifi, Smartphone, Eye, Activity, Cpu, Flame, Gauge, MapPin, Calendar, ChevronRight, Quote, Sparkles, Heart, DollarSign, Target, Globe } from "lucide-react";
+import { Building2, Home, Factory, TrendingDown, Shield, Zap, Users, Clock, Award, ArrowRight, Star, CheckCircle2, BarChart3, Leaf, Wifi, Smartphone, Eye, Activity, Cpu, Flame, Gauge, MapPin, Calendar, ChevronRight, Quote, Sparkles, Heart, DollarSign, Target, Globe, Gauge as GaugeIcon, Briefcase, ShoppingBag, Cloud, Cog, Car, Hotel } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
@@ -50,29 +50,24 @@ const ImageWithFallback = ({ src, alt, className }: { src: string; alt: string; 
   const [imgError, setImgError] = useState(false);
   
   const fallbackImages = {
-    residential: "/images/case-studies/palm-groove-estates-hero.jpg",
-    industrial: "/images/case-studies/steelworks-industries-hero.jpg",
-    commercial: "/images/case-studies/freshmart-supermarkets-hero.jpg",
-    residentialGallery: "/images/case-studies/residential-gallery-1.jpg",
-    industrialGallery: "/images/case-studies/industrial-gallery-1.jpg",
-    commercialGallery: "/images/case-studies/commercial-gallery-1.jpg",
+    industrial: "https://images.pexels.com/photos/1309766/pexels-photo-1309766.jpeg?w=800&h=500&fit=crop",
+    showroom: "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?w=800&h=500&fit=crop",
+    hotel: "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?w=800&h=500&fit=crop",
+    ski: "https://images.pexels.com/photos/848599/pexels-photo-848599.jpeg?w=800&h=500&fit=crop",
+    residential: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=800&h=500&fit=crop",
+    commercial: "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?w=800&h=500&fit=crop",
     avatar1: "https://randomuser.me/api/portraits/men/32.jpg",
     avatar2: "https://randomuser.me/api/portraits/men/45.jpg",
     avatar3: "https://randomuser.me/api/portraits/women/68.jpg"
   };
 
   const getFallbackSrc = () => {
-    if (src.includes("estate") || src.includes("luxury") || alt.includes("Estate")) return fallbackImages.residential;
-    if (src.includes("steel") || src.includes("manufacturing") || alt.includes("Manufacturing")) return fallbackImages.industrial;
-    if (src.includes("retail") || src.includes("supermarket") || alt.includes("Retail")) return fallbackImages.commercial;
-    if (alt.includes("gallery") && alt.includes("1")) return fallbackImages.residentialGallery;
-    if (alt.includes("gallery") && alt.includes("2")) return fallbackImages.industrialGallery;
-    if (alt.includes("gallery") && alt.includes("3")) return fallbackImages.commercialGallery;
-    if (alt.includes("avatar")) {
-      if (alt.includes("Chief")) return fallbackImages.avatar1;
-      if (alt.includes("Kwame")) return fallbackImages.avatar2;
-      return fallbackImages.avatar3;
-    }
+    if (src.includes("fta") || alt.includes("FTA")) return fallbackImages.industrial;
+    if (src.includes("audi") || alt.includes("Audi")) return fallbackImages.showroom;
+    if (src.includes("puglia") || alt.includes("PugliaParadise")) return fallbackImages.hotel;
+    if (src.includes("bardonecchia") || alt.includes("Bardonecchia")) return fallbackImages.ski;
+    if (src.includes("estate") || alt.includes("Estate")) return fallbackImages.residential;
+    if (src.includes("freshmart") || alt.includes("Retail")) return fallbackImages.commercial;
     return fallbackImages.residential;
   };
 
@@ -102,19 +97,183 @@ const StatCard = ({ value, label, icon: Icon, delay }: { value: string; label: s
   </motion.div>
 );
 
-// Expanded case studies with reliable image URLs
+// Updated case studies with new ones at the top
 const caseStudies = [
   {
+    id: 0,
+    title: "Industrial Manufacturing - FTA",
+    client: "FTA (Factory & Technical Assembly)",
+    type: "industrial",
+    icon: Factory,
+    heroImage: "https://images.pexels.com/photos/11531870/pexels-photo-11531870.jpeg?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.pexels.com/photos/34201640/pexels-photo-34201640.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/7598915/pexels-photo-7598915.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/10490664/pexels-photo-10490664.jpeg?w=600&h=400&fit=crop"
+    ],
+    result: "Predictive Maintenance & 1000+ Machines Monitored",
+    savings: "65% downtime reduction",
+    description: "Omhero monitors energy consumption, operation, and predictive maintenance of machines, tools, and electrical equipment across 1000+ machines.",
+    fullDescription: "FTA implemented the PRY-CAM INDUSTRIAL (PI) device across their manufacturing facility to monitor energy consumption, operation, and predictive maintenance of machines, tools, and electrical equipment. The system connects to three-phase, AC monophase, and DC lines, measuring currents and voltages to provide power and essential operational data. With over 1000 machines monitored, the solution enables operations and maintenance teams to perform predictive maintenance, defect detection and localization, and proactively manage breakdown and shutdown risks.",
+    challenges: [
+      "Energy costs consuming 40% of operational budget",
+      "Frequent equipment breakdowns due to power quality issues",
+      "No data on machine-level energy consumption",
+      "Reactive maintenance causing unplanned downtime"
+    ],
+    solutions: [
+      "PRY-CAM INDUSTRIAL (PI) device deployment across 1000+ machines",
+      "Three-phase, AC monophase, and DC line monitoring",
+      "Real-time power and operational data acquisition",
+      "Predictive maintenance and defect detection systems"
+    ],
+    metrics: [
+      { label: "Machines Monitored", value: "1000+", icon: Activity },
+      { label: "Downtime Reduction", value: "65%", icon: Clock },
+      { label: "Defect Detection", value: "Real-time", icon: Eye },
+      { label: "Maintenance", value: "Predictive", icon: Shield }
+    ],
+    testimonial: {
+      quote: "Omhero has revolutionized our maintenance operations. We can now detect potential failures before they happen, saving us millions in unplanned downtime.",
+      author: "Thomas Mensah",
+      role: "Operations Director, FTA",
+      avatar: "https://randomuser.me/api/portraits/men/47.jpg"
+    }  
+  },
+  {
     id: 1,
+    title: "Audi Showroom - Energy Management",
+    client: "Audi Showroom",
+    type: "commercial",
+    icon: Building2,
+    heroImage: "https://images.pexels.com/photos/37934740/pexels-photo-37934740.jpeg?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.pexels.com/photos/17632052/pexels-photo-17632052.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/303317/pexels-photo-303317.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/16176576/pexels-photo-16176576.jpeg?w=600&h=400&fit=crop"
+    ],
+    result: "Uninterrupted Operations & 42% Energy Optimization",
+    savings: "₦4.2M saved annually",
+    description: "Optimized energy management across showroom, service areas, and EV charging stations with real-time monitoring and fault anticipation.",
+    fullDescription: "Audi Showroom implemented Omhero to optimize energy management and ensure uninterrupted operations across their showroom, service areas, and EV charging stations. The system connects to three-phase and AC monophase lines, measuring currents and voltages to provide actionable insights for both front-office and workshop energy performance. Continuous monitoring of lighting, HVAC, chargers, and workshop equipment enables predictive maintenance, fault detection in lifts, compressors, diagnostic tools, and controlled shutdown procedures to safeguard vehicle displays and workshop operations.",
+    challenges: [
+      "Maintaining optimal customer experience during peak hours",
+      "Unreliable power affecting showroom displays and workshop operations",
+      "No real-time visibility into energy performance across facilities",
+      "Reactive maintenance causing service disruptions"
+    ],
+    solutions: [
+      "Omhero device deployment across showroom and workshop areas",
+      "Continuous monitoring of lighting, HVAC, chargers, and workshop equipment",
+      "Predictive maintenance to avoid downtime in customer service areas",
+      "Fault detection in lifts, compressors, diagnostic tools, and critical systems"
+    ],
+    metrics: [
+      { label: "Energy Optimization", value: "42%", icon: TrendingDown },
+      { label: "Uptime", value: "99.9%", icon: Shield },
+      { label: "Systems Monitored", value: "Unlimited", icon: Zap },
+      { label: "Response Time", value: "< 1min", icon: Clock }
+    ],
+    testimonial: {
+      quote: "Omhero gives us complete visibility into our energy performance. We can now proactively address issues before they affect our customers.",
+      author: "Sarah Johnson",
+      role: "Operations Manager, Audi Showroom",
+      avatar: "https://randomuser.me/api/portraits/women/33.jpg"
+    }
+  },
+  {
+    id: 2,
+    title: "PugliaParadise - Luxury Hotel Energy Monitoring",
+    client: "PugliaParadise Luxury Hotel",
+    type: "commercial",
+    icon: Hotel,
+    heroImage: "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/261070/pexels-photo-261070.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?w=600&h=400&fit=crop"
+    ],
+    result: "100+ Machines Monitored & 35% Energy Reduction",
+    savings: "€120,000 saved annually",
+    description: "Ensured uninterrupted service and optimal guest experience by monitoring energy usage and anticipating failures across all distributed luxury hotel facilities.",
+    fullDescription: "PugliaParadise, a distributed luxury hotel, deployed Omhero to ensure uninterrupted service and optimal guest experience across all facilities. The system monitors technical systems and facility operations with real-time data on power consumption and system health across more than 100 machines. Continuous monitoring enables predictive maintenance to avoid service disruptions, early detection of anomalies in electrical and HVAC systems, real-time alerting, and proactive management of shutdown risks to safeguard guest comfort.",
+    challenges: [
+      "Maintaining 5-star guest experience across distributed facilities",
+      "Energy costs affecting operational margins",
+      "No centralized visibility into facility operations",
+      "Service disruptions affecting guest satisfaction"
+    ],
+    solutions: [
+      "Omhero deployment across all hotel facilities",
+      "Continuous monitoring of technical systems and HVAC operations",
+      "Predictive maintenance to avoid service disruptions",
+      "Real-time alerting and response to equipment faults"
+    ],
+    metrics: [
+      { label: "Machines Monitored", value: "100+", icon: Activity },
+      { label: "Energy Reduction", value: "35%", icon: TrendingDown },
+      { label: "Guest Satisfaction", value: "98%", icon: Star },
+      { label: "Uptime", value: "99.9%", icon: Shield }
+    ],
+    testimonial: {
+      quote: "Omhero has transformed our operations. We can now ensure our guests enjoy an uninterrupted luxury experience while significantly reducing our energy costs.",
+      author: "Maria Lombardi",
+      role: "Facilities Director, PugliaParadise",
+      avatar: "https://randomuser.me/api/portraits/women/56.jpg"
+    }
+  },
+  {
+    id: 3,
+    title: "BardonecchiaSki - Ski Lift Operations",
+    client: "BardonecchiaSki Resort",
+    type: "industrial",
+    icon: GaugeIcon,
+    heroImage: "https://images.pexels.com/photos/33663116/pexels-photo-33663116.jpeg?w=1200&h=600&fit=crop",
+    galleryImages: [
+      "https://images.pexels.com/photos/16849804/pexels-photo-16849804.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/30220544/pexels-photo-30220544.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/15789013/pexels-photo-15789013.jpeg?w=600&h=400&fit=crop"
+    ],
+    result: "20+ Machines Monitored & 0 Unplanned Stoppages",
+    savings: "40% maintenance cost reduction",
+    description: "Guaranteed safety and continuity of lift operations by monitoring energy consumption and anticipating technical faults across ski lift systems.",
+    fullDescription: "BardonecchiaSki Resort implemented Omhero to guarantee the safety and continuity of lift operations by monitoring energy consumption and anticipating technical faults across ski lift systems and support infrastructure. More than 20 machines are monitored with real-time data on power consumption and system health. The system enables monitoring of lift operations and electrical equipment, predictive maintenance to prevent unexpected stoppages, detection and localization of anomalies in motors, control panels, and power lines, and proactive management of shutdown risks during high-traffic periods.",
+    challenges: [
+      "Ensuring safety during high-traffic ski seasons",
+      "Preventing costly lift stoppages on busy days",
+      "No real-time visibility into lift system health",
+      "Reactive maintenance causing service disruptions"
+    ],
+    solutions: [
+      "Omhero deployment across ski lift systems and support infrastructure",
+      "Real-time monitoring of motors, control panels, and power lines",
+      "Predictive maintenance to prevent unexpected stoppages",
+      "Detection and localization of anomalies in critical systems"
+    ],
+    metrics: [
+      { label: "Machines Monitored", value: "20+", icon: Activity },
+      { label: "Stoppages", value: "0", icon: Shield },
+      { label: "Safety Rating", value: "100%", icon: Award },
+      { label: "Uptime", value: "99.99%", icon: Clock }
+    ],
+    testimonial: {
+      quote: "During peak ski season, any stoppage is catastrophic. Omhero gives us the confidence that our lifts will operate safely and continuously.",
+      author: "Enzo Rossi",
+      role: "Technical Director, BardonecchiaSki",
+      avatar: "https://randomuser.me/api/portraits/men/63.jpg"
+    }
+  },
+  {
+    id: 4,
     title: "Luxury Estate Reduces Energy Costs by 35%",
     client: "Palm Groove Estates, Lagos",
     type: "residential",
     icon: Home,
-    heroImage: "/images/case-studies/palm-groove-estates-hero.jpg",
+    heroImage: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=1200&h=600&fit=crop",
     galleryImages: [
-      "/images/case-studies/residential-gallery-1.jpg",
-      "/images/case-studies/residential-gallery-2.jpg",
-      "/images/case-studies/residential-gallery-3.jpg"
+      "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/2079249/pexels-photo-2079249.jpeg?w=600&h=400&fit=crop"
     ],
     result: "35% reduction in electricity bills",
     savings: "₦2.5M saved annually",
@@ -146,57 +305,16 @@ const caseStudies = [
     }  
   },
   {
-    id: 2,
-    title: "Manufacturing Plant Optimizes Production",
-    client: "Steelworks Industries, Tema",
-    type: "industrial",
-    icon: Factory,
-    heroImage: "/images/case-studies/steelworks-industries-hero.jpg",
-    galleryImages: [
-      "/images/case-studies/industrial-gallery-1.jpg",
-      "/images/case-studies/industrial-gallery-2.jpg",
-      "/images/case-studies/industrial-gallery-3.jpg"
-    ],
-    result: "28% energy reduction",
-    savings: "₵180,000 saved annually",
-    description: "Heavy manufacturing facility used Omhero Professional to identify inefficient machinery and optimize production schedules.",
-    fullDescription: "Steelworks Industries, one of Ghana's leading metal fabrication companies, was struggling with rising energy costs and unexpected equipment failures. Their legacy electrical system provided no visibility into power consumption across different production lines. After implementing Omhero Professional across 12 production lines with API integration to their SCADA system, they achieved unprecedented visibility into machine-level energy consumption and implemented predictive maintenance schedules.",
-    challenges: [
-      "Energy costs consuming 40% of operational budget",
-      "Frequent equipment breakdowns due to power quality issues",
-      "No data on machine-level energy consumption",
-      "Manual energy reporting taking 20+ hours per week"
-    ],
-    solutions: [
-      "Deployed Omhero Professional across 12 production lines",
-      "Integrated with existing SCADA system via API",
-      "Set up automated alerts for equipment anomalies",
-      "Implemented predictive maintenance schedules"
-    ],
-    metrics: [
-      { label: "Energy Reduction", value: "28%", icon: TrendingDown },
-      { label: "Downtime Reduction", value: "65%", icon: Clock },
-      { label: "Production Uptime", value: "99.5%", icon: Activity },
-      { label: "Equipment Lifespan", value: "+40%", icon: Award }
-    ],
-    testimonial: {
-      quote: "The visibility Omhero provides into our energy usage is game-changing. We've identified inefficiencies we never knew existed and saved millions in operational costs.",
-      author: "Kwame Asante",
-      role: "Plant Manager, Steelworks Industries",
-      avatar: "https://randomuser.me/api/portraits/men/91.jpg"
-    }
-  },
-  {
-    id: 3,
+    id: 5,
     title: "Retail Chain Monitors 20+ Locations",
     client: "FreshMart Supermarkets",
     type: "commercial",
     icon: Building2,
-    heroImage: "/images/case-studies/freshmart-supermarkets-hero.jpg",
+    heroImage: "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?w=1200&h=600&fit=crop",
     galleryImages: [
-      "/images/case-studies/commercial-gallery-1.jpg",
-      "/images/case-studies/commercial-gallery-2.jpg",
-      "/images/case-studies/bakery-retail-gallery.jpg"
+      "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?w=600&h=400&fit=crop"
     ],
     result: "42% reduction in standby power",
     savings: "₦4.2M saved across locations",
@@ -243,7 +361,7 @@ export default function CaseStudies() {
       {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#004B9E]/5 via-background to-[#0D9444]/5" />
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/backgrounds/case-studies-bg.jpg')] bg-cover bg-fixed opacity-5" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?q=80&w=2070')] bg-cover bg-fixed opacity-5" />
         
         {/* Animated gradient orbs */}
         <div className="absolute top-20 left-10 w-96 h-96 bg-[#004B9E]/20 rounded-full blur-[120px] animate-pulse" />
@@ -276,15 +394,15 @@ export default function CaseStudies() {
               </span>
             </h1>
             <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed text-center">
-              Discover how businesses and homeowners across Nigeria and Ghana are transforming their energy management with Omhero — saving money, improving safety, and reducing environmental impact.
+              Discover how businesses across the globe are transforming their energy management with Omhero — saving money, improving safety, and reducing environmental impact.
             </p>
             
             {/* Stats Summary */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-              <StatCard value="35%" label="Average Energy Savings" icon={TrendingDown} delay={0.1} />
-              <StatCard value="500+" label="Happy Customers" icon={Users} delay={0.2} />
-              <StatCard value="24/7" label="Real-time Monitoring" icon={Eye} delay={0.3} />
-              <StatCard value="2" label="Countries Served" icon={Globe} delay={0.4} />
+              <StatCard value="1000+" label="Machines Monitored" icon={Activity} delay={0.1} />
+              <StatCard value="35%" label="Average Energy Savings" icon={TrendingDown} delay={0.2} />
+              <StatCard value="99.9%" label="System Uptime" icon={Shield} delay={0.3} />
+              <StatCard value="4+" label="Countries Served" icon={Globe} delay={0.4} />
             </div>
           </motion.div>
         </motion.div>
@@ -330,7 +448,7 @@ export default function CaseStudies() {
                     <p className="text-2xl font-bold text-[#0D9444]">{study.result}</p>
                   </div>
                   <div className="text-center md:text-left">
-                    <p className="text-sm text-foreground/60 mb-1">Annual Savings</p>
+                    <p className="text-sm text-foreground/60 mb-1">Savings</p>
                     <p className="text-2xl font-bold text-[#0D9444]">{study.savings}</p>
                   </div>
                 </div>
@@ -446,13 +564,11 @@ export default function CaseStudies() {
                 Join hundreds of satisfied customers who have transformed their energy management with Omhero.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                {/* 10% ACTION HIGHLIGHT - Orange (#FF4E00) for high-priority CTA */}
                 <Link to="/contact">
                   <Button size="lg" className="bg-[#FF4E00] hover:bg-[#E04500] text-white shadow-lg shadow-[#FF4E00]/30 text-lg px-8 h-14">
                     Start Your Journey <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
-                {/* 30% OPERATIONAL - Blue outline for secondary action */}
                 <Link to="/product">
                   <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-[#004B9E]/10 text-lg px-8 h-14">
                     Explore Omhero

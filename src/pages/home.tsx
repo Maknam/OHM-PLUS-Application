@@ -53,7 +53,7 @@ export default function Home() {
   // Video gallery with YouTube IDs (extracted from your URLs)
   const videoGallery = [
     {
-      youtubeId: "FDdl5FofPEo", // From: https://youtu.be/FDdl5FofPEo?feature=shared
+      youtubeId: "D1l2wFdiYLg", // From: https://youtu.be/FDdl5FofPEo?feature=shared
       title: "Introducing Omhero",
       thumbnail: "/images/hero/smart-home-monitoring.jpg",
       description: "Meet the smart energy monitor transforming how Africa manages power"

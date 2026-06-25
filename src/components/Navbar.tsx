@@ -294,7 +294,7 @@ export function Navbar() {
         </div>
         
         {/* 10% ACTION HIGHLIGHT - Orange CTA on mobile */}
-        <Link to="/contact" onClick={() => setIsOpen(false)}>
+        <Link to="/book-demo" onClick={() => setIsOpen(false)}>
           <Button className="w-full mt-2 bg-[#FF4E00] hover:bg-[#E04500] text-white font-semibold">
             Book Demo
           </Button>
